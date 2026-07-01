@@ -24,7 +24,7 @@ export default function Header() {
             O mně
           </Link>
           <Link
-            href="/#kontakt"
+            href="/kontakt"
             className="rounded-full border border-brown/25 px-4 py-2 text-sm font-medium text-ink transition-colors duration-200 hover:border-clay hover:text-clay-deep"
           >
             Ozvěte se

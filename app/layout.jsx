@@ -1,6 +1,7 @@
 import { Fraunces, Hanken_Grotesk, Space_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 import ViewportScaler from "@/components/layout/ViewportScaler";
 
 /* Display — teplý charakterní serif (drží řemeslný pocit) */
@@ -57,6 +58,7 @@ export default function RootLayout({ children }) {
         </a>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
