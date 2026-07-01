@@ -1,0 +1,8 @@
+# Lokální runtime secrets pro `npm run preview` (wrangler).
+# Zkopíruj do .dev.vars (je v .gitignore) a vyplň.
+# Pozn.: `next dev` čte místo toho .env.local.
+
+RESEND_API_KEY=""
+CONTACT_TO_EMAIL="robin.petr523@gmail.com"
+# Volitelné (bez ověřené domény nech prázdné → onboarding@resend.dev):
+CONTACT_FROM_EMAIL=""
