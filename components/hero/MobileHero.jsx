@@ -7,7 +7,7 @@ export default function MobileHero() {
   return (
     <section
       aria-labelledby="hero-nadpis-m"
-      className="relative flex min-h-[calc(100svh-3.5rem)] flex-col overflow-hidden px-5 pb-8 pt-7 min-[400px]:hidden"
+      className="relative flex min-h-[calc(100svh-3.5rem)] flex-col overflow-hidden px-5 pb-8 pt-7 min-[500px]:hidden"
     >
       {/* soft blob = hloubka */}
       <div

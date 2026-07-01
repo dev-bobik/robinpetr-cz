@@ -6,7 +6,7 @@ export default function DesktopHero() {
   return (
     <section
       aria-labelledby="hero-nadpis"
-      className="relative hidden flex-col overflow-hidden min-[400px]:flex min-[400px]:min-h-[88vh] min-[400px]:pb-40 min-[400px]:pt-20"
+      className="relative hidden flex-col overflow-hidden min-[500px]:flex min-[500px]:pb-16 min-[500px]:pt-12"
     >
       {/* měkké šalvějové / okrové tvary = hloubka */}
       <div

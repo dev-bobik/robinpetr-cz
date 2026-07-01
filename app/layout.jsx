@@ -1,5 +1,7 @@
 import { Fraunces, Hanken_Grotesk, Space_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/layout/Header";
+import ViewportScaler from "@/components/layout/ViewportScaler";
 
 /* Display — teplý charakterní serif (drží řemeslný pocit) */
 const fraunces = Fraunces({
@@ -49,9 +51,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="cs" className={fontVars}>
       <body className="font-body antialiased">
+        <ViewportScaler />
         <a className="skip-link" href="#hlavni-obsah">
           Přeskočit na obsah
         </a>
+        <Header />
         {children}
       </body>
     </html>

@@ -1,0 +1,32 @@
+<svg width="640" height="400" viewBox="0 0 640 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder fotky setupu">
+  <defs>
+    <linearGradient id="sbg" x1="0" y1="0" x2="0" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#efe7d5"/>
+      <stop offset="1" stop-color="#e3dcc7"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#sbg)"/>
+  <g stroke="#9c5e3a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.5">
+    <!-- stůl -->
+    <path d="M70 300 L570 300"/>
+    <!-- monitor -->
+    <rect x="120" y="150" width="180" height="120" rx="8"/>
+    <path d="M210 270 L210 300 M180 300 L240 300"/>
+    <!-- schéma na obrazovce -->
+    <path d="M150 215 L190 215 L200 205 L210 225 L220 205 L230 215 L270 215"/>
+    <!-- deska s čipem -->
+    <rect x="360" y="240" width="150" height="60" rx="6"/>
+    <rect x="410" y="258" width="50" height="24" rx="3"/>
+    <!-- páječka -->
+    <path d="M470 150 L420 252"/>
+    <path d="M470 150 L500 140"/>
+  </g>
+  <g fill="#9c5e3a" opacity="0.85">
+    <circle cx="150" cy="215" r="4"/>
+    <circle cx="270" cy="215" r="4"/>
+    <circle cx="435" cy="270" r="4"/>
+  </g>
+  <g fill="#9c5e3a" font-family="'Space Mono', ui-monospace, monospace" text-anchor="middle">
+    <text x="320" y="355" font-size="18" letter-spacing="3">SETUP</text>
+  </g>
+</svg>

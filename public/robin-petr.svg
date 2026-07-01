@@ -1,0 +1,18 @@
+<svg width="400" height="500" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder portrétu">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#efe7d5"/>
+      <stop offset="1" stop-color="#e3dcc7"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#bg)"/>
+  <!-- silueta -->
+  <g fill="#c8b79a">
+    <circle cx="200" cy="200" r="74"/>
+    <path d="M70 470 C 70 360, 130 300, 200 300 C 270 300, 330 360, 330 470 Z"/>
+  </g>
+  <!-- mono štítek -->
+  <g fill="#9c5e3a" font-family="'Space Mono', ui-monospace, monospace" text-anchor="middle">
+    <text x="200" y="448" font-size="20" letter-spacing="3">FOTO</text>
+  </g>
+</svg>
