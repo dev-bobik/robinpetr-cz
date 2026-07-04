@@ -1,4 +1,4 @@
-/* Ukázka reálného produktu — mini dashboard provozu z vlastního systému.
+/* Ukázka reálného produktu — mini dashboard podniku z vlastního systému.
    Lehce nakloněná, jemně se vznáší. Čísla v mono = tech styl.
    Zelená jen na ✓ a šipku, jinak paleta.
    `compact`    = menší varianta pro mobil.
@@ -86,7 +86,7 @@ export default function DashboardCard({
         {/* hlavička */}
         <div className="flex items-center justify-between">
           <p className={`font-mono ${s.label} uppercase tracking-[0.16em] text-brown`}>
-            Přehled provozu
+            Přehled podniku
           </p>
           <span className="flex gap-1" aria-hidden="true">
             <span className="h-1.5 w-1.5 rounded-full bg-sage" />

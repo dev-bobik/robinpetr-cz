@@ -36,12 +36,12 @@ export default function About() {
 
       <div className="relative mx-auto max-w-5xl px-6">
         <p className="eyebrow">02 — O mně</p>
-        <h2
+        <h1
           id="o-mne-nadpis"
           className="mt-4 font-display text-[clamp(1.9rem,1.2rem+2.6vw,3rem)] font-semibold leading-[1.08] text-ink"
         >
           Kdo za tím stojí
-        </h2>
+        </h1>
 
         <div className="mt-12 grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           {/* -------- Identita: fotka + jméno + datasheet (sticky) -------- */}

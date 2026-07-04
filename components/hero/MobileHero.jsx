@@ -50,10 +50,10 @@ export default function MobileHero() {
         </h1>
 
         <p className="mt-4 text-[0.95rem] leading-snug text-ink-soft">
-          Platební terminály, věrnostní systém, chytrá čidla i celý systém kolem
-          — zmodernizuju váš provoz na míru.{" "}
+          Weby, objednávky, věrnost i chytrý hardware — poskládám a propojím to
+          celé do jednoho.{" "}
           <span className="font-medium text-ink">
-            Vy se staráte o hosty, techniku nechte na mně.
+            Vy se staráte o hosty, o techniku se postarám já.
           </span>
         </p>
 
@@ -93,7 +93,7 @@ export default function MobileHero() {
             <span className="absolute inline-flex h-full w-full rounded-full bg-sage opacity-60 motion-safe:animate-ping" />
             <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-sage" />
           </span>
-          Přijímám nové provozy
+          Beru nové zakázky
         </p>
 
         {/* ---------------- Dashboard kartička (dole, celá vidět) ---------- */}

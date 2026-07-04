@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Copyable from "./Copyable";
 import { CONTACT } from "@/lib/contact";
 
 /* Krátká kontaktní výzva na home (dole). Plný formulář je na /kontakt. */
@@ -50,18 +51,20 @@ export default function ContactCTA() {
         </div>
 
         <p className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 font-mono text-sm text-ink-soft">
-          <a
-            href={`mailto:${CONTACT.email}`}
+          <Copyable
+            value={CONTACT.email}
+            label="e-mail"
             className="underline decoration-brown/30 underline-offset-4 transition-colors hover:text-clay-deep"
           >
             {CONTACT.email}
-          </a>
-          <a
-            href={`tel:${CONTACT.phoneHref}`}
+          </Copyable>
+          <Copyable
+            value={CONTACT.phoneDisplay}
+            label="telefon"
             className="underline decoration-brown/30 underline-offset-4 transition-colors hover:text-clay-deep"
           >
             {CONTACT.phoneDisplay}
-          </a>
+          </Copyable>
         </p>
       </div>
     </section>

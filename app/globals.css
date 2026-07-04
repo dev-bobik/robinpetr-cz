@@ -73,6 +73,37 @@
   }
 }
 
+/* razítka se plní jedno po druhém (motiv věrnosti) */
+@keyframes stamp-fill {
+  0% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  14% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  82% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+}
+
+/* jemné sešroubování (motiv na míru) */
+@keyframes screw-turn {
+  0%,
+  100% {
+    transform: rotate(-16deg);
+  }
+  50% {
+    transform: rotate(16deg);
+  }
+}
+
 /* ------------------------------- Base ---------------------------------- */
 @layer base {
   * {

@@ -1,5 +1,6 @@
 import SchematicBackground from "@/components/schematic/SchematicBackground";
 import ContactForm from "./ContactForm";
+import Copyable from "./Copyable";
 import { CONTACT } from "@/lib/contact";
 
 function MailIcon() {
@@ -74,29 +75,37 @@ export default function Contact() {
           <aside className="flex flex-col gap-6">
             {/* přímé kontakty */}
             <div className="flex flex-col gap-3">
-              <a href={`mailto:${CONTACT.email}`} className={directLinkClass}>
+              <Copyable
+                value={CONTACT.email}
+                label="e-mail"
+                className={`${directLinkClass} text-left`}
+              >
                 <span className="text-clay-deep">
                   <MailIcon />
                 </span>
                 <span>
                   <span className="block font-mono text-[0.66rem] uppercase tracking-[0.16em] text-brown">
-                    E-mail
+                    E-mail · klikni pro zkopírování
                   </span>
                   <span className="font-medium">{CONTACT.email}</span>
                 </span>
-              </a>
+              </Copyable>
 
-              <a href={`tel:${CONTACT.phoneHref}`} className={directLinkClass}>
+              <Copyable
+                value={CONTACT.phoneDisplay}
+                label="telefon"
+                className={`${directLinkClass} text-left`}
+              >
                 <span className="text-clay-deep">
                   <PhoneIcon />
                 </span>
                 <span>
                   <span className="block font-mono text-[0.66rem] uppercase tracking-[0.16em] text-brown">
-                    Telefon
+                    Telefon · klikni pro zkopírování
                   </span>
                   <span className="font-medium">{CONTACT.phoneDisplay}</span>
                 </span>
-              </a>
+              </Copyable>
 
               {/* Instagram — zatím neaktivní placeholder */}
               <div

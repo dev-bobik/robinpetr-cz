@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ViewportScaler from "@/components/layout/ViewportScaler";
+import CloudflareAnalytics from "@/components/analytics/CloudflareAnalytics";
 
 /* Display — teplý charakterní serif (drží řemeslný pocit) */
 const fraunces = Fraunces({
@@ -28,13 +29,13 @@ const spaceMono = Space_Mono({
 
 export const metadata = {
   metadataBase: new URL("https://robinpetr.cz"),
-  title: "Robin Petr — digitalizace provozů",
+  title: "Robin Petr — digitalizace podniků",
   description:
-    "Weby, objednávkové systémy a chytrý hardware pro malé provozy — od jednoho člověka, co to celé propojí.",
+    "Weby, objednávkové systémy a chytrý hardware pro malé podniky — od jednoho člověka, co to celé propojí.",
   openGraph: {
-    title: "Robin Petr — digitalizace provozů",
+    title: "Robin Petr — digitalizace podniků",
     description:
-      "Weby, objednávkové systémy a chytrý hardware pro malé provozy — od jednoho člověka, co to celé propojí.",
+      "Weby, objednávkové systémy a chytrý hardware pro malé podniky — od jednoho člověka, co to celé propojí.",
     url: "https://robinpetr.cz",
     siteName: "Robin Petr",
     locale: "cs_CZ",
@@ -59,6 +60,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
+        <CloudflareAnalytics />
       </body>
     </html>
   );

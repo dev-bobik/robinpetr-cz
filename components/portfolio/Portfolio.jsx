@@ -8,7 +8,7 @@ const PROJECTS = [
     type: "Web · objednávky",
     title: "Kebab [název — doplň]",
     description:
-      "Web s vlastním objednávkovým systémem pro kebab provoz.",
+      "Web a vlastní objednávkový systém pro kebab.",
     result:
       "Stálí zákazníci objednávají napřímo — provize rozvozovým platformám odpadá.",
   },
@@ -29,7 +29,7 @@ export default function Portfolio() {
     <section
       id="portfolio"
       aria-labelledby="portfolio-nadpis"
-      className="relative border-t border-brown/10 py-[clamp(4rem,3rem+6vw,8rem)]"
+      className="relative border-t border-brown/10 pb-[clamp(4rem,3rem+6vw,8rem)] pt-8"
     >
       <div className="mx-auto max-w-5xl px-6">
         <p className="eyebrow">Reference</p>
@@ -40,7 +40,8 @@ export default function Portfolio() {
           Výběr portfolia
         </h2>
         <p className="mt-4 max-w-xl text-[1.05rem] leading-relaxed text-ink-soft">
-          Pár věcí, co reálně běží — od webů po objednávkové systémy.
+          Pár věcí, co reálně běží u lidí v podniku — ne ukázky, živé weby a
+          systémy.
         </p>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

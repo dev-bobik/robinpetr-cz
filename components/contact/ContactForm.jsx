@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 const inputBase =
@@ -116,7 +117,7 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="message" className={labelBase}>
-          S čím vám můžu pomoct?
+          S čím vám mohu pomoct?
         </label>
         <textarea
           id="message"
@@ -147,6 +148,17 @@ export default function ContactForm() {
       >
         {status === "submitting" ? "Odesílám…" : "Odeslat"}
       </button>
+
+      <p className="text-[0.78rem] leading-snug text-ink-soft/80">
+        Odesláním beru na vědomí{" "}
+        <Link
+          href="/ochrana-osobnich-udaju"
+          className="underline decoration-brown/30 underline-offset-2 transition-colors hover:text-clay-deep"
+        >
+          zpracování osobních údajů
+        </Link>{" "}
+        pro vyřízení mé poptávky.
+      </p>
     </form>
   );
 }

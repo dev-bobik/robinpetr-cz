@@ -6,7 +6,7 @@ export default function DesktopHero() {
   return (
     <section
       aria-labelledby="hero-nadpis"
-      className="relative hidden flex-col overflow-hidden min-[500px]:flex min-[500px]:pb-16 min-[500px]:pt-12"
+      className="relative hidden flex-col overflow-hidden min-[500px]:flex min-[500px]:min-h-[44rem] min-[500px]:pb-0 min-[500px]:pt-12"
     >
       {/* měkké šalvějové / okrové tvary = hloubka */}
       <div
@@ -18,14 +18,15 @@ export default function DesktopHero() {
         className="pointer-events-none absolute -left-24 top-1/3 h-72 w-72 rounded-full bg-ochre/12 blur-3xl"
       />
 
-      {/* schéma — viditelná vrstva v pozadí přes celou plochu (z-0, pod textem) */}
-      <SchematicBackground
-        variant="full"
-        className="pointer-events-none absolute inset-0 z-0 h-full w-full opacity-[0.22]"
-      />
-
-      {/* ---------------- Obsah ---------------- */}
-      <div className="relative z-10 mx-auto grid w-full max-w-5xl flex-1 grid-cols-1 items-center gap-10 px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8">
+      {/* ---------------- Obsah (schéma ve stejném rámci → svázané všude) --- */}
+      <div className="relative z-10 mx-auto w-full max-w-5xl flex-1 px-6">
+        {/* schéma pevných 1200 px vycentrovaných na obsah → přesně rozvržení
+            jako na 1200 px, zamčené a svázané s textem na všech šířkách */}
+        <SchematicBackground
+          variant="full"
+          className="pointer-events-none absolute inset-y-0 left-1/2 z-0 w-[1344px] max-w-none -translate-x-1/2 -translate-y-[8.5rem] opacity-[0.15]"
+        />
+        <div className="relative z-10 grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8">
         <div className="max-w-xl">
           <h1
             id="hero-nadpis"
@@ -54,10 +55,10 @@ export default function DesktopHero() {
           </h1>
 
           <p className="mt-8 max-w-xl text-[1.35rem] leading-relaxed text-ink-soft">
-            Platební terminály, věrnostní systém, chytrá čidla i celý systém
-            kolem — zmodernizuju váš provoz na míru.{" "}
+            Weby, objednávky, věrnost i chytrý hardware — poskládám a propojím
+            to celé do jednoho.{" "}
             <span className="font-medium text-ink">
-              Vy se staráte o hosty, techniku nechte na mně.
+              Vy se staráte o hosty, o techniku se postarám já.
             </span>
           </p>
 
@@ -97,7 +98,7 @@ export default function DesktopHero() {
               <span className="absolute inline-flex h-full w-full rounded-full bg-sage opacity-60 motion-safe:animate-ping" />
               <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-sage" />
             </span>
-            Přijímám nové provozy
+            Beru nové zakázky
           </p>
         </div>
 
@@ -105,24 +106,9 @@ export default function DesktopHero() {
         <div className="flex justify-center lg:justify-end">
           <DashboardCard className="rotate-[-3deg] motion-safe:animate-float-slow" />
         </div>
+        </div>
       </div>
 
-      {/* scroll indikátor */}
-      <a
-        href="#nabidka"
-        aria-label="Posunout na nabídku"
-        className="absolute bottom-5 left-1/2 z-10 grid h-11 w-11 -translate-x-1/2 place-items-center rounded-full bg-ink text-beige shadow-md transition-transform duration-200 hover:translate-y-0.5 motion-safe:animate-bounce"
-      >
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-          <path
-            d="M9 3v11M4.5 9.5 9 14l4.5-4.5"
-            stroke="currentColor"
-            strokeWidth="1.7"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </a>
     </section>
   );
 }
