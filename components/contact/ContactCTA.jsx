@@ -20,9 +20,9 @@ export default function ContactCTA() {
           Pojďme to probrat
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-[1.05rem] leading-relaxed text-ink-soft">
-          Přijde vám, že vám v podniku něco zbytečně bere čas? Nebo vás napadá,
-          co by šlo zjednodušit?{" "}
-          <span className="font-medium text-ink">Napište mi nezávazně.</span>
+          Bere vám něco v podniku zbytečně čas? Nebo vás napadá, co by šlo
+          zjednodušit?{" "}
+          <span className="font-medium text-ink">Napište mi — nezávazně.</span>
         </p>
 
         <div className="mt-8 flex justify-center">
@@ -54,14 +54,14 @@ export default function ContactCTA() {
           <Copyable
             value={CONTACT.email}
             label="e-mail"
-            className="underline decoration-brown/30 underline-offset-4 transition-colors hover:text-clay-deep"
+            className="underline decoration-brown/30 underline-offset-4 transition-colors duration-200 hover:text-clay-deep"
           >
             {CONTACT.email}
           </Copyable>
           <Copyable
             value={CONTACT.phoneDisplay}
             label="telefon"
-            className="underline decoration-brown/30 underline-offset-4 transition-colors hover:text-clay-deep"
+            className="underline decoration-brown/30 underline-offset-4 transition-colors duration-200 hover:text-clay-deep"
           >
             {CONTACT.phoneDisplay}
           </Copyable>

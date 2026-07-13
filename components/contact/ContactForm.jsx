@@ -4,9 +4,16 @@ import Link from "next/link";
 import { useState } from "react";
 
 const inputBase =
-  "mt-1.5 w-full rounded-xl border border-brown/25 bg-card px-4 py-3 text-ink placeholder:text-ink-soft/60 transition-colors duration-200 focus:border-clay focus:outline-none focus:ring-2 focus:ring-clay/30";
+  "mt-1.5 w-full rounded-xl border border-brown/25 bg-card px-4 py-3 text-ink placeholder:text-ink-soft/60 transition-colors duration-200 hover:border-brown/40 focus:border-clay focus:outline-none focus:ring-2 focus:ring-clay/30";
 const labelBase =
   "font-mono text-[0.7rem] uppercase tracking-[0.14em] text-brown";
+
+function validate({ name, contact, message }) {
+  if (!name) return "Vyplňte prosím jméno.";
+  if (!contact) return "Vyplňte prosím e-mail nebo telefon, ať se vám můžu ozvat.";
+  if (!message) return "Napište prosím pár slov o tom, s čím potřebujete pomoct.";
+  return "";
+}
 
 export default function ContactForm() {
   const [status, setStatus] = useState("idle"); // idle | submitting | success | error
@@ -17,11 +24,18 @@ export default function ContactForm() {
     const form = event.currentTarget;
     const fd = new FormData(form);
     const payload = {
-      name: fd.get("name"),
-      contact: fd.get("contact"),
-      message: fd.get("message"),
-      website: fd.get("website"), // honeypot
+      name: String(fd.get("name") || "").trim(),
+      contact: String(fd.get("contact") || "").trim(),
+      message: String(fd.get("message") || "").trim(),
+      website: String(fd.get("website") || ""), // honeypot
     };
+
+    const validationError = validate(payload);
+    if (validationError) {
+      setError(validationError);
+      setStatus("error");
+      return;
+    }
 
     setStatus("submitting");
     setError("");
@@ -52,10 +66,10 @@ export default function ContactForm() {
     return (
       <div
         role="status"
-        className="rounded-2xl border border-brown/15 bg-card p-6"
+        className="rounded-2xl border border-brown/15 bg-card p-6 shadow-[0_18px_36px_-24px_rgba(46,42,34,0.4)]"
       >
-        <div className="flex items-center gap-2">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <div className="flex items-center gap-3">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <circle cx="12" cy="12" r="11" fill="#4e9d5e" opacity="0.15" />
             <path
               d="M7 12.5 10.5 16 17 8.5"
@@ -66,16 +80,17 @@ export default function ContactForm() {
             />
           </svg>
           <p className="font-display text-xl font-semibold text-ink">
-            Díky, odpovídám obvykle do 24 hodin.
+            Díky za zprávu!
           </p>
         </div>
-        <p className="mt-2 text-ink-soft">
-          Mezitím klidně mrkněte na portfolio nebo mi napište přímo.
+        <p className="mt-3 leading-relaxed text-ink-soft">
+          Ozvu se vám obvykle do 24 hodin. Mezitím klidně mrkněte na portfolio,
+          nebo mi napište přímo na e-mail.
         </p>
         <button
           type="button"
           onClick={() => setStatus("idle")}
-          className="mt-4 font-mono text-sm text-clay-deep underline decoration-brown/30 underline-offset-4 transition-colors hover:text-clay"
+          className="mt-5 font-mono text-sm text-clay-deep underline decoration-brown/30 underline-offset-4 transition-colors duration-200 hover:text-clay"
         >
           Napsat další zprávu
         </button>
@@ -84,7 +99,12 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="space-y-5">
+    <form
+      onSubmit={handleSubmit}
+      noValidate
+      aria-busy={status === "submitting"}
+      className="relative space-y-5"
+    >
       <div>
         <label htmlFor="name" className={labelBase}>
           Jméno
@@ -96,7 +116,7 @@ export default function ContactForm() {
           required
           autoComplete="name"
           className={inputBase}
-          placeholder="Jak vám mám říkat"
+          placeholder="Jak vám mám říkat?"
         />
       </div>
 
@@ -111,13 +131,13 @@ export default function ContactForm() {
           required
           autoComplete="email"
           className={inputBase}
-          placeholder="Kam se vám ozvu"
+          placeholder="Kam se vám mám ozvat?"
         />
       </div>
 
       <div>
         <label htmlFor="message" className={labelBase}>
-          S čím vám mohu pomoct?
+          S čím vám můžu pomoct?
         </label>
         <textarea
           id="message"
@@ -125,17 +145,17 @@ export default function ContactForm() {
           required
           rows={4}
           className={`${inputBase} resize-y`}
-          placeholder="Pár vět stačí — s čím vám můžu pomoct."
+          placeholder="Pár vět úplně stačí — detaily doladíme spolu."
         />
       </div>
 
       {/* honeypot — skryté pole proti botům */}
-      <div aria-hidden="true" className="absolute left-[-9999px] h-0 w-0 overflow-hidden">
+      <div aria-hidden="true" className="absolute left-[-9999px] top-0 h-0 w-0 overflow-hidden">
         <label htmlFor="website">Web (nevyplňujte)</label>
         <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
       </div>
 
-      {status === "error" ? (
+      {status === "error" && error ? (
         <p role="alert" className="text-sm font-medium text-clay-deep">
           {error}
         </p>
@@ -144,20 +164,36 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="inline-flex items-center gap-2 rounded-full bg-stone-600 px-7 py-3.5 font-medium text-beige shadow-[0_14px_30px_-14px_rgba(46,42,34,0.6)] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:bg-stone-700 disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0"
+        className="group inline-flex items-center gap-2 rounded-full bg-clay px-8 py-3.5 font-medium text-card shadow-[0_14px_30px_-12px_rgba(192,121,79,0.8)] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:bg-clay-deep disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0"
       >
-        {status === "submitting" ? "Odesílám…" : "Odeslat"}
+        {status === "submitting" ? "Odesílám…" : "Odeslat zprávu"}
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+          aria-hidden="true"
+          className="transition-transform duration-200 ease-out group-hover:translate-x-1"
+        >
+          <path
+            d="M3.5 9h11M10 4.5 14.5 9 10 13.5"
+            stroke="currentColor"
+            strokeWidth="1.7"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
       </button>
 
       <p className="text-[0.78rem] leading-snug text-ink-soft/80">
-        Odesláním beru na vědomí{" "}
+        Odesláním berete na vědomí{" "}
         <Link
           href="/ochrana-osobnich-udaju"
-          className="underline decoration-brown/30 underline-offset-2 transition-colors hover:text-clay-deep"
+          className="underline decoration-brown/30 underline-offset-2 transition-colors duration-200 hover:text-clay-deep"
         >
           zpracování osobních údajů
         </Link>{" "}
-        pro vyřízení mé poptávky.
+        pro vyřízení vaší poptávky.
       </p>
     </form>
   );
