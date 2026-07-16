@@ -5,13 +5,11 @@ import BenefitCard from "./BenefitCard";
    Karty jsou znovupoužitelné (BenefitCard) i pro budoucí /sluzby. */
 
 /* Ručně kreslené ilustrace v paletě webu (public/ilustrace).
-   Dekorativní — prázdný alt. Zdrojová PNG jsou malá, proto pevná menší výška.
-   Pozadí dlaždice = barva vypálená v PNG, aby obrázek splynul beze švů. */
+   Dekorativní — prázdný alt. Volně na kartě (bez rámečku), mix-blend-multiply
+   nechá světlé pozadí PNG splynout s podkladem karty. */
 function CardIllustration({ src }) {
   return (
-    <div className="flex h-28 items-center justify-center overflow-hidden rounded-xl border border-brown/10 bg-[#f9f5ec]">
-      <img src={src} alt="" className="h-full w-auto object-contain" />
-    </div>
+    <img src={src} alt="" className="h-24 w-auto mix-blend-multiply sm:h-28" />
   );
 }
 

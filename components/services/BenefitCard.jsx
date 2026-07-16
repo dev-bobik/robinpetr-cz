@@ -20,7 +20,8 @@ export default function BenefitCard({
           : "border-brown/15 bg-card hover:border-clay/40"
       }`}
     >
-      {visual ? <div className="mb-5 text-brown">{visual}</div> : null}
+      {/* ilustrace plave v pravém horním rohu karty (podle předlohy) */}
+      {visual ? <div className="-mr-1 -mt-1 mb-3 flex justify-end">{visual}</div> : null}
 
       <h3 className="font-display text-xl font-semibold leading-tight text-ink sm:text-2xl">
         {title}
