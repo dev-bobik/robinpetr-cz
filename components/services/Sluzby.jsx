@@ -7,38 +7,38 @@ const SERVICES = [
   {
     name: "Věrnostní systém",
     flag: "vlajková loď",
-    what: "Vracející se zákazníci — bez papírových kartiček a bez aplikací.",
+    what: "Věrnostní program, na který zákazníkům stačí telefon v kapse.",
     benefit:
-      "Zákazník, co se vrací, je ten nejlevnější. Přivedu vám ho zpátky a vy poprvé uvidíte, kdo to vlastně je.",
-    how: "U pokladny přiloží telefon, přičte se bod a hned vidí, kolik mu chybí do odměny. Podruhé už ho systém pozná sám.",
+      "Stálý zákazník utratí víc a nestojí vás reklamu. A konečně uvidíte, kdo k vám chodí a jak často.",
+    how: "U pokladny přiloží telefon ke stojánku, přičte se mu bod a vidí, kolik chybí do odměny. Podruhé už ho systém pozná sám.",
   },
   {
     name: "Hlídání podniku (HACCP)",
-    what: "Bezdrátová čidla, co za vás hlídají teploty v lednicích a mrazácích.",
+    what: "Bezdrátová čidla, která za vás měří teploty v lednicích a mrazácích.",
     benefit:
-      "Klid v hlavě a papíry na HACCP hotové samy. O problému víte dřív, než se zboží zkazí.",
-    how: "Čidlo měří nonstop, data tečou do přehledu. Když teplota uteče, cinkne vám alarm rovnou do telefonu.",
+      "Papíry k HACCP se vyplňují samy. O vypadlém mrazáku víte za pár minut, ne ráno nad zkaženým zbožím.",
+    how: "Čidlo měří nonstop a posílá data do přehledu. Když teplota vyletí, přijde vám zpráva na telefon.",
   },
   {
     name: "Web a online objednávky",
-    what: "Web, kde si zákazník objedná a zaplatí online — a vy máte objednávky na jednom místě.",
+    what: "Web, kde si zákazník objedná a zaplatí. Objednávky vám padají na jedno místo.",
     benefit:
-      "Míň vyzvánějícího telefonu ve špičce, míň chyb a objednávky i mimo otevíračku.",
-    how: "Zákazník objedná z mobilu, objednávka padne rovnou k vám. Žádných pět aplikací, co spolu nemluví.",
+      "Ve špičce vám míň zvoní telefon a objednávky chodí i po zavíračce.",
+    how: "Zákazník objedná z mobilu a vám se objednávka objeví v přehledu. Vy ji jen odbavíte.",
   },
   {
     name: "Recenze tag",
     flag: "levný začátek",
-    what: "Malý tag na stůl nebo pult, co lidem usnadní napsat vám Google recenzi.",
+    what: "Kartička na stůl nebo pult, přes kterou zákazník napíše Google recenzi na jedno přiložení telefonu.",
     benefit:
-      "Víc a lepších recenzí znamená víc lidí, co vás najdou. Malá věc s velkým efektem.",
-    how: "Zákazník přiloží telefon nebo naskenuje kód a je rovnou u recenze — nemusí nic hledat.",
+      "Recenze rozhodují o tom, koho Google ukáže první. Čím víc jich máte, tím víc lidí vás najde.",
+    how: "V kartičce je NFC čip a QR kód. Telefon ji přečte a rovnou otevře okno pro recenzi, zákazník nic nehledá.",
   },
   {
     name: "Něco na míru",
-    what: "Máte věc, co pořád dokola děláte ručně a bere vám čas? Postavím vám na ni nástroj přesně na váš podnik.",
+    what: "Věc, kterou v podniku děláte pořád dokola ručně, se většinou dá zautomatizovat. Postavím vám na ni nástroj.",
     benefit:
-      "Software i hardware od jednoho člověka — ne šablona, ale řešení vaší konkrétní situace.",
+      "Naprogramuju software, navrhnu a zapojím hardware. Dostanete řešení té jedné vaší situace a člověka, který za něj ručí.",
     cta: { label: "Napište mi, co potřebujete", href: "/kontakt" },
   },
 ];
@@ -118,9 +118,9 @@ export default function Sluzby() {
           Co pro váš podnik postavím
         </h1>
         <p className="mt-5 text-[1.15rem] leading-relaxed text-ink-soft">
-          Konkrétní věci, co reálně pomůžou — a když potřebujete něco vlastního,{" "}
-          <span className="font-medium text-ink">postavím to na míru</span>.
-          Všechno od jednoho člověka a propojené do jednoho celku.
+          Tohle stavím v podnicích nejčastěji. Když potřebujete něco jiného,{" "}
+          <span className="font-medium text-ink">udělám to na míru</span>.
+          Všechno dodává jeden člověk a všechno je propojené do jednoho celku.
         </p>
 
         {/* produkty */}
@@ -139,12 +139,13 @@ export default function Sluzby() {
             Na míru a férově
           </h2>
           <p className="mt-3 text-[1.02rem] leading-relaxed text-ink-soft">
-            Cenu dělám na míru vašemu podniku i rozpočtu.{" "}
+            Cena se odvíjí od velikosti podniku a od toho, co potřebujete.
+            Konkrétní číslo vám řeknu po první schůzce, až si projdeme váš
+            provoz.{" "}
             <span className="font-medium text-ink">
-              Většina investice se vám vrátí
+              Počítám to tak, aby se vám investice vrátila
             </span>{" "}
-            na tom, co ušetříte na čase a lidech. Konkrétní čísla řeknu, až spolu
-            probereme, co přesně potřebujete — ne od stolu.
+            na ušetřeném čase.
           </p>
         </div>
 
