@@ -192,7 +192,7 @@ export default function Sluzby() {
               Nejsem plátce DPH, ceny jsou konečné.
             </span>{" "}
             U větších projektů řeknu přesné číslo po schůzce, dřív než začnu
-            pracovat.
+            pracovat. Smlouva vzniká až vzájemným potvrzením objednávky.
           </p>
         </div>
 
