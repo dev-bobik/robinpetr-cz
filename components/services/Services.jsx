@@ -1,40 +1,33 @@
 import Link from "next/link";
 import BenefitCard from "./BenefitCard";
-import StampsMotif from "./motifs/StampsMotif";
-import PulseMotif from "./motifs/PulseMotif";
-import NodesMotif from "./motifs/NodesMotif";
-import BuildMotif from "./motifs/BuildMotif";
+// motif illustrations removed to keep cards clean
 
 /* "Co pro váš podnik udělám" — přínosy, ne seznam produktů.
    Karty jsou znovupoužitelné (BenefitCard) i pro budoucí /sluzby. */
 
 const BENEFITS = [
   {
-    visual: <StampsMotif />,
-    title: "Vracející se zákazníci",
+    title: "Věrnostní systém bez stahování aplikací",
     description:
-      "Zákazník přiloží telefon, sbírá body a vidí, kolik mu chybí do odměny. Žádné papírové kartičky, co se ztrácejí, ani aplikace, co si nikdo nenainstaluje.",
+      "Zákazník jen přiloží telefon k dřevěnému stojánku na stole, okamžitě sbírá body a vidí své odměny. Žádné papírové kartičky a žádné otravné aplikace, které si nikdo nechce instalovat.",
     tags: ["Věrnostní systém", "NFC stojánek"],
   },
   {
-    visual: <PulseMotif />,
-    title: "Míň starostí",
+    title: "Už žádné vyhozené suroviny kvůli vypadlému mrazáku",
     description:
-      "Čidla hlídají teploty v lednicích a mrazácích nonstop. Když něco hrozí, cinkne vám to rovnou do telefonu — ne až ráno nad zkaženým zbožím.",
+      "Chytrá čidla nonstop hlídají teploty v lednicích a skladech. Jakmile teplota stoupne, okamžitě vám pípne varování na mobilu. Zachráníte zboží včas, ne až ráno, když už je pozdě.",
     tags: ["Hlídání teplot", "HACCP", "Alarm"],
   },
   {
-    visual: <NodesMotif />,
-    title: "Zjednodušený podnik",
+    title: "Celý provoz pod palcem přímo z mobilu",
     description:
-      "Web, online objednávky i cenovky, co přepíšete z mobilu. Všechno na jednom místě a propojené — konec papírů a aplikací, co spolu nemluví.",
+      "Aktualizace menu na webu, změna cenovek na baru nebo správa online objednávek. Všechno upravíte na pár kliknutí z telefonu. Konec ručního přepisování tabulí a chaosu v papírech.",
     tags: ["Web", "Objednávky", "E-shop", "Cenovky"],
   },
   {
-    visual: <BuildMotif />,
-    title: "Něco na míru?",
+    title: "Máte specifický problém? Vyřeším ho.",
     description:
-      "Máte věc, co pořád dokola děláte ručně? Řekněte mi ji — postavím vám na ni nástroj. Software i hardware, od jednoho člověka.",
+      "Děláte v podniku nějakou rutinu pořád dokola ručně? Řekněte mi to. Navrhnu a vyrobím hardware nebo naprogramuju software přesně pro tento jeden účel. Na klíč a bez starostí.",
     cta: { label: "Napište mi", href: "/kontakt" },
     accent: true,
   },
@@ -45,22 +38,21 @@ export default function Services() {
     <section
       id="nabidka"
       aria-labelledby="nabidka-nadpis"
-      className="relative border-t border-brown/10 pb-[clamp(4rem,3rem+6vw,8rem)] pt-6"
+      className="relative border-t border-brown/10 pb-[clamp(4rem,3rem+6vw,8rem)] pt-4"
     >
       <div className="relative mx-auto max-w-5xl px-6">
-        <p className="eyebrow">Co nabízím</p>
+        <p className="eyebrow">Co konkrétně získáváte</p>
         <h2
           id="nabidka-nadpis"
           className="mt-4 max-w-2xl font-display text-[clamp(1.9rem,1.2rem+2.6vw,3rem)] font-semibold leading-[1.08] text-ink"
         >
-          Co pro váš podnik udělám
+          Místo pěti různých systémů jen jeden, co opravdu funguje
         </h2>
         <p className="mt-4 max-w-2xl text-[1.05rem] leading-relaxed text-ink-soft">
-          Ne pět aplikací od pěti dodavatelů, co se navzájem neznají.{" "}
-          <span className="font-medium text-ink">Jeden propojený celek</span> —
-          web, věrnost, čidla i objednávky spolu mluví a drží je{" "}
-          <span className="font-medium text-ink">jeden člověk</span>, co za to
-          ručí.
+          Zapomeňte na pět aplikací od různých firem, které spolu nekomunikují.
+          Postavím vám jeden propojený systém — od webu přes objednávky až po
+          chytrá čidla. A hlavně: máte na telefonu jednoho člověka, který za to
+          celé osobně ručí.
         </p>
 
         <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-3">

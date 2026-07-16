@@ -95,16 +95,22 @@ export default function DashboardCard({
           </span>
         </div>
 
-        {/* Ušetřeno za měsíc — dominantní */}
+        {/* Zákazníci — dominantní údaj */}
         <div className={s.gap}>
           <p className={`font-mono ${s.label} uppercase tracking-[0.14em] text-ink-soft`}>
-            Ušetřeno za měsíc
+            Zákazníci tento měsíc
           </p>
           <div className="mt-1 flex items-end gap-2">
             <span className={`font-mono ${s.trzby} font-bold leading-none text-ink`}>
-              8&nbsp;400
-              <span className={`ml-1 ${s.kc} font-medium text-ink-soft`}>Kč</span>
+              862
             </span>
+            <p
+              className={`mt-0.5 inline-flex items-center gap-0.5 font-mono ${s.badge} font-bold`}
+              style={{ color: GREEN }}
+            >
+              <ArrowUp />
+              18&nbsp;%
+            </p>
           </div>
         </div>
 
@@ -112,15 +118,10 @@ export default function DashboardCard({
         <div className={`${s.gap} grid grid-cols-2 gap-2.5`}>
           <div className={`flex flex-col justify-center rounded-xl border border-brown/10 ${tileBg} ${s.tilePad}`}>
             <p className={`font-mono ${s.tileLabel} uppercase tracking-[0.1em] text-ink-soft`}>
-              Zákazníci tento měsíc
+              Ušetřeno za měsíc
             </p>
-            <p className={`mt-1 font-mono ${s.tileVal} font-bold text-ink`}>312</p>
-            <p
-              className={`mt-0.5 inline-flex items-center gap-0.5 font-mono ${s.badge} font-bold`}
-              style={{ color: GREEN }}
-            >
-              <ArrowUp />
-              18&nbsp;%
+            <p className={`mt-1 font-mono ${s.tileVal} font-bold text-ink`}>8&nbsp;400
+              <span className={`ml-1 ${s.kc} font-medium text-ink-soft`}>Kč</span>
             </p>
           </div>
           <div className={`flex flex-col justify-center rounded-xl border border-brown/10 ${tileBg} ${s.tilePad}`}>
@@ -141,7 +142,7 @@ export default function DashboardCard({
             className={`font-mono ${s.status} font-bold uppercase tracking-wider`}
             style={{ color: GREEN }}
           >
-            Vše běží
+            Všechny služby aktivní
           </span>
         </div>
       </div>

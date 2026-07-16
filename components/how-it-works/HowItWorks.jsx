@@ -169,7 +169,7 @@ export default function HowItWorks() {
 
         {/* 5 — CO NABÍZÍM (krátce + odkaz) */}
         <div className="mt-16">
-          <SectionKicker>// Co nabízím</SectionKicker>
+          <SectionKicker>// Co konkrétně získáváte</SectionKicker>
           <h2 className="mt-3 font-display text-[clamp(1.6rem,1.2rem+1.6vw,2.2rem)] font-semibold leading-tight text-ink">
             Ve zkratce
           </h2>

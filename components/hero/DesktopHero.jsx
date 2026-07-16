@@ -6,7 +6,7 @@ export default function DesktopHero() {
   return (
     <section
       aria-labelledby="hero-nadpis"
-      className="relative hidden flex-col overflow-hidden min-[500px]:flex min-[500px]:min-h-[44rem] min-[500px]:pb-0 min-[500px]:pt-12"
+      className="relative hidden flex-col overflow-hidden min-[500px]:flex min-[500px]:pb-16 min-[500px]:pt-12"
     >
       {/* měkké šalvějové / okrové tvary = hloubka */}
       <div
@@ -49,6 +49,8 @@ export default function DesktopHero() {
                   strokeWidth="2"
                   strokeLinecap="round"
                   vectorEffect="non-scaling-stroke"
+                  pathLength="300"
+                  className="motion-safe:[stroke-dasharray:300] motion-safe:[animation:draw-underline_0.9s_var(--ease-out-soft)_0.15s_both]"
                 />
               </svg>
             </span>
@@ -65,7 +67,7 @@ export default function DesktopHero() {
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href="#kontakt"
-              className="group inline-flex items-center gap-2 rounded-full bg-clay px-8 py-4 text-[1.05rem] font-medium text-card shadow-[0_14px_30px_-12px_rgba(192,121,79,0.8)] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:bg-clay-deep hover:shadow-[0_20px_40px_-14px_rgba(168,98,56,0.9)]"
+              className="group inline-flex items-center gap-2 rounded-full bg-clay-deep px-8 py-4 text-[1.05rem] font-medium text-card shadow-[0_14px_30px_-12px_rgba(192,121,79,0.8)] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_20px_40px_-14px_rgba(168,98,56,0.9)]"
             >
               Ozvěte se
               <svg
@@ -93,13 +95,7 @@ export default function DesktopHero() {
             </a>
           </div>
 
-          <p className="mt-9 inline-flex items-center gap-2 font-mono text-sm tracking-wide text-ink-soft">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="absolute inline-flex h-full w-full rounded-full bg-sage opacity-60 motion-safe:animate-ping" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-sage" />
-            </span>
-            Beru nové zakázky
-          </p>
+          {/* 'Beru nové zakázky' removed per request */}
         </div>
 
         {/* vznášející se mini dashboard */}

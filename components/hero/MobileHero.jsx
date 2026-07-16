@@ -41,8 +41,7 @@ export default function MobileHero() {
                   strokeLinecap="round"
                   vectorEffect="non-scaling-stroke"
                   pathLength="300"
-                  className="motion-safe:[stroke-dasharray:300] motion-safe:[animation:draw-underline_1.4s_var(--ease-out-soft)_0.3s_both]"
-                  style={{ "--dash": 300 }}
+                  className="motion-safe:[stroke-dasharray:300] motion-safe:[animation:draw-underline_0.9s_var(--ease-out-soft)_0.15s_both]"
                 />
               </svg>
             </span>
@@ -60,7 +59,7 @@ export default function MobileHero() {
         <div className="mt-5 flex items-center gap-3">
           <a
             href="#kontakt"
-            className="group inline-flex items-center gap-2 rounded-full bg-clay px-6 py-3 font-medium text-card shadow-[0_12px_26px_-12px_rgba(192,121,79,0.85)] transition-all duration-200 ease-out active:translate-y-0.5"
+            className="group inline-flex items-center gap-2 rounded-full bg-clay-deep px-6 py-3 font-medium text-card shadow-[0_12px_26px_-12px_rgba(192,121,79,0.85)] transition-all duration-200 ease-out active:translate-y-0.5"
           >
             Ozvěte se
             <svg
@@ -88,13 +87,7 @@ export default function MobileHero() {
           </a>
         </div>
 
-        <p className="mt-4 inline-flex items-center gap-2 font-mono text-xs tracking-wide text-ink-soft">
-          <span className="relative flex h-2.5 w-2.5">
-            <span className="absolute inline-flex h-full w-full rounded-full bg-sage opacity-60 motion-safe:animate-ping" />
-            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-sage" />
-          </span>
-          Beru nové zakázky
-        </p>
+        {/* 'Beru nové zakázky' removed per request */}
 
         {/* ---------------- Dashboard kartička (dole, celá vidět) ---------- */}
         <div className="mt-auto flex justify-center pt-6">
