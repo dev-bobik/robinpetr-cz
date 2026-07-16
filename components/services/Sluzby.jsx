@@ -9,6 +9,7 @@ const SERVICES = [
   {
     name: "Recenze tag",
     flag: "levný začátek",
+    img: "/ilustrace/recenze-tag.png",
     what: "Kartička na stůl nebo pult, přes kterou zákazník napíše Google recenzi na jedno přiložení telefonu.",
     benefit:
       "Recenze rozhodují o tom, koho Google ukáže první. Čím víc jich máte, tím víc lidí vás najde.",
@@ -28,6 +29,7 @@ const SERVICES = [
   },
   {
     name: "Web podniku",
+    img: "/ilustrace/web-podniku.png",
     what: "Web, který lidi najdou na Googlu: menu, otevírací doba, fotky a kontakt.",
     benefit:
       "Vypadáte důvěryhodně a změnu menu nebo cen za vás udělám já. Žádné přepisování PDF a shánění webaře.",
