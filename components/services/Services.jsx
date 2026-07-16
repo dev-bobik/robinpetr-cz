@@ -1,30 +1,44 @@
 import Link from "next/link";
 import BenefitCard from "./BenefitCard";
-// motif illustrations removed to keep cards clean
 
 /* "Co pro váš podnik udělám" — přínosy, ne seznam produktů.
    Karty jsou znovupoužitelné (BenefitCard) i pro budoucí /sluzby. */
 
+/* Ručně kreslené ilustrace v paletě webu (public/ilustrace).
+   Dekorativní — prázdný alt. Zdrojová PNG jsou malá, proto pevná menší výška.
+   Pozadí dlaždice = barva vypálená v PNG, aby obrázek splynul beze švů. */
+function CardIllustration({ src }) {
+  return (
+    <div className="flex h-28 items-center justify-center overflow-hidden rounded-xl border border-brown/10 bg-[#f9f5ec]">
+      <img src={src} alt="" className="h-full w-auto object-contain" />
+    </div>
+  );
+}
+
 const BENEFITS = [
   {
+    visual: <CardIllustration src="/ilustrace/vernost.png" />,
     title: "Věrnostní systém bez stahování aplikací",
     description:
       "Zákazník jen přiloží telefon k dřevěnému stojánku na stole, okamžitě sbírá body a vidí své odměny. Žádné papírové kartičky a žádné otravné aplikace, které si nikdo nechce instalovat.",
     tags: ["Věrnostní systém", "NFC stojánek"],
   },
   {
+    visual: <CardIllustration src="/ilustrace/teploty.png" />,
     title: "Už žádné vyhozené suroviny kvůli vypadlému mrazáku",
     description:
       "Chytrá čidla nonstop hlídají teploty v lednicích a skladech. Jakmile teplota stoupne, okamžitě vám pípne varování na mobilu. Zachráníte zboží včas, ne až ráno, když už je pozdě.",
     tags: ["Hlídání teplot", "HACCP", "Alarm"],
   },
   {
+    visual: <CardIllustration src="/ilustrace/provoz.png" />,
     title: "Celý provoz pod palcem přímo z mobilu",
     description:
       "Aktualizace menu na webu, změna cenovek na baru nebo správa online objednávek. Všechno upravíte na pár kliknutí z telefonu. Konec ručního přepisování tabulí a chaosu v papírech.",
     tags: ["Web", "Objednávky", "E-shop", "Cenovky"],
   },
   {
+    visual: <CardIllustration src="/ilustrace/na-miru.png" />,
     title: "Máte specifický problém? Vyřeším ho.",
     description:
       "Děláte v podniku nějakou rutinu pořád dokola ručně? Řekněte mi to. Navrhnu a vyrobím hardware nebo naprogramuju software přesně pro tento jeden účel. Na klíč a bez starostí.",
