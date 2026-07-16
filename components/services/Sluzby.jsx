@@ -5,12 +5,38 @@ import Link from "next/link";
 
 const SERVICES = [
   {
+    name: "Recenze tag",
+    flag: "levný začátek",
+    what: "Kartička na stůl nebo pult, přes kterou zákazník napíše Google recenzi na jedno přiložení telefonu.",
+    benefit:
+      "Recenze rozhodují o tom, koho Google ukáže první. Čím víc jich máte, tím víc lidí vás najde.",
+    how: "V kartičce je NFC čip a QR kód. Telefon ji přečte a rovnou otevře okno pro recenzi, zákazník nic nehledá.",
+    price: "690 Kč včetně nastavení a instalace",
+  },
+  {
     name: "Věrnostní systém",
     flag: "vlajková loď",
     what: "Věrnostní program, na který zákazníkům stačí telefon v kapse.",
     benefit:
       "Stálý zákazník utratí víc a nestojí vás reklamu. A konečně uvidíte, kdo k vám chodí a jak často.",
     how: "U pokladny přiloží telefon ke stojánku, přičte se mu bod a vidí, kolik chybí do odměny. Podruhé už ho systém pozná sám.",
+    price: "2 990 Kč výroba a instalace stojánku na míru + 490 Kč měsíčně za provoz",
+  },
+  {
+    name: "Web podniku",
+    what: "Web, který lidi najdou na Googlu: menu, otevírací doba, fotky a kontakt.",
+    benefit:
+      "Vypadáte důvěryhodně a změnu menu nebo cen za vás udělám já. Žádné přepisování PDF a shánění webaře.",
+    how: "Postavím ho na rychlé šabloně a upravím vašemu podniku. Změny menu, cen a otevíračky jsou v měsíční správě.",
+    price: "9 900 Kč + 390 Kč měsíčně za správu",
+  },
+  {
+    name: "Online objednávky",
+    what: "Objednávání a placení přímo na vašem webu. Bez rozvozových aplikací a jejich provizí.",
+    benefit:
+      "Rozvozové aplikace si berou 25–30 % z každé objednávky. Vlastní objednávky vám ty peníze nechají a zaplatí se za pár týdnů.",
+    how: "Zákazník objedná z mobilu a vám se objednávka objeví v přehledu. Vy ji jen odbavíte.",
+    price: "od 19 900 Kč + 790 Kč měsíčně, z objednávek neplatíte žádné provize",
   },
   {
     name: "Hlídání podniku (HACCP)",
@@ -18,32 +44,44 @@ const SERVICES = [
     benefit:
       "Papíry k HACCP se vyplňují samy. O vypadlém mrazáku víte za pár minut, ne ráno nad zkaženým zbožím.",
     how: "Čidlo měří nonstop a posílá data do přehledu. Když teplota vyletí, přijde vám zpráva na telefon.",
-  },
-  {
-    name: "Web a online objednávky",
-    what: "Web, kde si zákazník objedná a zaplatí. Objednávky vám padají na jedno místo.",
-    benefit:
-      "Ve špičce vám míň zvoní telefon a objednávky chodí i po zavíračce.",
-    how: "Zákazník objedná z mobilu a vám se objednávka objeví v přehledu. Vy ji jen odbavíte.",
-  },
-  {
-    name: "Recenze tag",
-    flag: "levný začátek",
-    what: "Kartička na stůl nebo pult, přes kterou zákazník napíše Google recenzi na jedno přiložení telefonu.",
-    benefit:
-      "Recenze rozhodují o tom, koho Google ukáže první. Čím víc jich máte, tím víc lidí vás najde.",
-    how: "V kartičce je NFC čip a QR kód. Telefon ji přečte a rovnou otevře okno pro recenzi, zákazník nic nehledá.",
+    price: "990 Kč instalace + 149 Kč měsíčně za čidlo, pronájem čidel v ceně",
   },
   {
     name: "Něco na míru",
     what: "Věc, kterou v podniku děláte pořád dokola ručně, se většinou dá zautomatizovat. Postavím vám na ni nástroj.",
     benefit:
       "Naprogramuju software, navrhnu a zapojím hardware. Dostanete řešení té jedné vaší situace a člověka, který za něj ručí.",
+    price: "cena po schůzce, podle rozsahu",
     cta: { label: "Napište mi, co potřebujete", href: "/kontakt" },
   },
 ];
 
-function ServiceDetail({ name, flag, what, benefit, how, cta }) {
+/* Nejčastější obavy majitelů — odpovědi rovnou na stránce,
+   aby nebrzdily rozhodnutí. */
+const FAQ = [
+  {
+    q: "Musím něco umět nebo instalovat?",
+    a: "Ne. Přijedu, všechno nainstaluju a ukážu vám i personálu, jak se to používá. Vaši zákazníci si nic nestahují, stačí jim telefon.",
+  },
+  {
+    q: "Co se stane s daty mých zákazníků?",
+    a: "Data zůstávají v EU a podepíšeme zpracovatelskou smlouvu podle GDPR. Data patří vašemu podniku, nikomu je neprodávám ani nepředávám.",
+  },
+  {
+    q: "Co když se něco rozbije?",
+    a: "Servis je v měsíční ceně. Voláte nebo píšete přímo mně, ne call centru. Systém stavím a spravuju sám, takže vím, kde hledat.",
+  },
+  {
+    q: "Jak dlouho trvá, než to běží?",
+    a: "Recenze tag nainstaluju na místě za pár minut. Věrnostní stojánek vyrábím na míru, obvykle do dvou týdnů od schůzky. Web podle rozsahu, obvykle do dvou týdnů.",
+  },
+  {
+    q: "Kolik to stojí doopravdy?",
+    a: "Ceny výš jsou konečné, nejsem plátce DPH. Kde je uvedeno „od“, řeknu přesné číslo po schůzce, ne až po zahájení práce.",
+  },
+];
+
+function ServiceDetail({ name, flag, what, benefit, how, price, cta }) {
   return (
     <article className="rounded-2xl border border-brown/15 bg-card p-6 sm:p-8">
       <div className="flex flex-wrap items-center gap-3">
@@ -79,6 +117,15 @@ function ServiceDetail({ name, flag, what, benefit, how, cta }) {
           </div>
         ) : null}
       </div>
+
+      {price ? (
+        <p className="mt-5 border-t border-brown/10 pt-4 font-mono text-[0.85rem] text-ink">
+          <span className="mr-2 text-[0.64rem] uppercase tracking-[0.16em] text-brown">
+            Cena
+          </span>
+          {price}
+        </p>
+      ) : null}
 
       {cta ? (
         <Link
@@ -130,36 +177,65 @@ export default function Sluzby() {
           ))}
         </div>
 
-        {/* cena (obecně) */}
+        {/* jak platíte */}
         <div className="mt-14">
           <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-brown">
             // Cena
           </p>
           <h2 className="mt-3 font-display text-[clamp(1.6rem,1.2rem+1.6vw,2.2rem)] font-semibold leading-tight text-ink">
-            Na míru a férově
+            Žádná překvapení
           </h2>
           <p className="mt-3 text-[1.02rem] leading-relaxed text-ink-soft">
-            Cena se odvíjí od velikosti podniku a od toho, co potřebujete.
-            Konkrétní číslo vám řeknu po první schůzce, až si projdeme váš
-            provoz.{" "}
+            Jednorázová částka pokrývá výrobu a zavedení, měsíční částka provoz
+            a servis.{" "}
             <span className="font-medium text-ink">
-              Počítám to tak, aby se vám investice vrátila
+              Nejsem plátce DPH, ceny jsou konečné.
             </span>{" "}
-            na ušetřeném čase.
+            U větších projektů řeknu přesné číslo po schůzce, dřív než začnu
+            pracovat.
           </p>
+        </div>
+
+        {/* FAQ */}
+        <div className="mt-14">
+          <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-brown">
+            // Časté otázky
+          </p>
+          <h2 className="mt-3 font-display text-[clamp(1.6rem,1.2rem+1.6vw,2.2rem)] font-semibold leading-tight text-ink">
+            Na co se majitelé ptají
+          </h2>
+          <div className="mt-6 space-y-4">
+            {FAQ.map((item) => (
+              <div
+                key={item.q}
+                className="rounded-2xl border border-brown/15 bg-card p-5 sm:p-6"
+              >
+                <h3 className="font-display text-lg font-semibold text-ink">
+                  {item.q}
+                </h3>
+                <p className="mt-2 text-[0.98rem] leading-relaxed text-ink-soft">
+                  {item.a}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* CTA */}
         <div className="mt-14 rounded-2xl border border-clay/30 bg-clay/[0.05] p-8 text-center">
           <h2 className="font-display text-[clamp(1.6rem,1.2rem+1.6vw,2.2rem)] font-semibold leading-tight text-ink">
-            Nevíte, co by vám sedlo? Probereme to.
+            Chcete to vidět naživo?
           </h2>
+          <p className="mx-auto mt-3 max-w-md text-[1.02rem] leading-relaxed text-ink-soft">
+            Přijedu, položím stojánek na pult a vyzkoušíte si ho vlastním
+            telefonem. Ukázka vás nic nestojí.
+          </p>
           <div className="mt-6 flex justify-center">
             <Link
               href="/kontakt"
               className="group inline-flex items-center gap-2 rounded-full bg-clay px-8 py-4 font-medium text-card shadow-[0_14px_30px_-12px_rgba(192,121,79,0.8)] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:bg-clay-deep"
             >
-              Napsat mi
+              Domluvit ukázku
               <svg
                 width="18"
                 height="18"
