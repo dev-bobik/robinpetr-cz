@@ -93,7 +93,7 @@
   }
 }
 
-/* nájezd produktu při scrollu — zdola (mobil) a ze stran (desktop) */
+/* nájezd produktu zdola (mobil / svislý stack) */
 @keyframes reveal-up {
   from {
     opacity: 0;
@@ -105,25 +105,10 @@
   }
 }
 
-@keyframes reveal-from-left {
-  from {
-    opacity: 0;
-    transform: translateX(-64px);
-  }
+/* vodorovný posun produktové stopy řízený scrollem (desktop) */
+@keyframes services-x {
   to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes reveal-from-right {
-  from {
-    opacity: 0;
-    transform: translateX(64px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
+    transform: translateX(calc(-100% + 100vw));
   }
 }
 
@@ -237,32 +222,53 @@
     top: 1rem;
   }
 
-  /* Nájezd řízený scrollem (bez JS, běží mimo hlavní vlákno).
-     Prohlížeč bez podpory scroll-driven animací prvek prostě ukáže —
-     proto je výchozí stav viditelný a animace se přidává až uvnitř @supports. */
-  .reveal {
-    /* aby nájezd ze strany nedělal vodorovný posuvník */
-    overflow-x: clip;
+  /* Nabídka produktů.
+     Výchozí (mobil i prohlížeče bez scroll-driven animací): svislý stack —
+     funguje všude. Vodorovný scroll je progresivní vylepšení níž v @supports. */
+  .services__track {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+    max-width: 48rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
   }
 }
 
-@supports (animation-timeline: view()) {
-  @media (prefers-reduced-motion: no-preference) {
-    .reveal > * {
-      animation: reveal-up 0.9s var(--ease-out-soft) both;
-      animation-timeline: view();
-      /* doanimováno dřív, než je prvek uprostřed — jinak to působí líně */
-      animation-range: entry 5% cover 30%;
+/* Desktop: sekce se přilepí a scroll dolů posouvá produkty do strany.
+   Jen tam, kde to prohlížeč umí a uživatel nemá vypnutý pohyb. */
+@supports (animation-timeline: scroll()) {
+  @media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+    .services {
+      /* délka „přilepení" = kolik scrollu zabere projít všemi produkty */
+      height: calc(100vh + var(--n, 6) * 58vh);
+      view-timeline-name: --svc;
     }
 
-    /* ze stran až od tabletu — na úzkém displeji je to kostrbaté */
-    @media (min-width: 640px) {
-      .reveal > .reveal-left {
-        animation-name: reveal-from-left;
-      }
-      .reveal > .reveal-right {
-        animation-name: reveal-from-right;
-      }
+    .services__viewport {
+      position: sticky;
+      top: 0;
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .services__track {
+      flex-direction: row;
+      align-items: center;
+      gap: 2.5rem;
+      width: max-content;
+      max-width: none;
+      padding-inline: clamp(1.5rem, 8vw, 11rem);
+      animation: services-x linear both;
+      animation-timeline: --svc;
+      animation-range: contain;
+    }
+
+    .services__track > article {
+      width: min(76vw, 620px);
+      flex: 0 0 auto;
     }
   }
 }

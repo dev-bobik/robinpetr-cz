@@ -120,11 +120,9 @@ function PriceTag({ children, accent }) {
 }
 
 function ServiceDetail({ index, name, flag, accent, img, what, benefit, how, price, cta }) {
-  /* střídavý nájezd — lichý produkt zprava, sudý zleva (viz .reveal v globals.css) */
-  const side = index % 2 ? "reveal-right" : "reveal-left";
   return (
     <article
-      className={`group relative rounded-2xl border p-6 pb-8 shadow-[0_10px_30px_-18px_rgba(46,42,34,0.4)] transition duration-300 ease-out hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-8 sm:pb-9 ${side} ${
+      className={`group relative rounded-2xl border p-6 pb-8 shadow-[0_10px_30px_-18px_rgba(46,42,34,0.4)] transition duration-300 ease-out hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-8 sm:pb-9 ${
         accent ? "border-clay/40 bg-clay/[0.05]" : "border-brown/15 bg-card"
       }`}
     >
@@ -243,15 +241,22 @@ export default function Sluzby() {
           <span className="font-medium text-ink">udělám to na míru</span>.
           Všechno dodává jeden člověk a všechno je propojené do jednoho celku.
         </p>
+      </div>
 
-        {/* produkty — mezera navíc kvůli cenovkám přes spodní hranu.
-            -mx-4/px-4 dává stínům prostor, který by jim ořez nájezdu ubral. */}
-        <div className="reveal -mx-4 mt-12 space-y-9 px-4">
-          {SERVICES.map((s, i) => (
-            <ServiceDetail key={s.name} index={i} {...s} />
-          ))}
+      {/* produkty — na desktopu vodorovný scroll (sekce se přilepí a produkty
+          jedou do strany), na mobilu klasicky pod sebou. Plná šířka kvůli
+          vodorovnému posunu. Řízení je čisté CSS, viz .services* v globals.css. */}
+      <div className="services mt-12" style={{ "--n": SERVICES.length }}>
+        <div className="services__viewport">
+          <div className="services__track">
+            {SERVICES.map((s, i) => (
+              <ServiceDetail key={s.name} index={i} {...s} />
+            ))}
+          </div>
         </div>
+      </div>
 
+      <div className="mx-auto max-w-3xl px-6">
         {/* jak platíte */}
         <div className="mt-14">
           <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-brown">
