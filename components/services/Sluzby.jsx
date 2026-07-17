@@ -46,6 +46,15 @@ const SERVICES = [
     price: "od 19 900 Kč + 790 Kč/měs, bez provizí",
   },
   {
+    name: "E-shop na míru",
+    img: "/ilustrace/foto-objednavky.jpg",
+    what: "Vlastní e-shop, kde zákazník zaplatí kartou a zboží mu přijde domů. Produkty, košík, platby, doprava i admin, ve kterém si to spravujete sami.",
+    benefit:
+      "Prodáváte i mimo otevírací dobu a mimo své město. Bez provizí tržišť a bez měsíčních poplatků za pronajatou platformu.",
+    how: "Napojím platby kartou i převodem a dopravu (PPL, Zásilkovna). Objednávky, sklad a faktury máte v jednom přehledu.",
+    price: "od 45 000 Kč + 1 500 Kč/měs správa",
+  },
+  {
     name: "Hlídání podniku (HACCP)",
     img: "/ilustrace/foto-haccp.jpg",
     what: "Bezdrátová čidla, která za vás měří teploty v lednicích a mrazácích.",
@@ -111,9 +120,11 @@ function PriceTag({ children, accent }) {
 }
 
 function ServiceDetail({ index, name, flag, accent, img, what, benefit, how, price, cta }) {
+  /* střídavý nájezd — lichý produkt zprava, sudý zleva (viz .reveal v globals.css) */
+  const side = index % 2 ? "reveal-right" : "reveal-left";
   return (
     <article
-      className={`group relative rounded-2xl border p-6 pb-8 shadow-[0_10px_30px_-18px_rgba(46,42,34,0.4)] transition duration-300 ease-out hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-8 sm:pb-9 ${
+      className={`group relative rounded-2xl border p-6 pb-8 shadow-[0_10px_30px_-18px_rgba(46,42,34,0.4)] transition duration-300 ease-out hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-8 sm:pb-9 ${side} ${
         accent ? "border-clay/40 bg-clay/[0.05]" : "border-brown/15 bg-card"
       }`}
     >
@@ -233,8 +244,9 @@ export default function Sluzby() {
           Všechno dodává jeden člověk a všechno je propojené do jednoho celku.
         </p>
 
-        {/* produkty — mezera navíc kvůli cenovkám přes spodní hranu */}
-        <div className="mt-12 space-y-9">
+        {/* produkty — mezera navíc kvůli cenovkám přes spodní hranu.
+            -mx-4/px-4 dává stínům prostor, který by jim ořez nájezdu ubral. */}
+        <div className="reveal -mx-4 mt-12 space-y-9 px-4">
           {SERVICES.map((s, i) => (
             <ServiceDetail key={s.name} index={i} {...s} />
           ))}

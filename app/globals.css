@@ -93,6 +93,40 @@
   }
 }
 
+/* nájezd produktu při scrollu — zdola (mobil) a ze stran (desktop) */
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes reveal-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-64px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes reveal-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(64px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* jemné sešroubování (motiv na míru) */
 @keyframes screw-turn {
   0%,
@@ -201,6 +235,35 @@
 
   .skip-link:focus {
     top: 1rem;
+  }
+
+  /* Nájezd řízený scrollem (bez JS, běží mimo hlavní vlákno).
+     Prohlížeč bez podpory scroll-driven animací prvek prostě ukáže —
+     proto je výchozí stav viditelný a animace se přidává až uvnitř @supports. */
+  .reveal {
+    /* aby nájezd ze strany nedělal vodorovný posuvník */
+    overflow-x: clip;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal > * {
+      animation: reveal-up 0.9s var(--ease-out-soft) both;
+      animation-timeline: view();
+      /* doanimováno dřív, než je prvek uprostřed — jinak to působí líně */
+      animation-range: entry 5% cover 30%;
+    }
+
+    /* ze stran až od tabletu — na úzkém displeji je to kostrbaté */
+    @media (min-width: 640px) {
+      .reveal > .reveal-left {
+        animation-name: reveal-from-left;
+      }
+      .reveal > .reveal-right {
+        animation-name: reveal-from-right;
+      }
+    }
   }
 }
 
