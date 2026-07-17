@@ -57,12 +57,20 @@ export default function Footer() {
           <p className="font-mono text-[0.7rem] text-ink-soft/70">
             © {year} Robin Petr
           </p>
-          <Link
-            href="/ochrana-osobnich-udaju"
-            className="font-mono text-[0.7rem] text-ink-soft/70 underline decoration-brown/20 underline-offset-4 transition-colors hover:text-clay-deep"
-          >
-            Zásady zpracování osobních údajů
-          </Link>
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
+            <Link
+              href="/obchodni-podminky"
+              className="font-mono text-[0.7rem] text-ink-soft/70 underline decoration-brown/20 underline-offset-4 transition-colors hover:text-clay-deep"
+            >
+              Obchodní podmínky
+            </Link>
+            <Link
+              href="/ochrana-osobnich-udaju"
+              className="font-mono text-[0.7rem] text-ink-soft/70 underline decoration-brown/20 underline-offset-4 transition-colors hover:text-clay-deep"
+            >
+              Zásady zpracování osobních údajů
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

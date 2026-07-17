@@ -255,7 +255,14 @@ export default function Sluzby() {
               Nejsem plátce DPH, ceny jsou konečné.
             </span>{" "}
             U větších projektů řeknu přesné číslo po schůzce, dřív než začnu
-            pracovat. Smlouva vzniká až vzájemným potvrzením objednávky.
+            pracovat. Smlouva vzniká až vzájemným potvrzením objednávky — víc v{" "}
+            <Link
+              href="/obchodni-podminky"
+              className="text-clay-deep underline decoration-brown/30 underline-offset-4 hover:text-clay"
+            >
+              obchodních podmínkách
+            </Link>
+            .
           </p>
         </div>
 
