@@ -9,6 +9,7 @@ const SERVICES = [
   {
     name: "Recenze tag",
     flag: "levný začátek",
+    img: "/ilustrace/foto-tag.jpg",
     what: "Kartička na stůl nebo pult, přes kterou zákazník napíše Google recenzi na jedno přiložení telefonu.",
     benefit:
       "Recenze rozhodují o tom, koho Google ukáže první. Čím víc jich máte, tím víc lidí vás najde.",
@@ -19,7 +20,7 @@ const SERVICES = [
     name: "Věrnostní systém",
     flag: "vlajková loď",
     accent: true,
-    img: "/ilustrace/vernost.png",
+    img: "/ilustrace/foto-vernost.jpg",
     what: "Věrnostní program, na který zákazníkům stačí telefon v kapse.",
     benefit:
       "Stálý zákazník utratí víc a nestojí vás reklamu. A konečně uvidíte, kdo k vám chodí a jak často.",
@@ -28,6 +29,7 @@ const SERVICES = [
   },
   {
     name: "Web podniku",
+    img: "/ilustrace/foto-web.jpg",
     what: "Web, který lidi najdou na Googlu: menu, otevírací doba, fotky a kontakt.",
     benefit:
       "Vypadáte důvěryhodně a změnu menu nebo cen za vás udělám já. Žádné přepisování PDF a shánění webaře.",
@@ -36,7 +38,7 @@ const SERVICES = [
   },
   {
     name: "Online objednávky",
-    img: "/ilustrace/provoz.png",
+    img: "/ilustrace/foto-objednavky.jpg",
     what: "Objednávání a placení přímo na vašem webu. Bez rozvozových aplikací a jejich provizí.",
     benefit:
       "Rozvozové aplikace si berou 25–30 % z každé objednávky. Vlastní objednávky vám ty peníze nechají a zaplatí se za pár týdnů.",
@@ -45,7 +47,7 @@ const SERVICES = [
   },
   {
     name: "Hlídání podniku (HACCP)",
-    img: "/ilustrace/teploty.png",
+    img: "/ilustrace/foto-haccp.jpg",
     what: "Bezdrátová čidla, která za vás měří teploty v lednicích a mrazácích.",
     benefit:
       "Papíry k HACCP se vyplňují samy. O vypadlém mrazáku víte za pár minut, ne ráno nad zkaženým zbožím.",
@@ -54,7 +56,7 @@ const SERVICES = [
   },
   {
     name: "Něco na míru",
-    img: "/ilustrace/na-miru.png",
+    img: "/ilustrace/foto-namiru.jpg",
     what: "Věc, kterou v podniku děláte pořád dokola ručně, se většinou dá zautomatizovat. Postavím vám na ni nástroj.",
     benefit:
       "Naprogramuju software, navrhnu a zapojím hardware. Dostanete řešení té jedné vaší situace a člověka, který za něj ručí.",
@@ -132,11 +134,14 @@ function ServiceDetail({ index, name, flag, accent, img, what, benefit, how, pri
             {what}
           </p>
         </div>
+        {/* fotka jako polaroid připnutý do zápisníku — střídavý náklon */}
         {img ? (
           <img
             src={img}
             alt=""
-            className="-mr-2 -mt-2 hidden h-24 w-auto shrink-0 mix-blend-multiply min-[420px]:block sm:h-28"
+            className={`-mr-1 -mt-1 hidden h-28 w-40 shrink-0 rounded-lg border-4 border-white object-cover shadow-[0_14px_28px_-14px_rgba(46,42,34,0.55)] min-[420px]:block sm:h-32 sm:w-44 ${
+              index % 2 ? "-rotate-2" : "rotate-2"
+            }`}
           />
         ) : null}
       </div>
@@ -300,9 +305,9 @@ export default function Sluzby() {
         {/* CTA — ilustrace stojánku podpírá text „položím stojánek na pult" */}
         <div className="mt-14 flex flex-col items-center gap-6 rounded-2xl border border-clay/30 bg-clay/[0.05] p-8 text-center sm:flex-row sm:text-left">
           <img
-            src="/ilustrace/vernost.png"
+            src="/ilustrace/foto-vernost.jpg"
             alt=""
-            className="h-28 w-auto shrink-0 rotate-[-3deg] mix-blend-multiply sm:h-32"
+            className="h-32 w-44 shrink-0 rotate-[-3deg] rounded-lg border-4 border-white object-cover shadow-[0_16px_32px_-14px_rgba(46,42,34,0.55)] sm:h-36 sm:w-52"
           />
           <div className="flex-1">
             <h2 className="font-display text-[clamp(1.6rem,1.2rem+1.6vw,2.2rem)] font-semibold leading-tight text-ink">
