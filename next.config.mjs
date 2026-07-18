@@ -2,9 +2,15 @@ import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
 
 // Content-Security-Policy — povoluje self, inline (Next hydratace + inline styly),
 // self-hosted fonty a Cloudflare Web Analytics beacon. object/frame zakázáno.
+// V dev navíc 'unsafe-eval' — Next.js hot-reload ho vyžaduje; v produkci NE.
+const isDev = process.env.NODE_ENV !== "production";
+const scriptSrc = isDev
+  ? "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://static.cloudflareinsights.com"
+  : "script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com";
+
 const csp = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com",
+  scriptSrc,
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data:",
   "font-src 'self'",

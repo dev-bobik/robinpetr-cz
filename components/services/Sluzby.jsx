@@ -1,4 +1,5 @@
 import Link from "next/link";
+import NabidkaFocus from "./NabidkaFocus";
 
 /* Stránka /sluzby — nabídka produktů do detailu (konkrétní + obecné „na míru").
    Přehled zůstává na home; tady je každý produkt rozepsaný. Bez konkrétních cen. */
@@ -250,10 +251,13 @@ export default function Sluzby() {
         <div className="services__viewport">
           <div className="services__track">
             {SERVICES.map((s, i) => (
-              <ServiceDetail key={s.name} index={i} {...s} />
+              <div key={s.name} className="services__cell">
+                <ServiceDetail index={i} {...s} />
+              </div>
             ))}
           </div>
         </div>
+        <NabidkaFocus />
       </div>
 
       <div className="mx-auto max-w-3xl px-6">
