@@ -8,9 +8,9 @@ import { useEffect } from "react";
    karty zůstávají v plné velikosti (--fs/--fo mají v CSS default 1).
    Nastavuje jen CSS proměnné, samotný pohyb zůstává čisté CSS. */
 
-const CENTER = 1.14; // zvětšení produktu přesně ve středu
-const EDGE = 0.8; // zmenšení nejvzdálenějšího produktu
-const DIM = 0.5; // o kolik zprůhlední nejvzdálenější
+const CENTER = 1.34; // zvětšení produktu přesně ve středu
+const EDGE = 0.74; // zmenšení nejvzdálenějšího produktu
+const DIM = 0.55; // o kolik zprůhlední nejvzdálenější
 
 export default function NabidkaFocus() {
   useEffect(() => {
@@ -29,6 +29,7 @@ export default function NabidkaFocus() {
       for (const cell of cells) {
         cell.style.removeProperty("--fs");
         cell.style.removeProperty("--fo");
+        cell.style.removeProperty("z-index");
       }
     };
 
@@ -39,8 +40,11 @@ export default function NabidkaFocus() {
         const rect = cell.getBoundingClientRect();
         const cardCenter = rect.left + rect.width / 2;
         const norm = Math.min(Math.abs(cardCenter - centerX) / centerX, 1);
-        cell.style.setProperty("--fs", (CENTER - norm * (CENTER - EDGE)).toFixed(3));
+        const fs = CENTER - norm * (CENTER - EDGE);
+        cell.style.setProperty("--fs", fs.toFixed(3));
         cell.style.setProperty("--fo", (1 - norm * DIM).toFixed(3));
+        // bližší ke středu = vepředu, aby zvětšený produkt hezky překryl sousedy
+        cell.style.zIndex = String(Math.round(fs * 100));
       }
     };
 
