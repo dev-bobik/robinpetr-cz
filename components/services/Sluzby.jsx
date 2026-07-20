@@ -140,21 +140,37 @@ function ServiceDetail({ index, name, flag, accent, img, what, benefit, how, pri
           <h2 className="mt-2 font-display text-xl font-semibold text-ink sm:text-2xl">
             {name}
           </h2>
-          <p className="mt-3 text-[1.02rem] leading-relaxed text-ink-soft">
+          {/* „what" vedle fotky až od tabletu; na mobilu je pod fotkou (níž) */}
+          <p className="mt-3 hidden text-[1.02rem] leading-relaxed text-ink-soft sm:block">
             {what}
           </p>
         </div>
-        {/* fotka jako polaroid připnutý do zápisníku — střídavý náklon */}
+        {/* fotka jako polaroid — na tabletu/desktopu malá vpravo u nadpisu */}
         {img ? (
           <img
             src={img}
             alt=""
-            className={`-mr-1 -mt-1 hidden h-28 w-40 shrink-0 rounded-lg border-4 border-white object-cover shadow-[0_14px_28px_-14px_rgba(46,42,34,0.55)] min-[420px]:block sm:h-32 sm:w-44 ${
+            className={`-mr-1 -mt-1 hidden h-28 w-40 shrink-0 rounded-lg border-4 border-white object-cover shadow-[0_14px_28px_-14px_rgba(46,42,34,0.55)] sm:block sm:h-32 sm:w-44 ${
               index % 2 ? "-rotate-2" : "rotate-2"
             }`}
           />
         ) : null}
       </div>
+
+      {/* mobil: velká fotka přes celou šířku + „what" pod ní, ať karta není
+          jen hutný text (na tabletu/desktopu je fotka i text výš, viz nahoře) */}
+      {img ? (
+        <img
+          src={img}
+          alt=""
+          className={`mt-4 aspect-[16/10] w-full rounded-lg border-4 border-white object-cover shadow-[0_14px_28px_-14px_rgba(46,42,34,0.55)] sm:hidden ${
+            index % 2 ? "-rotate-1" : "rotate-1"
+          }`}
+        />
+      ) : null}
+      <p className="mt-4 text-[1.02rem] leading-relaxed text-ink-soft sm:hidden">
+        {what}
+      </p>
 
       <div className="mt-5 grid gap-4 sm:grid-cols-2">
         <div className="rounded-xl bg-beige/60 p-4">

@@ -44,7 +44,9 @@ export default function Portfolio() {
           systémy.
         </p>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {/* 3 položky: 1 pod sebou (mobil/tablet) nebo 3 v řadě (desktop),
+            nikdy ošklivé 2+1 z dvousloupcového rozložení. */}
+        <div className="mt-10 grid gap-6 lg:grid-cols-3">
           {PROJECTS.map((p) => (
             <ProjectCard key={p.title} {...p} />
           ))}

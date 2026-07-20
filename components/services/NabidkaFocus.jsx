@@ -8,7 +8,7 @@ import { useEffect } from "react";
    karty zůstávají v plné velikosti (--fs/--fo mají v CSS default 1).
    Nastavuje jen CSS proměnné, samotný pohyb zůstává čisté CSS. */
 
-const CENTER = 1.34; // zvětšení produktu přesně ve středu
+const CENTER = 1.24; // zvětšení produktu přesně ve středu
 const EDGE = 0.74; // zmenšení nejvzdálenějšího produktu
 const DIM = 0.55; // o kolik zprůhlední nejvzdálenější
 
