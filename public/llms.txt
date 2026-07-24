@@ -1,0 +1,27 @@
+# Robin Petr — digitalizace podniků
+
+> Robin Petr staví weby, e-shopy, objednávkové systémy a chytrý hardware (věrnostní systémy, recenzní NFC tagy, HACCP čidla na hlídání teplot) pro malé podniky v Hradci Králové, Pardubicích a okolí. Software i hardware dodává a propojí jeden člověk — pevná cena předem, bez agenturních cen a bez provizí rozvozovým aplikacím.
+
+## Stránky
+- [Úvod](https://robinpetr.cz): kdo je Robin Petr a přehled služeb
+- [Nabídka](https://robinpetr.cz/sluzby): detaily produktů a orientační ceny
+- [Jak to funguje](https://robinpetr.cz/jak-to-funguje): jak probíhá spolupráce
+- [O mně](https://robinpetr.cz/o-mne): kdo za tím stojí
+- [Kontakt](https://robinpetr.cz/kontakt): nezávazná poptávka
+- [Obchodní podmínky](https://robinpetr.cz/obchodni-podminky)
+- [Zásady zpracování osobních údajů](https://robinpetr.cz/ochrana-osobnich-udaju)
+
+## Služby
+- Tvorba webů pro podniky (menu, otevírací doba, SEO, rychlost)
+- E-shop na míru (platby kartou, doprava PPL/Zásilkovna, admin)
+- Online objednávky přímo na webu bez provizí rozvozovým aplikacím
+- Věrnostní systém, na který zákazníkovi stačí telefon
+- Recenzní NFC tag pro sběr Google recenzí na jedno přiložení telefonu
+- Hlídání teplot (HACCP): bezdrátová čidla do lednic a mrazáků s alarmem
+- Řešení na míru: automatizace opakované ruční práce v provozu
+
+## Kontakt
+- Web: https://robinpetr.cz
+- E-mail: info@robinpetr.cz
+- Telefon: +420 776 842 178
+- Působnost: Hradec Králové, Pardubice a okolí
