@@ -224,8 +224,25 @@ function ServiceDetail({ index, name, flag, accent, img, what, benefit, how, pri
 }
 
 export default function Sluzby() {
+  /* FAQ jako strukturovaná data — může Googlu vygenerovat rozbalovací
+     otázky přímo ve výsledcích a pomáhá AI pochopit odpovědi. Statická
+     data pod kontrolou, proto dangerouslySetInnerHTML (standard schema.org). */
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQ.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+
   return (
     <section className="relative py-[clamp(3.5rem,2.5rem+5vw,7rem)]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <div className="mx-auto max-w-3xl px-6">
         {/* úvod */}
         <p className="eyebrow">Nabídka</p>
