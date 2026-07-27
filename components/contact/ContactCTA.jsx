@@ -4,6 +4,40 @@ import { CONTACT } from "@/lib/contact";
 
 /* Krátká kontaktní výzva na home (dole). Plný formulář je na /kontakt. */
 
+function MailIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true" className="shrink-0 text-brown">
+      <rect x="2.5" y="4.5" width="15" height="11" rx="2" stroke="currentColor" strokeWidth="1.5" />
+      <path d="m3.5 6 6.5 4.5L16.5 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function PhoneIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true" className="shrink-0 text-brown">
+      <path
+        d="M6.5 3.5 4 4c-.7.2-1.1.9-1 1.6.4 2.6 1.6 5 3.4 6.9 1.9 1.8 4.3 3 6.9 3.4.7.1 1.4-.3 1.6-1l.5-2.5-3-1.2-1.4 1.4a10 10 0 0 1-3.7-3.7L8.7 6.5 6.5 3.5Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function CopyIcon() {
+  return (
+    <svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true" className="shrink-0 text-ink-soft transition-colors group-hover:text-clay-deep">
+      <rect x="7" y="7" width="9" height="9" rx="2" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M13 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+const CHIP =
+  "group inline-flex items-center gap-2.5 rounded-full border border-brown/20 bg-card px-5 py-2.5 text-[0.95rem] text-ink shadow-[0_10px_24px_-18px_rgba(46,42,34,0.55)] transition-all duration-200 hover:-translate-y-0.5 hover:border-clay hover:text-clay-deep";
+
 export default function ContactCTA() {
   return (
     <section
@@ -50,21 +84,20 @@ export default function ContactCTA() {
           </Link>
         </div>
 
-        <p className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 font-mono text-sm text-ink-soft">
-          <Copyable
-            value={CONTACT.email}
-            label="e-mail"
-            className="underline decoration-brown/30 underline-offset-4 transition-colors duration-200 hover:text-clay-deep"
-          >
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <Copyable value={CONTACT.email} label="e-mail" className={CHIP}>
+            <MailIcon />
             {CONTACT.email}
+            <CopyIcon />
           </Copyable>
-          <Copyable
-            value={CONTACT.phoneDisplay}
-            label="telefon"
-            className="underline decoration-brown/30 underline-offset-4 transition-colors duration-200 hover:text-clay-deep"
-          >
+          <Copyable value={CONTACT.phoneDisplay} label="telefon" className={`${CHIP} font-mono`}>
+            <PhoneIcon />
             {CONTACT.phoneDisplay}
+            <CopyIcon />
           </Copyable>
+        </div>
+        <p className="mt-3 font-mono text-[0.7rem] uppercase tracking-[0.16em] text-ink-soft">
+          Kliknutím zkopírujete
         </p>
       </div>
     </section>
