@@ -25,16 +25,6 @@ function PhoneIcon() {
   );
 }
 
-function InstagramIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" strokeWidth="1.7" />
-      <circle cx="12" cy="12" r="3.6" stroke="currentColor" strokeWidth="1.7" />
-      <circle cx="17" cy="7" r="1.1" fill="currentColor" />
-    </svg>
-  );
-}
-
 const directLinkClass =
   "group flex items-center gap-3 rounded-xl border border-brown/15 bg-card px-4 py-3 text-ink transition-all duration-200 hover:-translate-y-0.5 hover:border-clay/40 hover:shadow-[0_14px_28px_-18px_rgba(46,42,34,0.5)]";
 const directLabelClass =
@@ -109,20 +99,6 @@ export default function Contact() {
                   <span className="font-medium">{CONTACT.phoneDisplay}</span>
                 </span>
               </Copyable>
-
-              {/* Instagram — zatím neaktivní placeholder */}
-              <div
-                aria-disabled="true"
-                className="flex cursor-default items-center gap-3 rounded-xl border border-dashed border-brown/20 bg-card/60 px-4 py-3 text-ink opacity-60"
-              >
-                <span className="text-brown">
-                  <InstagramIcon />
-                </span>
-                <span>
-                  <span className={directLabelClass}>Instagram</span>
-                  <span className="font-medium">už brzy</span>
-                </span>
-              </div>
             </div>
 
             <p className="font-mono text-xs text-ink-soft">

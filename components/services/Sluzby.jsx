@@ -48,7 +48,7 @@ const SERVICES = [
   },
   {
     name: "E-shop na míru",
-    img: "/ilustrace/foto-objednavky.jpg",
+    img: "/ilustrace/foto-eshop.jpg",
     what: "Vlastní e-shop, kde zákazník zaplatí kartou a zboží mu přijde domů. Produkty, košík, platby, doprava i admin, ve kterém si to spravujete sami.",
     benefit:
       "Prodáváte i mimo otevírací dobu a mimo své město. Bez provizí tržišť a bez měsíčních poplatků za pronajatou platformu.",

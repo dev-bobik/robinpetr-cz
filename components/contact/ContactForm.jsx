@@ -84,8 +84,8 @@ export default function ContactForm() {
           </p>
         </div>
         <p className="mt-3 leading-relaxed text-ink-soft">
-          Ozvu se vám obvykle do 24 hodin. Mezitím klidně mrkněte na portfolio,
-          nebo mi napište přímo na e-mail.
+          Ozvu se vám obvykle do 24 hodin. Kdyby to spěchalo, klidně mi napište
+          přímo na e-mail nebo zavolejte.
         </p>
         <button
           type="button"
