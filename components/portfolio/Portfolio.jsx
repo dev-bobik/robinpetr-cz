@@ -5,6 +5,16 @@ import ProjectCard from "./ProjectCard";
 
 const PROJECTS = [
   {
+    type: "Interní aplikace",
+    title: "Přihlašování na školní akce",
+    description:
+      "Nástroj pro přihlašování studentů na akce — s tříděním, filtry a párováním přihlášek proti školní evidenci.",
+    result:
+      "Přihlášky se samy spárují s reálnými studenty — žádné ruční dohledávání v seznamech.",
+    image: "/portfolio/skola-akce.webp",
+    imageAlt: "Přehled přihlášek na školní akci s kontrolou proti evidenci studentů",
+  },
+  {
     type: "Web · objednávky",
     title: "Kebab Deluxe",
     description:
@@ -15,24 +25,14 @@ const PROJECTS = [
     imageAlt: "Úvodní stránka webu Kebab Deluxe",
   },
   {
-    type: "Webová aplikace",
-    title: "Přihlašování na školní akce",
-    description:
-      "Nástroj pro přihlašování studentů na akce — s tříděním, filtry a párováním přihlášek proti školní evidenci.",
-    result:
-      "Přihlášky se samy spárují s reálnými studenty — žádné ruční dohledávání v seznamech.",
-    image: "/portfolio/skola-akce.webp",
-    imageAlt: "Přehled přihlášek na školní akci s kontrolou proti evidenci studentů",
-  },
-  {
     type: "Hardware · IoT",
     title: "HACCP měření teplot",
     description:
-      "Vlastní čidlo na ESP32, které hlídá teploty lednic a mrazáků a posílá je do přehledu.",
+      "Vlastní čidla na ESP32 hlídají teploty lednic a mrazáků a posílají je do přehledu s alarmem.",
     result:
       "Záznamy pro hygienickou kontrolu běží samy — konec papírových tabulek a ručního zapisování.",
-    image: "/ilustrace/foto-haccp.jpg",
-    imageAlt: "Teplotní čidlo umístěné v lednici s potravinami",
+    image: "/portfolio/haccp-panel.webp",
+    imageAlt: "Přehled teplot lednic a mrazáků s upozorněním na překročení limitu",
   },
 ];
 
