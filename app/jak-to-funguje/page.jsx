@@ -1,4 +1,5 @@
 import HowItWorks from "@/components/how-it-works/HowItWorks";
+import ScrollCafe from "@/components/scroll-cafe/ScrollCafe";
 
 export const metadata = {
   title: "Jak to funguje — Robin Petr",
@@ -10,6 +11,7 @@ export const metadata = {
 export default function JakToFungujePage() {
   return (
     <main id="hlavni-obsah">
+      <ScrollCafe />
       <HowItWorks />
     </main>
   );
