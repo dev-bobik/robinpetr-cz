@@ -4,7 +4,7 @@
   "private": true,
   "description": "Osobní web Robin Petr — digitalizace provozů (robinpetr.cz)",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

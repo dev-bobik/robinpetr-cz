@@ -149,7 +149,9 @@ export default function HowItWorks() {
             <span className="font-medium text-ink">v jedněch rukou</span>. Jsem
             lokální, po ruce a dělám řešení na míru — na rozdíl od velkých
             neosobních systémů i běžných webařů, co skončí u webu a hardware
-            neřeší.
+            neřeší. Díky vlastnímu hardwaru a věcem dotaženým do detailu působí
+            váš podnik profesionálně — a to je přesně to, co zákazníka získá a
+            vrátí.
           </p>
         </div>
 

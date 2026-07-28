@@ -9,6 +9,7 @@ const NAV = [
   { label: "Domů", href: "/" },
   { label: "Nabídka", href: "/sluzby" },
   { label: "Jak to funguje", href: "/jak-to-funguje" },
+  { label: "Proč já", href: "/proc-ja" },
   { label: "O mně", href: "/o-mne" },
   // Portfolio se přidá později
 ];

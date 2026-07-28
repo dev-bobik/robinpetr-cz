@@ -271,9 +271,14 @@ export default function Sluzby() {
           </span>
         </h1>
         <p className="mt-5 text-[1.15rem] leading-relaxed text-ink-soft">
-          Tohle stavím v podnicích nejčastěji. Když potřebujete něco jiného,{" "}
-          <span className="font-medium text-ink">udělám to na míru</span>.
-          Všechno dodává jeden člověk a všechno je propojené do jednoho celku.
+          Tohle stavím v podnicích nejčastěji. Vezmete si jednu věc, nebo si
+          postupně poskládáte víc —{" "}
+          <span className="font-medium text-ink">
+            všechno spolu mluví a máte to na jednom místě
+          </span>
+          . Věci jako věrnostní stojánek nebo čidla do lednic u jiného webaře
+          nedostanete. Právě tím podnik vypadá jinak než ten odvedle, a to
+          přivádí zákazníky.
         </p>
       </div>
 

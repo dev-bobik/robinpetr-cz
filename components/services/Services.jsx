@@ -15,14 +15,14 @@ function CardIllustration({ src }) {
 
 const BENEFITS = [
   {
-    visual: <CardIllustration src="/ilustrace/vernost.png" />,
+    visual: <CardIllustration src="/ilustrace/vernost-web.png" />,
     title: "Věrnostní systém bez stahování aplikací",
     description:
       "Zákazník jen přiloží telefon ke stojánku na pultě, okamžitě sbírá body a vidí své odměny. Žádné papírové kartičky a žádné otravné aplikace, které si nikdo nechce instalovat.",
     tags: ["Věrnostní systém", "NFC stojánek"],
   },
   {
-    visual: <CardIllustration src="/ilustrace/teploty.png" />,
+    visual: <CardIllustration src="/ilustrace/nfc-web.png" />,
     title: "Už žádné vyhozené suroviny kvůli vypadlému mrazáku",
     description:
       "Chytrá čidla nonstop hlídají teploty v lednicích a skladech. Jakmile teplota stoupne, okamžitě vám pípne varování na mobilu. Zachráníte zboží včas, ne až ráno, když už je pozdě.",

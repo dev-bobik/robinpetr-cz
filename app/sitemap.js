@@ -6,6 +6,7 @@ const ROUTES = [
   { path: "", priority: 1.0, changeFrequency: "monthly" },
   { path: "/sluzby", priority: 0.9, changeFrequency: "monthly" },
   { path: "/jak-to-funguje", priority: 0.7, changeFrequency: "yearly" },
+  { path: "/proc-ja", priority: 0.7, changeFrequency: "yearly" },
   { path: "/o-mne", priority: 0.7, changeFrequency: "yearly" },
   { path: "/kontakt", priority: 0.8, changeFrequency: "yearly" },
   { path: "/obchodni-podminky", priority: 0.3, changeFrequency: "yearly" },
