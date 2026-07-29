@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { getCloudflareContext } from "@opennextjs/cloudflare";
 
 /* Kontaktní formulář — odesílá e-mail přes Resend REST API (bez SDK).
    Konfigurace přes env:
@@ -8,6 +9,21 @@ import { NextResponse } from "next/server";
 */
 
 const MAX = { name: 120, contact: 160, message: 4000 };
+const RATE_LIMIT = { max: 5, windowSeconds: 60 };
+
+/**
+ * @param {KVNamespace | undefined} kv
+ * @param {string} ip
+ * @returns {Promise<boolean>} true pokud smí požadavek pokračovat
+ */
+async function checkRateLimit(kv, ip) {
+  if (!kv) return true; // KV nedostupné (např. lokální `next dev`) — nepřidávej limit
+  const key = `contact-rl:${ip}`;
+  const count = Number(await kv.get(key)) || 0;
+  if (count >= RATE_LIMIT.max) return false;
+  await kv.put(key, String(count + 1), { expirationTtl: RATE_LIMIT.windowSeconds });
+  return true;
+}
 
 export async function POST(request) {
   let data;
@@ -40,6 +56,16 @@ export async function POST(request) {
     return NextResponse.json(
       { error: "Zpráva je příliš dlouhá." },
       { status: 400 },
+    );
+  }
+
+  const { env } = getCloudflareContext();
+  const ip = request.headers.get("CF-Connecting-IP") || "unknown";
+  const allowed = await checkRateLimit(env?.CONTACT_RATE_LIMIT_KV, ip);
+  if (!allowed) {
+    return NextResponse.json(
+      { error: "Příliš mnoho pokusů. Zkuste to prosím za chvíli." },
+      { status: 429 },
     );
   }
 

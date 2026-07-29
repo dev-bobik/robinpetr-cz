@@ -10,7 +10,13 @@
   },
   "observability": {
     "enabled": true
-  }
+  },
+  "kv_namespaces": [
+    {
+      "binding": "CONTACT_RATE_LIMIT_KV",
+      "id": "54c6892653ba4c328433d53919b0c729"
+    }
+  ]
   // Runtime secrets (NEdávat sem, jsou tajné):
   //   wrangler secret put RESEND_API_KEY
   //   wrangler secret put CONTACT_TO_EMAIL
