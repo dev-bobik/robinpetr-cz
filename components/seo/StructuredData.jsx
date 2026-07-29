@@ -1,4 +1,5 @@
 import { CONTACT } from "@/lib/contact";
+import { PRICING } from "@/lib/pricing";
 
 /* Strukturovaná data (JSON-LD, schema.org) pro vyhledávače a AI.
    Říká strojově: kdo je Robin Petr, co nabízí, kde působí — aby Google
@@ -9,15 +10,6 @@ import { CONTACT } from "@/lib/contact";
    a bezpečný postup pro schema.org v Next.js. */
 
 const URL = "https://robinpetr.cz";
-
-const SLUZBY = [
-  "Recenzní NFC tag",
-  "Věrnostní systém",
-  "Web podniku",
-  "Online objednávky bez provizí",
-  "E-shop na míru",
-  "Hlídání teplot (HACCP monitoring)",
-];
 
 export default function StructuredData() {
   const graph = {
@@ -52,9 +44,12 @@ export default function StructuredData() {
         hasOfferCatalog: {
           "@type": "OfferCatalog",
           name: "Služby",
-          itemListElement: SLUZBY.map((s) => ({
+          itemListElement: PRICING.map((s) => ({
             "@type": "Offer",
-            itemOffered: { "@type": "Service", name: s },
+            price: s.oneTimeCzk,
+            priceCurrency: "CZK",
+            description: s.text,
+            itemOffered: { "@type": "Service", name: s.name },
           })),
         },
       },

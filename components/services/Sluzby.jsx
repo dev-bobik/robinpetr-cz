@@ -1,5 +1,8 @@
 import Link from "next/link";
 import NabidkaFocus from "./NabidkaFocus";
+import { PRICING } from "@/lib/pricing";
+
+const priceText = (id) => PRICING.find((p) => p.id === id).text;
 
 /* Stránka /sluzby — nabídka produktů do detailu (konkrétní + obecné „na míru").
    Přehled zůstává na home; tady je každý produkt rozepsaný. Bez konkrétních cen. */
@@ -10,23 +13,23 @@ const SERVICES = [
   {
     name: "Recenze tag",
     flag: "levný začátek",
-    img: "/ilustrace/foto-tag.jpg",
+    img: "/ilustrace/nfc-web.png",
     what: "Kartička na stůl nebo pult, přes kterou zákazník napíše Google recenzi na jedno přiložení telefonu.",
     benefit:
       "Recenze rozhodují o tom, koho Google ukáže první. Čím víc jich máte, tím víc lidí vás najde.",
     how: "V kartičce je NFC čip a QR kód. Telefon ji přečte a rovnou otevře okno pro recenzi, zákazník nic nehledá.",
-    price: "690 Kč s instalací",
+    price: priceText("recenze-tag"),
   },
   {
     name: "Věrnostní systém",
     flag: "vlajková loď",
     accent: true,
-    img: "/ilustrace/foto-vernost.jpg",
+    img: "/ilustrace/vernost-web.jpg",
     what: "Věrnostní program, na který zákazníkům stačí telefon v kapse.",
     benefit:
       "Stálý zákazník utratí víc a nestojí vás reklamu. A konečně uvidíte, kdo k vám chodí a jak často.",
     how: "U pokladny přiloží telefon ke stojánku, přičte se mu bod a vidí, kolik chybí do odměny. Podruhé už ho systém pozná sám.",
-    price: "2 990 Kč stojánek na míru + 490 Kč/měs provoz",
+    price: priceText("vernost"),
   },
   {
     name: "Web podniku",
@@ -35,7 +38,7 @@ const SERVICES = [
     benefit:
       "Vypadáte důvěryhodně a změnu menu nebo cen za vás udělám já. Žádné přepisování PDF a shánění webaře.",
     how: "Postavím ho na rychlé šabloně a upravím vašemu podniku. Změny menu, cen a otevíračky jsou v měsíční správě.",
-    price: "9 900 Kč + 390 Kč/měs správa",
+    price: priceText("web"),
   },
   {
     name: "Online objednávky",
@@ -44,16 +47,16 @@ const SERVICES = [
     benefit:
       "Rozvozové aplikace si berou 25–30 % z každé objednávky. Vlastní objednávky vám ty peníze nechají a zaplatí se za pár týdnů.",
     how: "Zákazník objedná z mobilu a vám se objednávka objeví v přehledu. Vy ji jen odbavíte.",
-    price: "od 19 900 Kč + 790 Kč/měs, bez provizí",
+    price: priceText("objednavky"),
   },
   {
     name: "E-shop na míru",
-    img: "/ilustrace/foto-eshop.jpg",
+    img: "/ilustrace/eshop-web2.jpg",
     what: "Vlastní e-shop, kde zákazník zaplatí kartou a zboží mu přijde domů. Produkty, košík, platby, doprava i admin, ve kterém si to spravujete sami.",
     benefit:
       "Prodáváte i mimo otevírací dobu a mimo své město. Bez provizí tržišť a bez měsíčních poplatků za pronajatou platformu.",
     how: "Napojím platby kartou i převodem a dopravu (PPL, Zásilkovna). Objednávky, sklad a faktury máte v jednom přehledu.",
-    price: "od 45 000 Kč + 1 500 Kč/měs správa",
+    price: priceText("eshop"),
   },
   {
     name: "Hlídání podniku (HACCP)",
@@ -62,7 +65,7 @@ const SERVICES = [
     benefit:
       "Papíry k HACCP se vyplňují samy. O vypadlém mrazáku víte za pár minut, ne ráno nad zkaženým zbožím.",
     how: "Čidlo měří nonstop a posílá data do přehledu. Když teplota vyletí, přijde vám zpráva na telefon.",
-    price: "990 Kč instalace + 149 Kč/měs za čidlo",
+    price: priceText("haccp"),
   },
   {
     name: "Něco na míru",
@@ -150,7 +153,7 @@ function ServiceDetail({ index, name, flag, accent, img, what, benefit, how, pri
           <img
             src={img}
             alt=""
-            className={`-mr-1 -mt-1 hidden h-28 w-40 shrink-0 rounded-lg border-4 border-white object-cover shadow-[0_14px_28px_-14px_rgba(46,42,34,0.55)] sm:block sm:h-32 sm:w-44 ${
+            className={`-mr-1 -mt-1 hidden h-28 w-40 shrink-0 rounded-lg border-4 border-white object-cover shadow-[0_14px_28px_-14px_rgba(46,42,34,0.55)] sm:block sm:h-44 sm:w-60 lg:h-48 lg:w-64 ${
               index % 2 ? "-rotate-2" : "rotate-2"
             }`}
           />

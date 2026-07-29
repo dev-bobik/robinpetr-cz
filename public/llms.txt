@@ -5,6 +5,7 @@
 ## Stránky
 - [Úvod](https://robinpetr.cz): kdo je Robin Petr a přehled služeb
 - [Nabídka](https://robinpetr.cz/sluzby): detaily produktů a orientační ceny
+- [Ceník (strojově čitelný)](https://robinpetr.cz/pricing.md): stejné ceny v čistém markdownu
 - [Jak to funguje](https://robinpetr.cz/jak-to-funguje): jak probíhá spolupráce
 - [O mně](https://robinpetr.cz/o-mne): kdo za tím stojí
 - [Kontakt](https://robinpetr.cz/kontakt): nezávazná poptávka
