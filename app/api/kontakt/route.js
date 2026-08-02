@@ -76,7 +76,7 @@ export async function POST(request) {
       "Kontaktní formulář není nakonfigurován: chybí RESEND_API_KEY nebo CONTACT_TO_EMAIL.",
     );
     return NextResponse.json(
-      { error: "Formulář zatím není nakonfigurován. Napište mi prosím přímo e-mailem." },
+      { error: "Formulář zatím není připravený. Napište mi prosím přímo e-mailem." },
       { status: 503 },
     );
   }

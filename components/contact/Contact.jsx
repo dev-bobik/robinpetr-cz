@@ -51,12 +51,11 @@ export default function Contact() {
           id="kontakt-nadpis"
           className="mt-4 font-display text-[clamp(2rem,1.3rem+2.8vw,3.2rem)] font-semibold leading-[1.06] text-ink"
         >
-          Pojďme to probrat
+          Napište mi, co řešíte
         </h1>
         <p className="mt-4 max-w-2xl text-[1.05rem] leading-relaxed text-ink-soft">
-          Bere vám něco v podniku zbytečně čas? Nebo vás napadá, co by šlo
-          zjednodušit?{" "}
-          <span className="font-medium text-ink">Napište mi — nezávazně.</span>
+          Bere vám něco v podniku zbytečně čas? Nebo už víte, co by šlo
+          zjednodušit? <span className="font-medium text-ink">Napište mi.</span>
         </p>
 
         <div className="mt-12 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
@@ -78,7 +77,7 @@ export default function Contact() {
                 </span>
                 <span>
                   <span className={directLabelClass}>
-                    E-mail · klikněte pro zkopírování
+                    E-mail · kliknutím zkopírujete
                   </span>
                   <span className="font-medium">{CONTACT.email}</span>
                 </span>
@@ -94,7 +93,7 @@ export default function Contact() {
                 </span>
                 <span>
                   <span className={directLabelClass}>
-                    Telefon · klikněte pro zkopírování
+                    Telefon · kliknutím zkopírujete
                   </span>
                   <span className="font-medium">{CONTACT.phoneDisplay}</span>
                 </span>
@@ -102,7 +101,7 @@ export default function Contact() {
             </div>
 
             <p className="font-mono text-xs text-ink-soft">
-              {"// Odpovídám obvykle do 24 hodin."}
+              {"// Odpovím obvykle do 24 hodin."}
             </p>
           </aside>
         </div>

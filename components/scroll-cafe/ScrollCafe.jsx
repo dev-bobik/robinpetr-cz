@@ -16,26 +16,26 @@ const PHASES = [
   {
     at: 0.0,
     kicker: "Web",
-    title: "Web, který vás lidem najde",
-    text: "Menu, otevírací doba, fotky a kontakt — přehledně a dohledatelně na Googlu. Změny za vás udělám já, žádné přepisování PDF.",
+    title: "Web, díky kterému vás lidé najdou",
+    text: "Menu, otevírací doba, fotky a kontakt přehledně na jednom místě. Změny za vás udělám já.",
   },
   {
-    at: 0.3,
+    at: 0.24,
     kicker: "Objednávky",
-    title: "Objednávky bez provizí",
-    text: "Zákazník objedná z mobilu, vám to naskočí rovnou v pokladně. Rozvozové aplikace si berou 25–30 % — tohle vám je nechá.",
+    title: "Objednávky bez provizí navíc",
+    text: "Zákazník objedná z mobilu a vám se to ukáže v pokladně. Peníze zůstávají u vás.",
   },
   {
-    at: 0.55,
+    at: 0.47,
     kicker: "Teploty",
     title: "Lednice pod dohledem",
-    text: "Čidla měří teploty nonstop a HACCP papíry se plní samy. O vypadlém mrazáku víte hned, ne až ráno nad zkaženým zbožím.",
+    text: "Čidla měří teploty nonstop a záznamy pro HACCP se vedou samy. O výpadku víte hned.",
   },
   {
-    at: 0.78,
+    at: 0.66,
     kicker: "Věrnost",
-    title: "Věrnost, co vrací lidi",
-    text: "Zákazník přiloží telefon a přičte se mu bod — žádné plastové kartičky ani apka. A vy konečně vidíte, kdo se vrací.",
+    title: "Věrnost, která vrací lidi",
+    text: "Zákazník přiloží telefon a přičte se mu bod. Žádné plastové kartičky ani aplikace navíc.",
   },
 ];
 
@@ -180,47 +180,20 @@ export default function ScrollCafe() {
             <p className="eyebrow">Jeden propojený systém</p>
 
             <div key={phase} style={{ animation: "scEnter .45s ease both" }}>
-              <h2 className="mt-4 font-display text-[clamp(1.7rem,1.2rem+1.8vw,2.5rem)] font-semibold leading-[1.12] text-ink">
+              <p className="mt-4 flex items-center gap-2.5 font-mono text-[0.72rem] uppercase tracking-[0.16em] text-clay-deep">
+                <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-clay font-bold text-card">
+                  {phase + 1}
+                </span>
+                {current.kicker}
+                <span className="text-ink-soft/50">/ {PHASES.length}</span>
+              </p>
+              <h2 className="mt-3 font-display text-[clamp(1.7rem,1.2rem+1.8vw,2.5rem)] font-semibold leading-[1.12] text-ink">
                 {current.title}
               </h2>
               <p className="mt-4 max-w-md text-[1.05rem] leading-relaxed text-ink-soft">
                 {current.text}
               </p>
             </div>
-
-            {/* svislý seznam fází — aktivní zvýrazněná */}
-            <ol className="mt-8 space-y-1.5">
-              {PHASES.map((p, i) => {
-                const active = i === phase;
-                return (
-                  <li
-                    key={p.kicker}
-                    className={`flex items-center gap-3 rounded-xl border px-3.5 py-2.5 transition-all duration-300 ${
-                      active
-                        ? "border-brown/15 bg-card shadow-[0_10px_30px_-20px_rgba(46,42,34,0.5)]"
-                        : "border-transparent"
-                    }`}
-                  >
-                    <span
-                      className={`grid h-6 w-6 shrink-0 place-items-center rounded-full font-mono text-[0.72rem] font-bold transition-colors duration-300 ${
-                        active
-                          ? "bg-clay text-card"
-                          : "border border-brown/40 text-brown"
-                      }`}
-                    >
-                      {i + 1}
-                    </span>
-                    <span
-                      className={`font-mono text-[0.72rem] uppercase tracking-[0.16em] transition-colors duration-300 ${
-                        active ? "text-clay-deep" : "text-ink-soft"
-                      }`}
-                    >
-                      {p.kicker}
-                    </span>
-                  </li>
-                );
-              })}
-            </ol>
           </div>
 
           {/* ---- Video jako krémové „okno" ve stylu stránky ---- */}

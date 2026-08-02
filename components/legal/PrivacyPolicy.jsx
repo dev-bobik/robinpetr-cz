@@ -28,7 +28,7 @@ export default function PrivacyPolicy() {
         </h1>
         <p className="mt-4 text-[1.05rem] leading-relaxed text-ink-soft">
           Když mi napíšete přes formulář, e-mail nebo telefon, zpracovávám vaše
-          údaje jen v nezbytné míře a férově. Tady je přehledně, co s nimi dělám.
+          údaje jen v nezbytné míře. Tady je přehledně, co s nimi dělám.
         </p>
 
         <Block title="Kdo je správce">

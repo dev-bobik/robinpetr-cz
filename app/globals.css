@@ -105,13 +105,6 @@
   }
 }
 
-/* vodorovný posun produktové stopy řízený scrollem (desktop) */
-@keyframes services-x {
-  to {
-    transform: translateX(calc(-100% + 100vw));
-  }
-}
-
 /* jemné sešroubování (motiv na míru) */
 @keyframes screw-turn {
   0%,
@@ -235,50 +228,107 @@
   }
 }
 
-/* Desktop: sekce se přilepí a scroll dolů posouvá produkty do strany.
-   Jen tam, kde to prohlížeč umí a uživatel nemá vypnutý pohyb. */
-@supports (animation-timeline: scroll()) {
-  @media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
-    .services {
-      /* délka „přilepení" = kolik scrollu zabere projít všemi produkty */
-      height: calc(100vh + var(--n, 6) * 58vh);
-      view-timeline-name: --svc;
-    }
+/* Rychlost projíždění nabídky: kolik scrollu zabere přechod na další produkt.
+   Vyšší číslo = pomalejší. Musí být mimo media query — počítají s ním i kotvy
+   dosedání (.services__snap), které si ho berou přes inline style v Sluzby.jsx.
+   Kdyby se rozešly, snap by přestal trefovat střed produktu. */
+.services {
+  --krok: 85vh;
+}
 
-    .services__viewport {
-      position: sticky;
-      top: 0;
-      display: flex;
-      height: 100vh;
-      align-items: center;
-      overflow: hidden;
-    }
+/* Desktop: sekce se přilepí a produkty jedou do strany podle scroll pozice.
+   Jen tam, kde uživatel nemá vypnutý pohyb; bez JS (nebo na mobilu) zůstává
+   svislý stack z .services__track výš. */
+@media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+  .services {
+    /* Sekce zabírá reálnou výšku scrollu — jeden --krok na každý přechod.
+       Posun stopy je čistá funkce scroll pozice (viz NabidkaFocus), takže se
+       s ní nemůže rozejít a sekce nejde „přeskočit". */
+    height: calc(100vh + (var(--n, 6) - 1) * var(--krok));
+    position: relative;
+  }
 
-    .services__track {
-      flex-direction: row;
-      align-items: center;
-      gap: 2.5rem;
-      width: max-content;
-      max-width: none;
-      padding-inline: clamp(1.5rem, 8vw, 11rem);
-      animation: services-x linear both;
-      animation-timeline: --svc;
-      animation-range: contain;
-    }
 
-    .services__cell {
-      width: min(76vw, 600px);
-      flex: 0 0 auto;
-      /* --fs / --fo dopočítává NabidkaFocus podle vzdálenosti od středu.
-         Bez JS zůstávají na 1 → všechny produkty plné velikosti. */
-      transform: scale(var(--fs, 1));
-      opacity: var(--fo, 1);
-      transform-origin: center center;
-      transition:
-        transform 0.12s linear,
-        opacity 0.12s linear;
-      will-change: transform;
-    }
+  .services__viewport {
+    position: sticky;
+    top: 0;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .services__track {
+    flex-direction: row;
+    /* stretch = všechny produkty stejně vysoké, ať karta nemění tvar podle
+       délky textu (e-shop má nejdelší popis a byl by jinak vyšší) */
+    align-items: stretch;
+    gap: 3rem;
+    width: max-content;
+    max-width: none;
+    /* symetrické odsazení = první a poslední produkt dojedou přesně doprostřed
+       (šířka karty je 880px, viz .services__cell) */
+    padding-inline: max(1.5rem, calc((100vw - 880px) / 2));
+    /* posun nastavuje NabidkaFocus každý snímek podle scroll pozice —
+       žádná transition, jinak by stopa za scrollem zaostávala */
+    will-change: transform;
+  }
+
+  .services__cell {
+    width: min(64vw, 880px);
+    flex: 0 0 auto;
+    /* karta uvnitř se roztáhne na plnou šířku i výšku buňky */
+    display: grid;
+    /* --fs / --fo dopočítává NabidkaFocus podle vzdálenosti od středu.
+       Bez JS zůstávají na 1 → všechny produkty plné velikosti. */
+    transform: scale(var(--fs, 1));
+    opacity: var(--fo, 1);
+    transform-origin: center center;
+    will-change: transform;
+  }
+
+  /* V přilepené nabídce má karta celou obrazovku pro sebe — obsah proto
+     zvětšit, ať ji vyplní. Cílí na rozvržení z komponenty ServiceDetail
+     (Sluzby.jsx); mimo tenhle režim platí původní velikosti z tříd. */
+  .services__cell article {
+    display: flex;
+    flex-direction: column;
+    padding: 2.75rem 2.75rem 3rem;
+  }
+
+  /* polaroid fotka — jen proporčně zvětšená (poměr 4:3 jako v původních
+     třídách h-48/w-64), aby karta vyplnila víc výšky. Žádné roztahování. */
+  .services__cell article > div:first-child > img {
+    height: 18rem;
+    width: 24rem;
+  }
+
+  .services__cell article h2 {
+    font-size: 2.1rem;
+  }
+
+  /* popis produktu pod nadpisem */
+  .services__cell article > div:first-child p:last-child {
+    margin-top: 1rem;
+    font-size: 1.15rem;
+  }
+
+  /* Dvojice boxů „Co vám to přinese" / „Jak to funguje" dolů — `margin-top:
+     auto` rozprostře obsah po celé výšce, takže v kratších kartách nezůstane
+     prázdný pruh dole (karty jsou stejně vysoké kvůli `stretch` výš). */
+  .services__cell article > div.grid {
+    margin-top: auto;
+    padding-top: 1.75rem;
+    gap: 1.25rem;
+  }
+
+  .services__cell article > div.grid > div {
+    padding: 1.35rem;
+  }
+
+  .services__cell article > div.grid p:last-child {
+    margin-top: 0.6rem;
+    font-size: 1.02rem;
   }
 }
 

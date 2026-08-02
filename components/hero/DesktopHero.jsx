@@ -32,7 +32,7 @@ export default function DesktopHero() {
             id="hero-nadpis"
             className="font-display text-[2.6rem] font-semibold leading-[1.1] text-ink lg:text-[3rem]"
           >
-            Chytrý hardware a software pro{" "}
+            Weby, objednávky a hardware pro{" "}
             <span className="relative inline-block whitespace-nowrap">
               váš podnik.
               {/* jemný ruční akcent jen pod "váš podnik." */}
@@ -57,10 +57,10 @@ export default function DesktopHero() {
           </h1>
 
           <p className="mt-8 max-w-xl text-[1.35rem] leading-relaxed text-ink-soft">
-            Weby, objednávky, věrnost i chytrý hardware — poskládám a propojím
-            to celé do jednoho.{" "}
+            Postavím web, objednávky, věrnost i jednoduchou techniku a propojím
+            je do jednoho celku. {" "}
             <span className="font-medium text-ink">
-              Vy se staráte o hosty, o techniku se postarám já.
+              Vy se věnujete provozu, já technické části.
             </span>
           </p>
 
@@ -69,7 +69,7 @@ export default function DesktopHero() {
               href="#kontakt"
               className="group inline-flex items-center gap-2 rounded-full bg-clay-deep px-8 py-4 text-[1.05rem] font-medium text-card shadow-[0_14px_30px_-12px_rgba(192,121,79,0.8)] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_20px_40px_-14px_rgba(168,98,56,0.9)]"
             >
-              Ozvěte se
+              Napsat mi
               <svg
                 width="18"
                 height="18"
@@ -91,7 +91,7 @@ export default function DesktopHero() {
               href="#nabidka"
               className="inline-flex items-center gap-2 rounded-full border border-brown/25 px-7 py-4 text-[1.05rem] font-medium text-ink transition-colors duration-200 hover:border-clay hover:text-clay-deep"
             >
-              Co nabízím
+              Co dělám
             </a>
           </div>
 

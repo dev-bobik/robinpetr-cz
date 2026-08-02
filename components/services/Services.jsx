@@ -15,31 +15,31 @@ function CardIllustration({ src }) {
 
 const BENEFITS = [
   {
-    visual: <CardIllustration src="/ilustrace/vernost-web.png" />,
-    title: "Věrnostní systém bez stahování aplikací",
+    visual: <CardIllustration src="/ilustrace/vernost.png" />,
+    title: "Věrnostní systém bez aplikací",
     description:
-      "Zákazník jen přiloží telefon ke stojánku na pultě, okamžitě sbírá body a vidí své odměny. Žádné papírové kartičky a žádné otravné aplikace, které si nikdo nechce instalovat.",
+      "Zákazník přiloží telefon ke stojánku, hned sbírá body a vidí odměny. Žádné papírové kartičky ani aplikace navíc.",
     tags: ["Věrnostní systém", "NFC stojánek"],
   },
   {
-    visual: <CardIllustration src="/ilustrace/nfc-web.png" />,
-    title: "Už žádné vyhozené suroviny kvůli vypadlému mrazáku",
+    visual: <CardIllustration src="/ilustrace/teploty.png" />,
+    title: "Méně škod při výpadku chlazení",
     description:
-      "Chytrá čidla nonstop hlídají teploty v lednicích a skladech. Jakmile teplota stoupne, okamžitě vám pípne varování na mobilu. Zachráníte zboží včas, ne až ráno, když už je pozdě.",
+      "Čidla hlídají teploty v lednicích a skladech. Když se něco mění, hned přijde upozornění na mobil.",
     tags: ["Hlídání teplot", "HACCP", "Alarm"],
   },
   {
     visual: <CardIllustration src="/ilustrace/provoz.png" />,
-    title: "Celý provoz pod palcem přímo z mobilu",
+    title: "Přehled o provozu z mobilu",
     description:
-      "Aktualizace menu na webu, změna cenovek na baru nebo správa online objednávek. Všechno upravíte na pár kliknutí z telefonu. Konec ručního přepisování tabulí a chaosu v papírech.",
+      "Menu na webu, ceny nebo online objednávky upravíte z telefonu. Místo přepisování papírů máte všechno na jednom místě.",
     tags: ["Web", "Objednávky", "E-shop", "Cenovky"],
   },
   {
     visual: <CardIllustration src="/ilustrace/na-miru.png" />,
-    title: "Máte specifický problém? Vyřeším ho.",
+    title: "Potřebujete něco na míru?",
     description:
-      "Děláte v podniku nějakou rutinu pořád dokola ručně? Řekněte mi to. Navrhnu a vyrobím hardware nebo naprogramuju software přesně pro tento jeden účel. Na klíč a bez starostí.",
+      "Když něco děláte pořád dokola ručně, často se to dá zjednodušit. Navrhnu k tomu hardware nebo software přesně pro ten jeden konkrétní úkol.",
     cta: { label: "Napište mi", href: "/kontakt" },
     accent: true,
   },
@@ -58,13 +58,12 @@ export default function Services() {
           id="nabidka-nadpis"
           className="mt-4 max-w-2xl font-display text-[clamp(1.9rem,1.2rem+2.6vw,3rem)] font-semibold leading-[1.08] text-ink"
         >
-          Místo pěti různých systémů jen jeden, co opravdu funguje
+          Místo pěti různých systémů jeden přehledný
         </h2>
         <p className="mt-4 max-w-2xl text-[1.05rem] leading-relaxed text-ink-soft">
-          Zapomeňte na pět aplikací od různých firem, které spolu nekomunikují.
-          Postavím vám jeden propojený systém — od webu přes objednávky až po
-          chytrá čidla. A hlavně: máte na telefonu jednoho člověka, který za to
-          celé osobně ručí.
+          Nemusíte skládat pět aplikací od různých firem dohromady. Postavím vám
+          jeden propojený systém — od webu přes objednávky až po čidla. Když je
+          potřeba něco řešit, ozvete se přímo mně.
         </p>
 
         <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-3">

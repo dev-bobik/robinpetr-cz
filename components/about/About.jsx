@@ -40,7 +40,7 @@ export default function About() {
           id="o-mne-nadpis"
           className="mt-4 font-display text-[clamp(1.9rem,1.2rem+2.6vw,3rem)] font-semibold leading-[1.08] text-ink"
         >
-          Kdo za tím stojí
+          Kdo za webem stojí
         </h1>
 
         <div className="mt-12 grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
@@ -107,34 +107,26 @@ export default function About() {
               ))}
             </dl>
           </aside>
-
-          {/* -------- Příběh -------- */}
           <div className="order-1 max-w-[60ch] space-y-7 text-[1.05rem] leading-relaxed text-ink-soft lg:order-none">
             <p>
-              Ahoj, jsem Robin. Většina lidí dělá buď čistě weby, nebo samotný
-              hardware.{" "}
+              Ahoj, jsem Robin. Většina lidí dělá buď weby, nebo hardware.{" "}
               <span className="font-medium text-ink">
-                Já tyhle dva světy propojuju.
+                Já tyhle dvě věci propojuju.
               </span>{" "}
-              Naprogramuju vám e-shop s platební bránou a klidně k němu na
-              prodejně fyzicky připojím terminál, čidlo nebo tiskárnu účtenek.{" "}
-              <span className="font-medium text-ink">
-                Všechno máte od jednoho člověka
-              </span>
-              , takže odpadá klasické dohadování několika dodavatelů o tom, proč
-              to jako celek nefunguje.
+              Naprogramuju e-shop s platební bránou a podle potřeby k němu
+              připojím terminál, čidlo nebo tiskárnu účtenek. Všechno řešíte s
+              jedním člověkem, takže odpadá domlouvání několika dodavatelů.
             </p>
             <p className="max-sm:hidden">
               Věci dělám rukama odmalička. Pájím, navrhuju vlastní elektroniku a
-              stavím modulární roboty. Takže když řeknu, že pro vás něco vymyslím,
-              není to jen kód na obrazovce, který po mně bude muset někdo jiný
-              oživit.
+              stavím modulární roboty. Když řeknu, že něco vymyslím, není to jen
+              kód na obrazovce, ale něco, co umím dotáhnout do provozu.
             </p>
 
             {/* pull-quote — silné místo, jemný akcent */}
             <blockquote className="border-l-[3px] border-clay pl-5 font-display text-[clamp(1.25rem,1rem+1vw,1.6rem)] font-medium leading-snug text-ink">
-              Vím přesně, jak věci fungují — od posledního odporu na desce až po
-              finální pixel na webu.
+              Vím, jak věci fungují — od posledního odporu na desce až po finální
+              pixel na webu.
             </blockquote>
 
             {/* fotka setupu — placeholder, nahraď public/setup.jpg */}
@@ -155,28 +147,26 @@ export default function About() {
 
             <p>
               Jako student mám čerstvý přehled o technologiích, které se používají
-              dneska, ne před deseti lety. Na každé zakázce mi extrémně záleží,
-              protože si na ní buduju jméno. Díky tomu ode mě dostanete{" "}
-              <span className="font-medium text-ink">
-                přímou, soustředěnou práci bez agenturní přirážky
+              dnes. Na každé zakázce mi záleží, protože si na ní buduju jméno.
+              Díky tomu ode mě dostanete <span className="font-medium text-ink">
+                přímou a soustředěnou práci
               </span>{" "}
-              a zdlouhavého kolování projektu mezi deseti lidmi.
+              bez zbytečných mezičlánků.
             </p>
             <p>
-              Mám za sebou reálné a funkční projekty — od klasických webů po
-              e-shopy. Programoval jsem i interní aplikace pro naši školu. Že umím
-              věci dotáhnout do konce a vzít za ně odpovědnost, ukazuje i to, že
-              vedu studentskou radu na našem gymnáziu. A pokud jde o technickou
-              hloubku a kyberbezpečnost, mluví za mě výsledky:{" "}
-              <span className="font-medium text-ink">
+              Mám za sebou reálné projekty — od klasických webů po e-shopy.
+              Programoval jsem i interní aplikace pro naši školu. Že umím věci
+              dotáhnout do konce a vzít za ně odpovědnost, ukazuje i to, že vedu
+              studentskou radu na našem gymnáziu. A pokud jde o technickou
+              hloubku a kyberbezpečnost, mluví za mě výsledky: <span className="font-medium text-ink">
                 1. místo v kraji a 5. místo v celostátním finále soutěže Haxagon.
               </span>
             </p>
 
             {/* závěr — měkká karta */}
             <p className="rounded-2xl border border-brown/15 bg-card p-5 text-[1.1rem] text-ink">
-              Zkrátka: získáte parťáka, který rozumí technice i byznysu a postará
-              se o to, aby vám to celé fungovalo a vy jste to vůbec nemuseli řešit.
+              Zkrátka: získáte parťáka, který rozumí technice i provozu a postará
+              se o to, aby vám to celé fungovalo.
             </p>
           </div>
         </div>

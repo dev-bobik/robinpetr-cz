@@ -20,10 +20,10 @@ export default function MobileHero() {
           id="hero-nadpis-m"
           className="font-display text-[clamp(1.35rem,5vw,1.75rem)] font-semibold leading-[1.16] text-ink"
         >
-          Chytrý hardware a
+          Weby, objednávky a
           <br />
           <span className="whitespace-nowrap">
-            software pro{" "}
+            hardware pro{" "}
             <span className="relative inline-block">
               váš podnik.
               {/* jemný ruční akcent jen pod "váš podnik." */}
@@ -49,10 +49,10 @@ export default function MobileHero() {
         </h1>
 
         <p className="mt-4 text-[0.95rem] leading-snug text-ink-soft">
-          Weby, objednávky, věrnost i chytrý hardware — poskládám a propojím to
-          celé do jednoho.{" "}
+          Postavím web, objednávky, věrnost i jednoduchou techniku a propojím je
+          do jednoho celku. {" "}
           <span className="font-medium text-ink">
-            Vy se staráte o hosty, o techniku se postarám já.
+            Vy se věnujete provozu, já technické části.
           </span>
         </p>
 
@@ -61,7 +61,7 @@ export default function MobileHero() {
             href="#kontakt"
             className="group inline-flex items-center gap-2 rounded-full bg-clay-deep px-6 py-3 font-medium text-card shadow-[0_12px_26px_-12px_rgba(192,121,79,0.85)] transition-all duration-200 ease-out active:translate-y-0.5"
           >
-            Ozvěte se
+            Napsat mi
             <svg
               width="17"
               height="17"
@@ -83,7 +83,7 @@ export default function MobileHero() {
             href="#nabidka"
             className="text-sm font-medium text-ink-soft underline decoration-brown/30 decoration-1 underline-offset-4 transition-colors duration-200 active:text-clay-deep"
           >
-            Co nabízím
+            Co dělám
           </a>
         </div>
 

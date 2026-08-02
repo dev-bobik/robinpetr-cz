@@ -3,7 +3,7 @@ import ProcJa from "@/components/why-me/ProcJa";
 export const metadata = {
   title: "Proč já — Robin Petr",
   description:
-    "Proč dává smysl řešení na míru místo hotové krabice. Věcně, lidsky a bez marketingové omáčky.",
+    "Proč dává smysl řešení na míru místo hotové krabice. Stručně, věcně a bez velkých slov.",
   alternates: { canonical: "/proc-ja" },
 };
 

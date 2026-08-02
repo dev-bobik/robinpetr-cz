@@ -12,23 +12,23 @@ const priceText = (id) => PRICING.find((p) => p.id === id).text;
 const SERVICES = [
   {
     name: "Recenze tag",
-    flag: "levný začátek",
+    flag: "rychlý start",
     img: "/ilustrace/nfc-web.png",
-    what: "Kartička na stůl nebo pult, přes kterou zákazník napíše Google recenzi na jedno přiložení telefonu.",
+    what: "Kartička na stůl nebo pult, přes kterou zákazník otevře Google recenzi jedním přiložením telefonu.",
     benefit:
-      "Recenze rozhodují o tom, koho Google ukáže první. Čím víc jich máte, tím víc lidí vás najde.",
-    how: "V kartičce je NFC čip a QR kód. Telefon ji přečte a rovnou otevře okno pro recenzi, zákazník nic nehledá.",
+      "Recenze pomáhají tomu, aby vás Google ukázal dřív. Když jich máte víc, lidi vás snadněji najdou.",
+    how: "V kartičce je NFC čip i QR kód. Telefon ji přečte a rovnou otevře formulář pro recenzi.",
     price: priceText("recenze-tag"),
   },
   {
     name: "Věrnostní systém",
-    flag: "vlajková loď",
+    flag: "hlavní řešení",
     accent: true,
     img: "/ilustrace/vernost-web.jpg",
     what: "Věrnostní program, na který zákazníkům stačí telefon v kapse.",
     benefit:
-      "Stálý zákazník utratí víc a nestojí vás reklamu. A konečně uvidíte, kdo k vám chodí a jak často.",
-    how: "U pokladny přiloží telefon ke stojánku, přičte se mu bod a vidí, kolik chybí do odměny. Podruhé už ho systém pozná sám.",
+      "Stálý zákazník utratí víc a nemusíte ho pokaždé znovu lákat reklamou. Navíc vidíte, kdo chodí a jak často.",
+    how: "U pokladny přiloží telefon ke stojánku, přičte se bod a zákazník hned vidí, kolik mu chybí do odměny.",
     price: priceText("vernost"),
   },
   {
@@ -36,17 +36,17 @@ const SERVICES = [
     img: "/ilustrace/foto-web.jpg",
     what: "Web, který lidi najdou na Googlu: menu, otevírací doba, fotky a kontakt.",
     benefit:
-      "Vypadáte důvěryhodně a změnu menu nebo cen za vás udělám já. Žádné přepisování PDF a shánění webaře.",
-    how: "Postavím ho na rychlé šabloně a upravím vašemu podniku. Změny menu, cen a otevíračky jsou v měsíční správě.",
+      "Působíte důvěryhodně a změny menu nebo cen za vás udělám já. Nemusíte přepisovat PDF ani shánět webaře.",
+    how: "Postavím ho na rychlém základu a upravím podle vašeho podniku. Změny menu, cen i otevírací doby jsou v měsíční správě.",
     price: priceText("web"),
   },
   {
     name: "Online objednávky",
     img: "/ilustrace/foto-objednavky.jpg",
-    what: "Objednávání a placení přímo na vašem webu. Bez rozvozových aplikací a jejich provizí.",
+    what: "Objednávání a platba přímo na vašem webu. Bez rozvozových aplikací a jejich provizí.",
     benefit:
-      "Rozvozové aplikace si berou 25–30 % z každé objednávky. Vlastní objednávky vám ty peníze nechají a zaplatí se za pár týdnů.",
-    how: "Zákazník objedná z mobilu a vám se objednávka objeví v přehledu. Vy ji jen odbavíte.",
+      "Rozvozové aplikace si z každé objednávky berou 25–30 %. Vlastní objednávky nechají peníze u vás.",
+    how: "Zákazník objedná z mobilu a vám se objednávka ukáže v přehledu. Vy ji jen odbavíte.",
     price: priceText("objednavky"),
   },
   {
@@ -55,24 +55,24 @@ const SERVICES = [
     what: "Vlastní e-shop, kde zákazník zaplatí kartou a zboží mu přijde domů. Produkty, košík, platby, doprava i admin, ve kterém si to spravujete sami.",
     benefit:
       "Prodáváte i mimo otevírací dobu a mimo své město. Bez provizí tržišť a bez měsíčních poplatků za pronajatou platformu.",
-    how: "Napojím platby kartou i převodem a dopravu (PPL, Zásilkovna). Objednávky, sklad a faktury máte v jednom přehledu.",
+    how: "Napojím platby kartou i převodem a dopravu (PPL, Zásilkovna). Objednávky, sklad i faktury máte v jednom přehledu.",
     price: priceText("eshop"),
   },
   {
     name: "Hlídání podniku (HACCP)",
     img: "/ilustrace/foto-haccp.jpg",
-    what: "Bezdrátová čidla, která za vás měří teploty v lednicích a mrazácích.",
+    what: "Bezdrátová čidla, která měří teploty v lednicích a mrazácích.",
     benefit:
-      "Papíry k HACCP se vyplňují samy. O vypadlém mrazáku víte za pár minut, ne ráno nad zkaženým zbožím.",
-    how: "Čidlo měří nonstop a posílá data do přehledu. Když teplota vyletí, přijde vám zpráva na telefon.",
+      "Záznamy pro HACCP se vedou samy. O vypadlém mrazáku víte za pár minut, ne až ráno, kdy je zboží zkažené.",
+    how: "Čidlo měří nonstop a posílá data do přehledu. Jakmile teplota překročí limit, přijde vám zpráva na telefon.",
     price: priceText("haccp"),
   },
   {
     name: "Něco na míru",
     img: "/ilustrace/foto-namiru.jpg",
-    what: "Věc, kterou v podniku děláte pořád dokola ručně, se většinou dá zautomatizovat. Postavím vám na ni nástroj.",
+    what: "Věc, kterou v podniku děláte pořád dokola ručně, se většinou dá zjednodušit. Postavím vám na ni nástroj.",
     benefit:
-      "Naprogramuju software, navrhnu a zapojím hardware. Dostanete řešení té jedné vaší situace a člověka, který za něj ručí.",
+      "Naprogramuju software, navrhnu i zapojím hardware. Dostanete řešení pro tu jednu konkrétní situaci.",
     price: "cena po schůzce",
     cta: { label: "Napište mi, co potřebujete", href: "/kontakt" },
   },
@@ -95,7 +95,7 @@ const FAQ = [
   },
   {
     q: "Jak dlouho trvá, než to běží?",
-    a: "Recenze tag nainstaluju na místě za pár minut. Věrnostní stojánek vyrábím na míru, obvykle do dvou týdnů od schůzky. Web podle rozsahu, obvykle do dvou týdnů.",
+    a: "Recenze tag nainstaluju na místě za pár minut. Věrnostní stojánek vyrábím na míru, obvykle do dvou týdnů od schůzky. Web bývá hotový v podobném termínu, podle rozsahu.",
   },
   {
     q: "Kolik to stojí doopravdy?",
@@ -252,7 +252,7 @@ export default function Sluzby() {
         <h1 className="mt-4 font-display text-[clamp(2rem,1.3rem+2.8vw,3.2rem)] font-semibold leading-[1.06] text-ink">
           Co pro váš podnik{" "}
           <span className="relative inline-block whitespace-nowrap">
-            postavím
+            udělám
             {/* stejný ruční akcent jako v hero na home */}
             <svg
               className="absolute left-0 top-full h-2 w-full text-clay"
@@ -274,14 +274,12 @@ export default function Sluzby() {
           </span>
         </h1>
         <p className="mt-5 text-[1.15rem] leading-relaxed text-ink-soft">
-          Tohle stavím v podnicích nejčastěji. Vezmete si jednu věc, nebo si
-          postupně poskládáte víc —{" "}
+          Tohle dělám v podnicích nejčastěji. Můžete si vzít jednu věc, nebo si
+          postupně poskládat víc —{" "}
           <span className="font-medium text-ink">
-            všechno spolu mluví a máte to na jednom místě
+            všechno spolu funguje a máte to na jednom místě
           </span>
-          . Věci jako věrnostní stojánek nebo čidla do lednic u jiného webaře
-          nedostanete. Právě tím podnik vypadá jinak než ten odvedle, a to
-          přivádí zákazníky.
+          . Věrnostní stojánek nebo čidla do lednic u běžného webaře nedostanete.
         </p>
       </div>
 
@@ -308,7 +306,7 @@ export default function Sluzby() {
             // Cena
           </p>
           <h2 className="mt-3 font-display text-[clamp(1.6rem,1.2rem+1.6vw,2.2rem)] font-semibold leading-tight text-ink">
-            Žádná překvapení
+            Ceny dopředu
           </h2>
           <p className="mt-3 text-[1.02rem] leading-relaxed text-ink-soft">
             Jednorázová částka pokrývá výrobu a zavedení, měsíční částka provoz
@@ -317,7 +315,7 @@ export default function Sluzby() {
               Nejsem plátce DPH, ceny jsou konečné.
             </span>{" "}
             U větších projektů řeknu přesné číslo po schůzce, dřív než začnu
-            pracovat. Smlouva vzniká až vzájemným potvrzením objednávky — víc v{" "}
+            pracovat. Smlouva vzniká až potvrzením objednávky — víc v{" "}
             <Link
               href="/obchodni-podminky"
               className="text-clay-deep underline decoration-brown/30 underline-offset-4 hover:text-clay"
@@ -334,7 +332,7 @@ export default function Sluzby() {
             // Časté otázky
           </p>
           <h2 className="mt-3 font-display text-[clamp(1.6rem,1.2rem+1.6vw,2.2rem)] font-semibold leading-tight text-ink">
-            Na co se majitelé ptají
+              Na co se majitelé ptají
           </h2>
           {/* rozklikávací bez JS (details/summary) — stránka zůstává statická */}
           <div className="mt-6 space-y-3">

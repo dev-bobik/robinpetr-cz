@@ -2,28 +2,28 @@ import Link from "next/link";
 
 const DIFFERENCES = [
   {
-    title: "Hardware, který jinde nekoupí",
-    text: "Věrnostní stojánek, čidla do lednic, cenovky na baru — vlastní zařízení, co běžný webař ani velká platforma nenabídne. Tím se odlišíte hned na první pohled.",
+    title: "Věci, které jinde nedostanete",
+    text: "Věrnostní stojánek, čidla do lednic nebo cenovky na baru — vlastní zařízení, které běžný webař nenabídne.",
   },
   {
     title: "Jeden dodavatel, jeden přehled",
-    text: "Věrnost, web, objednávky i čidla máte od jednoho člověka a vidíte je na jednom místě. Žádné lepení pěti aplikací od pěti firem, které spolu nemluví.",
+    text: "Věrnost, web, objednávky i čidla máte od jednoho člověka a vidíte je na jednom místě.",
   },
   {
     title: "Dotažené do detailu",
-    text: "Nedodávám polotovar. Věci vypadají a fungují tak, že u vás zákazník cítí, že to má hlavu a patu — a rád se vrátí.",
+    text: "Nedodávám polotovar. Věci vypadají i fungují tak, aby dávaly smysl v provozu.",
   },
   {
-    title: "Řešíte to se mnou, ne s podporou",
-    text: "Když je potřeba něco změnit nebo hoří problém, voláte přímo mně. Žádné přehazování mezi dodavateli, které brzdí a stojí peníze.",
+    title: "Řešíte to se mnou",
+    text: "Když je potřeba něco změnit nebo je problém, voláte přímo mně.",
   },
 ];
 
 const RENTAL_COSTS = [
-  "Šablona splývá s konkurencí — zákazník nemá důvod vybrat si zrovna vás.",
-  "Když nástroje nefungují spolu, dělají v provozu chyby, které pocítí zákazník.",
-  "Než zákazník proklikáním něco vyřeší, radši objedná jinde.",
-  "Za pronajatou platformu platíte pořád, a stejně vypadáte jako všichni.",
+  "Šablona splývá s konkurencí a zákazník nemá důvod vybrat si zrovna vás.",
+  "Když nástroje nefungují spolu, dělají v provozu chyby.",
+  "Než zákazník něco prokliká, často radši odejde jinam.",
+  "Za pronajatou platformu platíte pořád a stejně vypadáte podobně jako ostatní.",
 ];
 
 function CtaLink({ children, className = "" }) {
@@ -67,19 +67,18 @@ export default function ProcJa() {
       <div className="mx-auto max-w-3xl px-6">
         <p className="eyebrow">Proč já</p>
         <h1 className="mt-4 font-display text-[clamp(2rem,1.3rem+2.8vw,3.2rem)] font-semibold leading-[1.06] text-ink">
-          Proč se mnou
+          Proč spolupracovat se mnou
         </h1>
         <p className="mt-5 text-[1.15rem] leading-relaxed text-ink-soft">
-          Většina konkurence prodává tu samou šablonu jako všem ostatním. Ode mě
-          dostanete něco, co soused přes ulici nemá — vlastní hardware,
-          propojené věci a detail, který je vidět. Tím podnik vyčnívá a přivádí
-          zákazníky.
+          Většina konkurence nabízí stejnou šablonu všem. Ode mě dostanete
+          řešení, které je přizpůsobené vašemu provozu, propojené a dotažené do
+          detailu.
         </p>
 
         <div className="mt-16">
           <SectionKicker>// Dvě cesty</SectionKicker>
           <h2 className="mt-3 font-display text-[clamp(1.7rem,1.2rem+1.8vw,2.4rem)] font-semibold leading-tight text-ink">
-            Splynout s davem, nebo vyčnívat
+            Dvě cesty: šablona, nebo řešení na míru
           </h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             <article className="rounded-2xl border border-brown/15 bg-card p-6">
@@ -88,8 +87,7 @@ export default function ProcJa() {
               </p>
               <p className="mt-3 text-[0.98rem] leading-snug text-ink-soft">
                 Stejná šablona jako u stovek jiných podniků. Platíte měsíčně,
-                mluvíte s call centrem a hardware si sháníte jinde. Zákazník
-                nepozná, čím se lišíte.
+                mluvíte s podporou a hardware si řešíte zvlášť.
               </p>
             </article>
             <article className="rounded-2xl border border-clay/35 bg-clay/[0.05] p-6">
@@ -97,9 +95,8 @@ export default function ProcJa() {
                 Řešení ode mě
               </p>
               <p className="mt-3 text-[0.98rem] leading-snug text-ink-soft">
-                Postavené na váš podnik, od webu po hardware na pultě. Vypadá to
-                jako váš podnik, ne jako šablona — a to je první důvod, proč si u
-                vás zákazník vybere.
+                Postavené pro váš podnik, od webu po hardware na pultě. Vypadá
+                to jako váš podnik, ne jako cizí šablona.
               </p>
             </article>
           </div>
@@ -108,7 +105,7 @@ export default function ProcJa() {
         <div className="mt-16">
           <SectionKicker>// Co je v tom navíc</SectionKicker>
           <h2 className="mt-3 font-display text-[clamp(1.6rem,1.2rem+1.6vw,2.2rem)] font-semibold leading-tight text-ink">
-            Čtyři věci, které u konkurence nenajdete
+            Čtyři věci navíc
           </h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             {DIFFERENCES.map((item) => (
@@ -130,12 +127,12 @@ export default function ProcJa() {
         <div className="mt-16 rounded-2xl border-l-[3px] border-clay bg-card p-6 sm:p-8">
           <SectionKicker>// Co vás stojí šablonovost</SectionKicker>
           <h2 className="mt-3 font-display text-[clamp(1.6rem,1.2rem+1.6vw,2.2rem)] font-semibold leading-tight text-ink">
-            Nejdražší není systém, ale zákazník, co odešel jinam
+            Nejdražší je zákazník, který odejde jinam
           </h2>
           <p className="mt-3 text-[1.02rem] leading-relaxed text-ink-soft">
             Když web, objednávky a věrnost nefungují spolu, zákazník to pozná
-            hned. A jakmile odejde ke konkurenci, stojí to víc než cokoli, co
-            jste ušetřili na začátku.
+            hned. A jakmile odejde ke konkurenci, bývá to dražší než úspora na
+            začátku.
           </p>
           <ul className="mt-5 space-y-2">
             {RENTAL_COSTS.map((point) => (
@@ -155,19 +152,17 @@ export default function ProcJa() {
         <div className="mt-16">
           <SectionKicker>// Pro koho to je</SectionKicker>
           <h2 className="mt-3 font-display text-[clamp(1.6rem,1.2rem+1.6vw,2.2rem)] font-semibold leading-tight text-ink">
-            Pro podniky, které chtějí vyčnívat a růst
+            Pro podniky, které chtějí fungovat líp
           </h2>
           <p className="mt-3 text-[1.02rem] leading-relaxed text-ink-soft">
-            Jestli chcete, aby si vás zákazník zapamatoval a vracel se — a aby
-            vám to celé reálně vydělávalo — musí podnik fungovat jako jeden
-            propojený celek. Přesně na to jsem tu: software i hardware v jedněch
-            rukou.
+            Pokud chcete, aby si vás zákazník zapamatoval a vracel se, dává smysl
+            mít podnik jako jeden propojený celek. Přesně na to jsem tu.
           </p>
         </div>
 
         <div className="mt-16 rounded-2xl border border-clay/30 bg-clay/[0.05] p-8 text-center">
           <h2 className="font-display text-[clamp(1.6rem,1.2rem+1.6vw,2.2rem)] font-semibold leading-tight text-ink">
-            Ozvěte se, nezávazně to probereme
+            Ozvěte se, projdeme to spolu
           </h2>
           <div className="mt-6 flex justify-center">
             <CtaLink className="px-8 py-4">Napsat mi</CtaLink>

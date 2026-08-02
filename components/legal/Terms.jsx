@@ -33,8 +33,8 @@ export default function Terms() {
           Obchodní podmínky
         </h1>
         <p className="mt-4 text-[1.05rem] leading-relaxed text-ink-soft">
-          Krátce a bez kliček: co platí, když spolu začneme spolupracovat. Když
-          vám tu něco nesedí, řekněte — dá se to dohodnout jinak.
+          Stručně a bez kliček: co platí, když spolu začneme spolupracovat. Když
+          vám tu něco nesedí, řekněte mi to.
         </p>
         <p className="mt-2 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-brown">
           Platné od {PLATNE_OD}

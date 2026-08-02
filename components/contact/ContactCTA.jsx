@@ -51,12 +51,11 @@ export default function ContactCTA() {
           id="kontakt-cta-nadpis"
           className="mt-4 font-display text-[clamp(1.9rem,1.2rem+2.6vw,3rem)] font-semibold leading-[1.08] text-ink"
         >
-          Pojďme to probrat
+          Napište mi, co řešíte
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-[1.05rem] leading-relaxed text-ink-soft">
-          Bere vám něco v podniku zbytečně čas? Nebo vás napadá, co by šlo
-          zjednodušit?{" "}
-          <span className="font-medium text-ink">Napište mi — nezávazně.</span>
+          Bere vám něco v podniku zbytečně čas? Nebo už víte, co by šlo
+          zjednodušit? <span className="font-medium text-ink">Napište mi.</span>
         </p>
 
         <div className="mt-8 flex justify-center">
@@ -64,7 +63,7 @@ export default function ContactCTA() {
             href="/kontakt"
             className="group inline-flex items-center gap-2 rounded-full bg-clay px-8 py-4 font-medium text-card shadow-[0_14px_30px_-12px_rgba(192,121,79,0.8)] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:bg-clay-deep"
           >
-            Napsat zprávu
+            Napsat mi
             <svg
               width="18"
               height="18"

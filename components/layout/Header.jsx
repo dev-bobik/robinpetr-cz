@@ -26,7 +26,7 @@ export default function Header() {
             Robin Petr
           </span>
           <span className="hidden font-mono text-[0.68rem] uppercase tracking-[0.18em] text-brown lg:inline">
-            — digitalizace podniků
+            — weby a hardware pro podniky
           </span>
         </Link>
 

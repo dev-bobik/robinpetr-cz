@@ -9,7 +9,7 @@ export default function Footer() {
         <div>
           <p className="font-display text-lg font-semibold text-ink">Robin Petr</p>
           <p className="mt-1 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-brown">
-            digitalizace podniků
+            weby a hardware pro podniky
           </p>
           {CONTACT.ico ? (
             <p className="mt-4 font-mono text-xs text-ink-soft">

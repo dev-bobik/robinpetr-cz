@@ -5,35 +5,35 @@ import Link from "next/link";
 
 const STEPS = [
   {
-    title: "Ozvete se — nezávazně",
-    desc: "Napíšete pár vět, ozvu se. Domluvíme se na kafi nebo hovoru, nic vás to nezavazuje.",
+    title: "Napíšete mi",
+    desc: "Pošlete pár vět. Ozvu se zpátky a domluvíme si krátký hovor nebo schůzku.",
   },
   {
     title: "Probereme, co váš podnik potřebuje",
-    desc: "Poslechnu si, co vás zdržuje a co by reálně pomohlo — bez technického žargonu.",
+    desc: "Poslechnu si, co vás zdržuje a co by opravdu pomohlo — bez složitých výrazů.",
   },
   {
-    title: "Navrhnu řešení na míru (ne šablonu)",
-    desc: "Dostanete návrh přesně na váš podnik, ne univerzální krabici, kterou nikdo nepoužije.",
+    title: "Navrhnu řešení na míru",
+    desc: "Dostanete návrh přesně pro váš podnik, ne univerzální krabici pro všechny.",
   },
   {
     title: "Postavím a nasadím",
-    desc: "Software i hardware postavím, propojím a rozjedu u vás — ať to celé funguje jako jeden systém.",
+    desc: "Software i hardware postavím, propojím a zprovozním u vás.",
   },
   {
-    title: "Starám se dál — jsem po ruce, když něco hoří",
-    desc: "Nezmizím po předání. Když je průšvih, řešíte ho se mnou, ne s call centrem.",
+    title: "Zůstávám po ruce",
+    desc: "Nezmizím po předání. Když je problém, řešíte ho přímo se mnou.",
   },
 ];
 
 const OFFER = [
   {
     title: "Vracející se zákazníci",
-    text: "Věrnost, co zákazníka přivede zpátky — bez plastových kartiček a aplikací.",
+    text: "Věrnostní program, který zákazníka přivede zpátky — bez plastových kartiček a aplikací.",
   },
   {
     title: "Klidnější hlava",
-    text: "Hlídám váš podnik — třeba teploty v lednicích — abyste o problému věděli hned.",
+    text: "Hlídání teplot v lednicích a dalších místech, abyste o problému věděli včas.",
   },
   {
     title: "Míň chaosu",
@@ -41,7 +41,7 @@ const OFFER = [
   },
   {
     title: "Hardware na míru",
-    text: "Děláte něco ručně, co vás zdržuje? Postavím vám to — software i hardware.",
+    text: "Děláte něco ručně, co vás zdržuje? Postavím k tomu vlastní řešení.",
   },
 ];
 
@@ -87,22 +87,22 @@ export default function HowItWorks() {
         {/* 1 — CO DĚLÁM (obecně) */}
         <p className="eyebrow">Jak to funguje</p>
         <h1 className="mt-4 font-display text-[clamp(2rem,1.3rem+2.8vw,3.2rem)] font-semibold leading-[1.06] text-ink">
-          Jeden parťák na celou digitalizaci
+          Jeden člověk na celý systém
         </h1>
         <p className="mt-5 text-[1.15rem] leading-relaxed text-ink-soft">
-          Digitalizuju podniky — spojuju{" "}
+          Dělám weby, objednávky i jednoduchý hardware pro podniky — spojuju{" "}
           <span className="font-medium text-ink">
-            software a vlastní hardware do jednoho propojeného celku
+            software a hardware do jednoho propojeného celku
           </span>
-          , od jednoho člověka. Nejsem výčet krabiček, ale parťák, co vám to
-          postaví, nasadí a postará se, aby to celé fungovalo.
+          . Všechno řešíte s jedním člověkem, který to postaví, nasadí a udržuje
+          v chodu.
         </p>
 
         {/* 2 — JAK SPOLUPRÁCE PROBÍHÁ (jádro) */}
         <div className="mt-16">
           <SectionKicker>// Jak spolupráce probíhá</SectionKicker>
           <h2 className="mt-3 font-display text-[clamp(1.7rem,1.2rem+1.8vw,2.4rem)] font-semibold leading-tight text-ink">
-            Pět kroků, žádná věda
+            Pět kroků od prvního kontaktu po provoz
           </h2>
 
           <ol className="mt-8 space-y-4">
@@ -133,7 +133,7 @@ export default function HowItWorks() {
         {/* CTA v průběhu čtení */}
         <div className="mt-12 flex flex-wrap items-center gap-4 rounded-2xl border border-brown/15 bg-beige-deep/40 p-6">
           <p className="flex-1 text-[1.02rem] font-medium text-ink">
-            Krok jedna je na vás — zbytek zařídím.
+            První krok je na vás, zbytek zařídím já.
           </p>
           <CtaLink>Napsat mi</CtaLink>
         </div>
@@ -142,16 +142,12 @@ export default function HowItWorks() {
         <div className="mt-16">
           <SectionKicker>// Proč já</SectionKicker>
           <h2 className="mt-3 font-display text-[clamp(1.6rem,1.2rem+1.6vw,2.2rem)] font-semibold leading-tight text-ink">
-            Místní člověk, ne neosobní systém
+            Jeden člověk, ne neosobní systém
           </h2>
           <p className="mt-3 text-[1.02rem] leading-relaxed text-ink-soft">
-            Software i hardware máte{" "}
-            <span className="font-medium text-ink">v jedněch rukou</span>. Jsem
-            lokální, po ruce a dělám řešení na míru — na rozdíl od velkých
-            neosobních systémů i běžných webařů, co skončí u webu a hardware
-            neřeší. Díky vlastnímu hardwaru a věcem dotaženým do detailu působí
-            váš podnik profesionálně — a to je přesně to, co zákazníka získá a
-            vrátí.
+            Software i hardware máte <span className="font-medium text-ink">v jedněch rukou</span>.
+            Jsem po ruce a dělám řešení na míru, ne univerzální šablonu. Díky tomu
+            máte méně dohadů a víc věcí, které spolu opravdu fungují.
           </p>
         </div>
 
@@ -159,13 +155,12 @@ export default function HowItWorks() {
         <div className="mt-16 rounded-2xl border-l-[3px] border-clay bg-card p-6 sm:p-8">
           <SectionKicker>// Jak přemýšlím</SectionKicker>
           <h2 className="mt-3 font-display text-[clamp(1.6rem,1.2rem+1.6vw,2.2rem)] font-semibold leading-tight text-ink">
-            Neprodávám krabičky, řeším potřebu
+            Neřeším krabičku, ale potřebu
           </h2>
           <p className="mt-3 text-[1.02rem] leading-relaxed text-ink-soft">
-            Hardware je ta hmatatelná část, ale hodnota je v{" "}
-            <span className="font-medium text-ink">propojení a službě</span> —
-            ne v zařízeních samotných. Všechno drží pohromadě jeden člověk —
-            nic není ostrov a nikdo si nepřehazuje odpovědnost.
+            Hardware je jen ta viditelná část. Hodnota je v propojení a v tom,
+            že všechno drží pohromadě jeden člověk. Nic není ostrov a nikdo si
+            nepřehazuje odpovědnost.
           </p>
         </div>
 
@@ -173,7 +168,7 @@ export default function HowItWorks() {
         <div className="mt-16">
           <SectionKicker>// Co konkrétně získáváte</SectionKicker>
           <h2 className="mt-3 font-display text-[clamp(1.6rem,1.2rem+1.6vw,2.2rem)] font-semibold leading-tight text-ink">
-            Ve zkratce
+            Stručně
           </h2>
 
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
@@ -220,7 +215,7 @@ export default function HowItWorks() {
         <div className="mt-16">
           <SectionKicker>// Cena</SectionKicker>
           <h2 className="mt-3 font-display text-[clamp(1.6rem,1.2rem+1.6vw,2.2rem)] font-semibold leading-tight text-ink">
-            Na míru a férově
+            Na míru a bez zbytečností
           </h2>
           <p className="mt-3 text-[1.02rem] leading-relaxed text-ink-soft">
             Cenu dělám na míru vašemu podniku i rozpočtu.{" "}
@@ -235,7 +230,7 @@ export default function HowItWorks() {
         {/* 7 — CTA */}
         <div className="mt-16 rounded-2xl border border-clay/30 bg-clay/[0.05] p-8 text-center">
           <h2 className="font-display text-[clamp(1.6rem,1.2rem+1.6vw,2.2rem)] font-semibold leading-tight text-ink">
-            Ozvěte se, nezávazně to probereme
+            Ozvěte se, projdeme to spolu
           </h2>
           <div className="mt-6 flex justify-center">
             <CtaLink className="px-8 py-4">Napsat mi</CtaLink>

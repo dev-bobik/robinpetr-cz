@@ -3,7 +3,7 @@ import About from "@/components/about/About";
 export const metadata = {
   title: "O mně — Robin Petr",
   description:
-    "Kdo za tím stojí. Propojuju hardware a software — od posledního odporu na desce až po finální pixel na webu.",
+    "Kdo za webem stojí a proč dělám vedle sebe hardware i software.",
   alternates: { canonical: "/o-mne" },
 };
 

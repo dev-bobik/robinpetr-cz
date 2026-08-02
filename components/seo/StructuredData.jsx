@@ -20,7 +20,7 @@ export default function StructuredData() {
         "@id": `${URL}/#business`,
         name: "Robin Petr — digitalizace podniků",
         description:
-          "Weby, objednávkové systémy a chytrý hardware pro malé podniky — od jednoho člověka, co to celé propojí.",
+          "Weby, objednávky a jednoduchý hardware pro malé podniky. Všechno navrhuju a propojuju sám.",
         url: URL,
         image: `${URL}/foto.png`,
         email: `info@robinpetr.cz`,

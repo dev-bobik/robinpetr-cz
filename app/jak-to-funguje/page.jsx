@@ -4,7 +4,7 @@ import ScrollCafe from "@/components/scroll-cafe/ScrollCafe";
 export const metadata = {
   title: "Jak to funguje — Robin Petr",
   description:
-    "Lidsky vysvětleno, co dělám: propojený software i vlastní hardware pro podniky. Věrnostní systém, objednávky, dashboard, hlídání teplot — jeden ucelený systém od jednoho člověka.",
+    "Jak probíhá spolupráce a co dostanete: weby, objednávky, věrnost, hlídání teplot i další jednoduchý hardware pro podniky.",
   alternates: { canonical: "/jak-to-funguje" },
 };
 

@@ -31,11 +31,11 @@ export const metadata = {
   metadataBase: new URL("https://robinpetr.cz"),
   title: "Robin Petr — digitalizace podniků",
   description:
-    "Weby, objednávkové systémy a chytrý hardware pro malé podniky — od jednoho člověka, co to celé propojí.",
+    "Weby, objednávky a jednoduchý hardware pro malé podniky. Navrhuju je, postavím a propojím sám.",
   openGraph: {
     title: "Robin Petr — digitalizace podniků",
     description:
-      "Weby, objednávkové systémy a chytrý hardware pro malé podniky — od jednoho člověka, co to celé propojí.",
+      "Weby, objednávky a jednoduchý hardware pro malé podniky. Navrhuju je, postavím a propojím sám.",
     url: "https://robinpetr.cz",
     siteName: "Robin Petr",
     locale: "cs_CZ",

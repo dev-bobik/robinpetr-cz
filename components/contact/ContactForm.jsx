@@ -11,7 +11,7 @@ const labelBase =
 function validate({ name, contact, message }) {
   if (!name) return "Vyplňte prosím jméno.";
   if (!contact) return "Vyplňte prosím e-mail nebo telefon, ať se vám můžu ozvat.";
-  if (!message) return "Napište prosím pár slov o tom, s čím potřebujete pomoct.";
+  if (!message) return "Napište prosím pár slov o tom, co potřebujete.";
   return "";
 }
 
@@ -57,7 +57,7 @@ export default function ContactForm() {
       setStatus("success");
       form.reset();
     } catch {
-      setError("Odeslání se nepovedlo — zkontrolujte připojení a zkuste to znovu.");
+      setError("Odeslání se nepovedlo. Zkontrolujte připojení a zkuste to znovu.");
       setStatus("error");
     }
   }
@@ -84,8 +84,8 @@ export default function ContactForm() {
           </p>
         </div>
         <p className="mt-3 leading-relaxed text-ink-soft">
-          Ozvu se vám obvykle do 24 hodin. Kdyby to spěchalo, klidně mi napište
-          přímo na e-mail nebo zavolejte.
+          Odpovím obvykle do 24 hodin. Kdyby to spěchalo, napište mi přímo na
+          e-mail nebo zavolejte.
         </p>
         <button
           type="button"
@@ -186,14 +186,14 @@ export default function ContactForm() {
       </button>
 
       <p className="text-[0.78rem] leading-snug text-ink-soft/80">
-        Odesláním berete na vědomí{" "}
+        Odesláním souhlasíte s{" "}
         <Link
           href="/ochrana-osobnich-udaju"
           className="underline decoration-brown/30 underline-offset-2 transition-colors duration-200 hover:text-clay-deep"
         >
-          zpracování osobních údajů
+          ochranou osobních údajů
         </Link>{" "}
-        pro vyřízení vaší poptávky.
+        pro vyřízení poptávky.
       </p>
     </form>
   );
