@@ -118,11 +118,13 @@ const FAQ = [
 ];
 
 /* Cena jako fyzická cenovka zavěšená přes spodní hranu karty — cenovky jsou
-   doslova jeden z produktů, které prodávám. Očko = tečka vlevo. */
+   doslova jeden z produktů, které prodávám. Očko = tečka vlevo.
+   Na úzké obrazovce zůstává v normálním toku: delší ceny se tam lámou na dva
+   řádky a zavěšená cenovka pak přerůstala přes odkaz na kontakt pod ní. */
 function PriceTag({ children, accent }) {
   return (
     <p
-      className={`absolute -bottom-4 right-6 inline-flex rotate-[1.5deg] items-center gap-2 rounded-lg border px-3.5 py-2 font-mono text-[0.8rem] font-medium shadow-[0_10px_20px_-10px_rgba(46,42,34,0.5)] transition-transform duration-200 group-hover:rotate-[-1deg] motion-reduce:transition-none ${
+      className={`mt-5 flex w-fit rotate-[1.5deg] items-center gap-2 rounded-lg border px-3.5 py-2 font-mono text-[0.8rem] font-medium shadow-[0_10px_20px_-10px_rgba(46,42,34,0.5)] transition-transform duration-200 group-hover:rotate-[-1deg] motion-reduce:transition-none sm:absolute sm:-bottom-4 sm:right-6 sm:mt-0 sm:inline-flex ${
         accent
           ? "border-clay-deep/40 bg-clay text-card"
           : "border-brown/25 bg-card text-ink"
@@ -138,6 +140,10 @@ function PriceTag({ children, accent }) {
 }
 
 function ServiceDetail({ index, name, flag, accent, soon, img, what, benefit, how, price, cta }) {
+  /* Výchozí odkaz na kontakt; produkty s vlastním textem (na míru, pokladna)
+     si ho přebijí přes `cta`. */
+  const link = cta ?? { label: "Napište mi", href: "/kontakt" };
+
   return (
     <article
       className={`group relative rounded-2xl border p-6 pb-8 shadow-[0_10px_30px_-18px_rgba(46,42,34,0.4)] transition duration-300 ease-out hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-8 sm:pb-9 ${
@@ -263,30 +269,30 @@ function ServiceDetail({ index, name, flag, accent, soon, img, what, benefit, ho
 
       {price ? <PriceTag accent={accent}>{price}</PriceTag> : null}
 
-      {cta ? (
-        <Link
-          href={cta.href}
-          className="group mt-5 inline-flex items-center gap-2 font-mono text-sm font-medium text-clay-deep underline decoration-clay/30 underline-offset-4 transition-colors hover:text-clay"
+      {/* Odkaz na kontakt má KAŽDÁ karta — ať nikdo nemusí kontakt hledat
+          jinde na stránce. Produkt si může vlastní text přebít přes `cta`. */}
+      <Link
+        href={link.href}
+        className="group mt-5 inline-flex items-center gap-2 font-mono text-sm font-medium text-clay-deep underline decoration-clay/30 underline-offset-4 transition-colors hover:text-clay"
+      >
+        {link.label}
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 18 18"
+          fill="none"
+          aria-hidden="true"
+          className="transition-transform duration-200 ease-out group-hover:translate-x-1"
         >
-          {cta.label}
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 18 18"
-            fill="none"
-            aria-hidden="true"
-            className="transition-transform duration-200 ease-out group-hover:translate-x-1"
-          >
-            <path
-              d="M3.5 9h11M10 4.5 14.5 9 10 13.5"
-              stroke="currentColor"
-              strokeWidth="1.7"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </Link>
-      ) : null}
+          <path
+            d="M3.5 9h11M10 4.5 14.5 9 10 13.5"
+            stroke="currentColor"
+            strokeWidth="1.7"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </Link>
     </article>
   );
 }
