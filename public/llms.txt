@@ -21,6 +21,9 @@
 - Hlídání teplot (HACCP): bezdrátová čidla do lednic a mrazáků s alarmem
 - Řešení na míru: automatizace opakované ruční práce v provozu
 
+## Připravujeme (zatím není v prodeji)
+- Pokladna: pokladní systém na tablet nebo počítač, markování dotykem, účtenky, denní uzávěrka, funguje i bez internetu
+
 ## Kontakt
 - Web: https://robinpetr.cz
 - E-mail: info@robinpetr.cz

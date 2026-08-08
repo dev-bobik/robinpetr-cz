@@ -68,6 +68,20 @@ const SERVICES = [
     price: priceText("haccp"),
   },
   {
+    name: "Pokladna",
+    flag: "připravujeme",
+    soon: true,
+    /* skutečný snímek z běžící pokladny (Software/pokladna), ne ilustrace */
+    img: "/ilustrace/foto-pokladna.jpg",
+    what: "Pokladna na tablet nebo počítač. Markování dotykem, účtenky, denní uzávěrka — a funguje i bez internetu.",
+    benefit:
+      "Neplatíte měsíční pronájem pokladny a data zůstávají u vás. Když vypadne připojení, prodáváte dál.",
+    how: "Běží přímo v zařízení, nepotřebuje server. Účtenku vytisknete na běžnou termotiskárnu.",
+    /* Záměrně bez ceny — není spuštěná. Proto taky není v lib/pricing.js:
+       ten plní schema.org Offer a nabídka bez ceny by byla vadný structured data. */
+    cta: { label: "Dejte vědět, až to spustím", href: "/kontakt" },
+  },
+  {
     name: "Něco na míru",
     img: "/ilustrace/foto-namiru.jpg",
     what: "Věc, kterou v podniku děláte pořád dokola ručně, se většinou dá zjednodušit. Postavím vám na ni nástroj.",
@@ -123,19 +137,27 @@ function PriceTag({ children, accent }) {
   );
 }
 
-function ServiceDetail({ index, name, flag, accent, img, what, benefit, how, price, cta }) {
+function ServiceDetail({ index, name, flag, accent, soon, img, what, benefit, how, price, cta }) {
   return (
     <article
       className={`group relative rounded-2xl border p-6 pb-8 shadow-[0_10px_30px_-18px_rgba(46,42,34,0.4)] transition duration-300 ease-out hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-8 sm:pb-9 ${
         accent ? "border-clay/40 bg-clay/[0.05]" : "border-brown/15 bg-card"
-      }`}
+      } ${soon ? "border-dashed" : ""}`}
     >
       <div className="flex items-start justify-between gap-5">
         <div>
           <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-brown">
             {String(index + 1).padStart(2, "0")}
             {flag ? (
-              <span className="ml-3 rounded-full bg-clay/15 px-2.5 py-1 text-[0.6rem] tracking-wider text-clay-deep">
+              /* „připravujeme" schválně jinou barvou než prodejní štítky
+                 („rychlý start", „hlavní řešení"), ať se nedá splést s nabídkou */
+              <span
+                className={`ml-3 rounded-full px-2.5 py-1 text-[0.6rem] tracking-wider ${
+                  soon
+                    ? "bg-brown/12 text-brown"
+                    : "bg-clay/15 text-clay-deep"
+                }`}
+              >
                 {flag}
               </span>
             ) : null}

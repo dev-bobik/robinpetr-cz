@@ -26,6 +26,10 @@
 - Cena: 990 Kč jednorázově (instalace)
 - Měsíční poplatek: 149 Kč/měs za čidlo
 
+## Pokladna (připravujeme, zatím není v prodeji)
+- Cena: zatím nestanovena — chystá se spuštění
+- Co to bude: pokladna na tablet nebo počítač, markování dotykem, účtenky, denní uzávěrka, funguje i bez internetu
+
 ## Něco na míru
 - Cena: po schůzce — sazba se odvíjí od rozsahu, přesné číslo padne dřív, než se začne pracovat
 - Kontakt: info@robinpetr.cz, +420 776 842 178
