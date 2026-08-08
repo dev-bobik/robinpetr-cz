@@ -48,12 +48,16 @@ export default function NabidkaFocus() {
     const hasScrollEnd = "onscrollend" in window;
     const isActive = () => mqDesktop.matches && !mqReduce.matches;
 
+    /* Bez šířky svislého scrollbaru — innerWidth ho započítává, takže by byl
+       „střed obrazovky" o pár pixelů vedle a produkt by nikdy nesedl přesně. */
+    const viewportWidth = () => document.documentElement.clientWidth;
+
     const measure = () => {
       cells = Array.from(track.querySelectorAll(".services__cell"));
       pinY = Math.round(wrap.getBoundingClientRect().top + window.scrollY);
       range = Math.max(1, wrap.offsetHeight - window.innerHeight);
       offsets = cells.map(
-        (c) => window.innerWidth / 2 - (c.offsetLeft + c.offsetWidth / 2),
+        (c) => viewportWidth() / 2 - (c.offsetLeft + c.offsetWidth / 2),
       );
     };
 
@@ -77,7 +81,7 @@ export default function NabidkaFocus() {
 
       /* Vzdálenost od středu jde spočítat z offsetů — bez čtení layoutu,
          takže tohle nenutí prohlížeč každý snímek přepočítávat stránku. */
-      const half = window.innerWidth / 2;
+      const half = viewportWidth() / 2;
       for (let k = 0; k < cells.length; k++) {
         const norm = Math.min(Math.abs(x - offsets[k]) / half, 1);
         const fs = CENTER - norm * (CENTER - EDGE);
@@ -148,6 +152,15 @@ export default function NabidkaFocus() {
       render();
     };
 
+    /* Uložené pozice produktů platí jen do nejbližší změny layoutu. Fotky
+       a fonty doběhnou až po prvním měření a stopu posunou — pak se produkt
+       nezastavil uprostřed, ale kus vedle („ujelo to do strany").
+       ResizeObserver na stopě takovou změnu zachytí a přeměří. */
+    const ro = new ResizeObserver(() => {
+      measure();
+      render();
+    });
+
     const reset = () => {
       clearTimeout(idleTimer);
       selfScrolling = false;
@@ -164,6 +177,11 @@ export default function NabidkaFocus() {
       if (cells.length === 0) return;
       lastY = window.scrollY;
       render();
+      ro.observe(track);
+      /* fotky se načtou až po prvním měření → po každé přeměřit */
+      for (const im of track.querySelectorAll("img")) {
+        if (!im.complete) im.addEventListener("load", onResize, { once: true });
+      }
       window.addEventListener("scroll", onScroll, { passive: true });
       window.addEventListener("resize", onResize);
       window.addEventListener("wheel", onUserInput, { passive: true });
@@ -173,6 +191,7 @@ export default function NabidkaFocus() {
     };
 
     const stop = () => {
+      ro.disconnect();
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onResize);
       window.removeEventListener("wheel", onUserInput);

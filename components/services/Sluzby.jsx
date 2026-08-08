@@ -79,7 +79,7 @@ const SERVICES = [
     how: "Běží přímo v zařízení, nepotřebuje server. Účtenku vytisknete na běžnou termotiskárnu.",
     /* Záměrně bez ceny — není spuštěná. Proto taky není v lib/pricing.js:
        ten plní schema.org Offer a nabídka bez ceny by byla vadný structured data. */
-    cta: { label: "Dejte vědět, až to spustím", href: "/kontakt" },
+    cta: { label: "Chci vědět, až bude hotová", href: "/kontakt" },
   },
   {
     name: "Něco na míru",
@@ -141,8 +141,14 @@ function ServiceDetail({ index, name, flag, accent, soon, img, what, benefit, ho
   return (
     <article
       className={`group relative rounded-2xl border p-6 pb-8 shadow-[0_10px_30px_-18px_rgba(46,42,34,0.4)] transition duration-300 ease-out hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-8 sm:pb-9 ${
-        accent ? "border-clay/40 bg-clay/[0.05]" : "border-brown/15 bg-card"
-      } ${soon ? "border-dashed" : ""}`}
+        /* „připravujeme" = zašedlá karta bez barvy značky, ať je na první
+           pohled jasné, že tohle se ještě neprodává */
+        soon
+          ? "border-dashed border-brown/25 bg-beige/40 shadow-none"
+          : accent
+            ? "border-clay/40 bg-clay/[0.05]"
+            : "border-brown/15 bg-card"
+      }`}
     >
       <div className="flex items-start justify-between gap-5">
         <div>
@@ -162,11 +168,19 @@ function ServiceDetail({ index, name, flag, accent, soon, img, what, benefit, ho
               </span>
             ) : null}
           </p>
-          <h2 className="mt-2 font-display text-xl font-semibold text-ink sm:text-2xl">
+          <h2
+            className={`mt-2 font-display text-xl font-semibold sm:text-2xl ${
+              soon ? "text-ink/55" : "text-ink"
+            }`}
+          >
             {name}
           </h2>
           {/* „what" vedle fotky až od tabletu; na mobilu je pod fotkou (níž) */}
-          <p className="mt-3 hidden text-[1.02rem] leading-relaxed text-ink-soft sm:block">
+          <p
+            className={`mt-3 hidden text-[1.02rem] leading-relaxed sm:block ${
+              soon ? "text-ink-soft/65" : "text-ink-soft"
+            }`}
+          >
             {what}
           </p>
         </div>
@@ -175,8 +189,13 @@ function ServiceDetail({ index, name, flag, accent, soon, img, what, benefit, ho
           <img
             src={img}
             alt=""
-            className={`-mr-1 -mt-1 hidden h-28 w-40 shrink-0 rounded-lg border-4 border-white object-cover shadow-[0_14px_28px_-14px_rgba(46,42,34,0.55)] sm:block sm:h-44 sm:w-60 lg:h-48 lg:w-64 ${
+            className={`-mr-1 -mt-1 hidden h-28 w-40 shrink-0 rounded-lg border-4 object-cover sm:block sm:h-44 sm:w-60 lg:h-48 lg:w-64 ${
               index % 2 ? "-rotate-2" : "rotate-2"
+            } ${
+              /* odbarvená fotka = další signál, že produkt ještě neběží */
+              soon
+                ? "border-white/70 opacity-60 shadow-[0_10px_20px_-14px_rgba(46,42,34,0.4)] grayscale"
+                : "border-white shadow-[0_14px_28px_-14px_rgba(46,42,34,0.55)]"
             }`}
           />
         ) : null}
@@ -188,30 +207,54 @@ function ServiceDetail({ index, name, flag, accent, soon, img, what, benefit, ho
         <img
           src={img}
           alt=""
-          className={`mt-4 aspect-[16/10] w-full rounded-lg border-4 border-white object-cover shadow-[0_14px_28px_-14px_rgba(46,42,34,0.55)] sm:hidden ${
+          className={`mt-4 aspect-[16/10] w-full rounded-lg border-4 object-cover sm:hidden ${
             index % 2 ? "-rotate-1" : "rotate-1"
+          } ${
+            soon
+              ? "border-white/70 opacity-60 shadow-[0_10px_20px_-14px_rgba(46,42,34,0.4)] grayscale"
+              : "border-white shadow-[0_14px_28px_-14px_rgba(46,42,34,0.55)]"
           }`}
         />
       ) : null}
-      <p className="mt-4 text-[1.02rem] leading-relaxed text-ink-soft sm:hidden">
+      <p
+        className={`mt-4 text-[1.02rem] leading-relaxed sm:hidden ${
+          soon ? "text-ink-soft/65" : "text-ink-soft"
+        }`}
+      >
         {what}
       </p>
 
       <div className="mt-5 grid gap-4 sm:grid-cols-2">
-        <div className="rounded-xl bg-beige/60 p-4">
-          <p className="font-mono text-[0.64rem] uppercase tracking-[0.16em] text-clay-deep">
+        <div className={`rounded-xl p-4 ${soon ? "bg-brown/[0.06]" : "bg-beige/60"}`}>
+          <p
+            className={`font-mono text-[0.64rem] uppercase tracking-[0.16em] ${
+              soon ? "text-brown/70" : "text-clay-deep"
+            }`}
+          >
             Co vám to přinese
           </p>
-          <p className="mt-2 text-[0.96rem] leading-snug text-ink-soft">
+          <p
+            className={`mt-2 text-[0.96rem] leading-snug ${
+              soon ? "text-ink-soft/65" : "text-ink-soft"
+            }`}
+          >
             {benefit}
           </p>
         </div>
         {how ? (
-          <div className="rounded-xl bg-beige/60 p-4">
-            <p className="font-mono text-[0.64rem] uppercase tracking-[0.16em] text-brown">
+          <div className={`rounded-xl p-4 ${soon ? "bg-brown/[0.06]" : "bg-beige/60"}`}>
+            <p
+              className={`font-mono text-[0.64rem] uppercase tracking-[0.16em] ${
+                soon ? "text-brown/70" : "text-brown"
+              }`}
+            >
               Jak to funguje
             </p>
-            <p className="mt-2 text-[0.96rem] leading-snug text-ink-soft">
+            <p
+              className={`mt-2 text-[0.96rem] leading-snug ${
+                soon ? "text-ink-soft/65" : "text-ink-soft"
+              }`}
+            >
               {how}
             </p>
           </div>
