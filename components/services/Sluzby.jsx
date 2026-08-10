@@ -11,14 +11,14 @@ const priceText = (id) => PRICING.find((p) => p.id === id).text;
    proto číslování. Ilustrace sdílené s home (public/ilustrace). */
 const SERVICES = [
   {
-    name: "Recenze tag",
+    name: "Digitální vizitka",
     flag: "rychlý start",
     img: "/ilustrace/nfc-web.png",
-    what: "Kartička na stůl nebo pult, přes kterou zákazník otevře Google recenzi jedním přiložením telefonu.",
+    what: "Stojánek na stůl nebo pult s vaším logem. Zákazník přiloží telefon k logu nebo naskenuje QR a otevře se mu, kam potřebujete — recenze, menu, věrnost.",
     benefit:
       "Recenze pomáhají tomu, aby vás Google ukázal dřív. Když jich máte víc, lidi vás snadněji najdou.",
-    how: "V kartičce je NFC čip i QR kód. Telefon ji přečte a rovnou otevře formulář pro recenzi.",
-    price: priceText("recenze-tag"),
+    how: "Vyrábím ho na míru vašemu podniku: logo v plastickém reliéfu, barvy podle vás, QR panel a cedulka se jménem. NFC čip je schovaný pod logem, zvenku není vidět.",
+    price: priceText("vizitka"),
   },
   {
     name: "Věrnostní systém",
@@ -109,7 +109,7 @@ const FAQ = [
   },
   {
     q: "Jak dlouho trvá, než to běží?",
-    a: "Recenze tag nainstaluju na místě za pár minut. Věrnostní stojánek vyrábím na míru, obvykle do dvou týdnů od schůzky. Web bývá hotový v podobném termínu, podle rozsahu.",
+    a: "Digitální vizitku vyrobím a přivezu obvykle do týdne od schůzky. Věrnostní stojánek vyrábím na míru, obvykle do dvou týdnů. Web bývá hotový v podobném termínu, podle rozsahu.",
   },
   {
     q: "Kolik to stojí doopravdy?",

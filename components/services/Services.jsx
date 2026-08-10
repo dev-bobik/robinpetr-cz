@@ -19,7 +19,7 @@ const BENEFITS = [
     title: "Věrnostní systém bez aplikací",
     description:
       "Zákazník přiloží telefon ke stojánku, hned sbírá body a vidí odměny. Žádné papírové kartičky ani aplikace navíc.",
-    tags: ["Věrnostní systém", "NFC stojánek"],
+    tags: ["Věrnostní systém", "Stojánek u pokladny"],
   },
   {
     visual: <CardIllustration src="/ilustrace/teploty.png" />,

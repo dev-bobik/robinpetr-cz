@@ -63,9 +63,9 @@ export default function Terms() {
               .
             </li>
             <li>
-              Podmínky platí pro služby digitalizace provozů: recenze tag,
-              věrnostní systém, hlídání teplot (HACCP), weby, online objednávky
-              a další služby dle nabídky.
+              Podmínky platí pro služby digitalizace provozů: digitální
+              vizitka, věrnostní systém, hlídání teplot (HACCP), weby, online
+              objednávky a další služby dle nabídky.
             </li>
             <li>
               <span className="font-medium text-ink">
