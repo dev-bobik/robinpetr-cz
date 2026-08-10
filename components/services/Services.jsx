@@ -18,7 +18,7 @@ const BENEFITS = [
     visual: <CardIllustration src="/ilustrace/vernost.png" />,
     title: "Věrnostní systém bez aplikací",
     description:
-      "Zákazník přiloží telefon ke stojánku, hned sbírá body a vidí odměny. Žádné papírové kartičky ani aplikace navíc.",
+      "Zákazník naskenuje QR ze stojánku, hned sbírá body a vidí odměny. Žádné papírové kartičky ani aplikace navíc.",
     tags: ["Věrnostní systém", "Stojánek u pokladny"],
   },
   {

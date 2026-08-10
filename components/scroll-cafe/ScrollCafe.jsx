@@ -35,7 +35,7 @@ const PHASES = [
     at: 0.66,
     kicker: "Věrnost",
     title: "Věrnost, která vrací lidi",
-    text: "Zákazník přiloží telefon a přičte se mu bod. Žádné plastové kartičky ani aplikace navíc.",
+    text: "Zákazník naskenuje QR ze stojánku a přičte se mu bod. Žádné plastové kartičky ani aplikace navíc.",
   },
 ];
 

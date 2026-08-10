@@ -28,7 +28,7 @@ const SERVICES = [
     what: "Věrnostní program, na který zákazníkům stačí telefon v kapse.",
     benefit:
       "Stálý zákazník utratí víc a nemusíte ho pokaždé znovu lákat reklamou. Navíc vidíte, kdo chodí a jak často.",
-    how: "U pokladny přiloží telefon ke stojánku, přičte se bod a zákazník hned vidí, kolik mu chybí do odměny.",
+    how: "U pokladny stojí stojánek s displejem. Zákazník zmáčkne tlačítko, naskenuje QR, který se ukáže, a hned vidí, kolik mu chybí do odměny. QR se pokaždé mění, takže si body nikdo nepřipíše zpovzdálí.",
     price: priceText("vernost"),
   },
   {
