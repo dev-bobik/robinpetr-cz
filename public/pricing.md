@@ -24,7 +24,7 @@
 - Měsíční poplatek: 1 290 Kč/měs (správa)
 
 ## Hlídání teplot (HACCP monitoring)
-- Cena: 990 Kč za čidlo jednorázově (včetně instalace)
+- Cena: 1 290 Kč za čidlo jednorázově (včetně instalace)
 - Měsíční poplatek: 179 Kč/měs za čidlo
 
 ## Pokladna (připravujeme, zatím není v prodeji)
