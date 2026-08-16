@@ -90,7 +90,7 @@ export default function PrehledPodniku() {
             href="/kontakt"
             className="font-medium text-clay-deep underline decoration-clay/30 underline-offset-4 transition-colors hover:text-clay"
           >
-            Můžu vám ho ukázat naživo
+            Pokud máte zájem, napište
           </Link>
           .
         </p>
