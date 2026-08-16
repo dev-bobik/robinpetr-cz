@@ -111,6 +111,28 @@ export default function Services() {
               />
             </svg>
           </Link>
+          <a
+            href="#prehled"
+            className="group inline-flex items-center gap-2 text-[0.95rem] font-medium text-ink-soft underline decoration-brown/25 underline-offset-4 transition-colors hover:text-clay-deep"
+          >
+            Jak vypadá přehled
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 18 18"
+              fill="none"
+              aria-hidden="true"
+              className="transition-transform duration-200 ease-out group-hover:translate-y-0.5"
+            >
+              <path
+                d="M9 3.5v11M4.5 10 9 14.5 13.5 10"
+                stroke="currentColor"
+                strokeWidth="1.7"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </a>
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">

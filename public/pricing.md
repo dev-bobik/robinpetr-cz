@@ -1,6 +1,6 @@
 # Ceník — Robin Petr, digitalizace podniků
 
-> Ceny jsou konečné, nejsem plátce DPH. Jednorázová částka pokrývá výrobu a zavedení, měsíční částka provoz a servis. Aktuální i na https://robinpetr.cz/sluzby.
+> Ceny jsou konečné, nejsem plátce DPH. Jednorázová částka pokrývá výrobu a zavedení, měsíční částka provoz a servis. Součástí měsíční částky je i přístup do společného přehledu (věrnost, teploty, tržby na jedné stránce) — neúčtuje se zvlášť. Aktuální i na https://robinpetr.cz/sluzby.
 
 ## Digitální vizitka
 - Cena: 990 Kč jednorázově (s instalací)

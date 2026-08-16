@@ -7,7 +7,7 @@ const DIFFERENCES = [
   },
   {
     title: "Jeden dodavatel, jeden přehled",
-    text: "Věrnost, web, objednávky i čidla máte od jednoho člověka a vidíte je na jednom místě.",
+    text: "Věrnost, web, objednávky i čidla máte od jednoho člověka. Vidíte je v jednom přehledu, který si otevřete v telefonu.",
   },
   {
     title: "Dotažené do detailu",

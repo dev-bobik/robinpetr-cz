@@ -20,6 +20,7 @@
 - Recenzní NFC tag pro sběr Google recenzí na jedno přiložení telefonu
 - Hlídání teplot (HACCP): bezdrátová čidla do lednic a mrazáků s alarmem
 - Řešení na míru: automatizace opakované ruční práce v provozu
+- Společný přehled pro majitele: věrnost, teploty z čidel a denní tržby na jedné stránce v prohlížeči; součást měsíční částky u příslušných produktů, neprodává se zvlášť
 
 ## Připravujeme (zatím není v prodeji)
 - Pokladna: pokladní systém na tablet nebo počítač, markování dotykem, účtenky, denní uzávěrka, funguje i bez internetu

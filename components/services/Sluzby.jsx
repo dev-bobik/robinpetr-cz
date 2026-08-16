@@ -371,6 +371,28 @@ export default function Sluzby() {
       </div>
 
       <div className="mx-auto max-w-3xl px-6">
+        {/* společný přehled — patří ke všem produktům výš, proto není samostatná karta */}
+        <div className="mt-14">
+          <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-brown">
+            // Přehled
+          </p>
+          <h2 className="mt-3 font-display text-[clamp(1.6rem,1.2rem+1.6vw,2.2rem)] font-semibold leading-tight text-ink">
+            Všechno vidíte na jednom místě
+          </h2>
+          <p className="mt-3 text-[1.02rem] leading-relaxed text-ink-soft">
+            Věrnost, teploty z čidel i denní tržby máte v jednom přehledu, který
+            si otevřete v telefonu. Zapnuté v něm je jen to, co u vás běží, a je
+            součástí měsíční částky u produktů výš — neplatí se zvlášť.{" "}
+            <Link
+              href="/#prehled"
+              className="font-medium text-clay-deep underline decoration-clay/30 underline-offset-4 transition-colors hover:text-clay"
+            >
+              Jak vypadá
+            </Link>
+            .
+          </p>
+        </div>
+
         {/* jak platíte */}
         <div className="mt-14">
           <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-brown">
