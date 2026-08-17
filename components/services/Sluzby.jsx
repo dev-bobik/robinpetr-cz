@@ -32,13 +32,22 @@ const SERVICES = [
     price: priceText("vernost"),
   },
   {
-    name: "Web podniku",
+    name: "Web podniku (jedna stránka)",
     img: "/ilustrace/foto-web.jpg",
-    what: "Web, který lidi najdou na Googlu: menu, otevírací doba, fotky a kontakt.",
+    what: "Když vám stačí jedna přehledná stránka — menu, otevírací doba, fotky a kontakt, všechno pod sebou.",
     benefit:
       "Působíte důvěryhodně a změny menu nebo cen za vás udělám já. Nemusíte přepisovat PDF ani shánět webaře.",
     how: "Postavím ho na rychlém základu a upravím podle vašeho podniku. Změny menu, cen i otevírací doby jsou v měsíční správě.",
-    price: priceText("web"),
+    price: priceText("web-jedna"),
+  },
+  {
+    name: "Web podniku (víc stránek)",
+    img: "/ilustrace/foto-web.jpg",
+    what: "Když máte víc služeb, pobočky nebo reference a chcete pro každé téma vlastní stránku s vlastním menu.",
+    benefit:
+      "Každá stránka cílí na jiné vyhledávání, takže vás Google nabídne víc lidem. Web má prostor růst spolu s podnikem.",
+    how: "V ceně je až pět stránek podle vašeho zadání (např. úvod, služby, reference, ceník, kontakt). Změny textů i přidávání obsahu jsou v měsíční správě.",
+    price: priceText("web-vice"),
   },
   {
     name: "Online objednávky",

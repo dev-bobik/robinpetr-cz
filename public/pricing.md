@@ -11,9 +11,15 @@
 - Cena: 3 490 Kč jednorázově (stojánek na míru)
 - Měsíční poplatek: 590 Kč/měs (provoz)
 
-## Web podniku
-- Cena: 9 900 Kč jednorázově
+## Web podniku (jedna stránka)
+- Cena: 8 900 Kč jednorázově
 - Měsíční poplatek: 390 Kč/měs (správa)
+- Co to je: jedna přehledná stránka — menu, otevírací doba, fotky a kontakt
+
+## Web podniku (víc stránek)
+- Cena: 11 900 Kč jednorázově (do pěti stránek)
+- Měsíční poplatek: 390 Kč/měs (správa)
+- Co to je: samostatná stránka pro každé téma (služby, reference, ceník…) s vlastním menu
 
 ## Online objednávky (bez provizí rozvozovým aplikacím)
 - Cena: od 14 900 Kč jednorázově
