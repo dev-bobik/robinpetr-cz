@@ -4,11 +4,8 @@ import Link from "next/link";
    k věrnosti, čidlům i tržbám. Obsah odpovídá modulům platformy
    (Software/platforma/dashboard/src/moduly/registry.tsx).
 
-   VIZUÁL: sekce záměrně nemá ilustraci ani kartičku z hero — ta je vymyšlená
-   grafika a tady, kde se ukazuje reálný produkt, by lhala. Až bude snímek
-   z běžícího přehledu, ulož ho jako public/ilustrace/foto-dashboard.jpg
-   a nastav SNIMEK na tu cestu; layout se přepne na dva sloupce. */
-const SNIMEK = null;
+   VIZUÁL: sekce je záměrně bez obrázku. Kartička z hero je vymyšlená grafika
+   a tady, kde se popisuje reálný produkt, by lhala. */
 
 const POLOZKY = [
   {
@@ -24,23 +21,6 @@ const POLOZKY = [
     text: "Denní tržba a počet prodejů za posledních sedm dní, poskládané z pokladny i e-shopu.",
   },
 ];
-
-function Polozky({ className = "" }) {
-  return (
-    <dl className={className}>
-      {POLOZKY.map((p) => (
-        <div key={p.stitek}>
-          <dt className="font-mono text-[0.7rem] uppercase tracking-[0.16em] text-clay-deep">
-            {p.stitek}
-          </dt>
-          <dd className="mt-1.5 text-[1.02rem] leading-relaxed text-ink-soft">
-            {p.text}
-          </dd>
-        </div>
-      ))}
-    </dl>
-  );
-}
 
 export default function PrehledPodniku() {
   return (
@@ -64,21 +44,18 @@ export default function PrehledPodniku() {
           minutu.
         </p>
 
-        {SNIMEK ? (
-          <div className="mt-10 grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-12">
-            <img
-              src={SNIMEK}
-              alt="Přehled podniku: věrnostní program, teploty z čidel a denní tržby na jedné stránce"
-              width={1280}
-              height={860}
-              loading="lazy"
-              className="w-full max-w-md rotate-[-1.5deg] rounded-lg border-4 border-white shadow-[0_24px_48px_-24px_rgba(46,42,34,0.5)]"
-            />
-            <Polozky className="space-y-6" />
-          </div>
-        ) : (
-          <Polozky className="mt-10 grid grid-cols-1 gap-7 sm:grid-cols-3 sm:gap-8" />
-        )}
+        <dl className="mt-10 grid grid-cols-1 gap-7 sm:grid-cols-3 sm:gap-8">
+          {POLOZKY.map((p) => (
+            <div key={p.stitek}>
+              <dt className="font-mono text-[0.7rem] uppercase tracking-[0.16em] text-clay-deep">
+                {p.stitek}
+              </dt>
+              <dd className="mt-1.5 text-[1.02rem] leading-relaxed text-ink-soft">
+                {p.text}
+              </dd>
+            </div>
+          ))}
+        </dl>
 
         <p className="mt-10 max-w-2xl text-[1.02rem] leading-relaxed text-ink-soft">
           <span className="font-medium text-ink">
