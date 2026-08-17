@@ -13,7 +13,7 @@
 
 ## Web podniku (jedna stránka)
 - Cena: 8 900 Kč jednorázově
-- Měsíční poplatek: 390 Kč/měs (správa)
+- Měsíční poplatek: 290 Kč/měs (správa)
 - Co to je: jedna přehledná stránka — menu, otevírací doba, fotky a kontakt
 
 ## Web podniku (víc stránek)
