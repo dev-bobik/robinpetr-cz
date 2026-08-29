@@ -8,9 +8,22 @@ const inputBase =
 const labelBase =
   "font-mono text-[0.7rem] uppercase tracking-[0.14em] text-brown";
 
+const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function isEmail(value) {
+  return emailRe.test(value);
+}
+
+function isPhone(value) {
+  const digits = value.replace(/[\s\-/().]/g, "");
+  return /^\+?\d{9,15}$/.test(digits);
+}
+
 function validate({ name, contact, message }) {
   if (!name) return "Vyplňte prosím jméno.";
   if (!contact) return "Vyplňte prosím e-mail nebo telefon, ať se vám můžu ozvat.";
+  if (!isEmail(contact) && !isPhone(contact))
+    return "Zadejte prosím platný e-mail nebo telefonní číslo.";
   if (!message) return "Napište prosím pár slov o tom, co potřebujete.";
   return "";
 }

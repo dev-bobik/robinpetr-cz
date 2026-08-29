@@ -48,6 +48,14 @@ export async function POST(request) {
       { status: 400 },
     );
   }
+  const looksLikeEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact);
+  const looksLikePhone = /^\+?\d{9,15}$/.test(contact.replace(/[\s\-/().]/g, ""));
+  if (!looksLikeEmail && !looksLikePhone) {
+    return NextResponse.json(
+      { error: "Zadejte prosím platný e-mail nebo telefonní číslo." },
+      { status: 400 },
+    );
+  }
   if (
     name.length > MAX.name ||
     contact.length > MAX.contact ||
@@ -83,7 +91,7 @@ export async function POST(request) {
 
   const from =
     process.env.CONTACT_FROM_EMAIL || "Web robinpetr.cz <onboarding@resend.dev>";
-  const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact);
+  const isEmail = looksLikeEmail;
 
   try {
     const res = await fetch("https://api.resend.com/emails", {
