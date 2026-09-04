@@ -1,5 +1,5 @@
 import { CONTACT } from "@/lib/contact";
-import { PRICING } from "@/lib/pricing";
+import { PRICING, BALICKY, polozkyBalicku } from "@/lib/pricing";
 
 /* Strukturovaná data (JSON-LD, schema.org) pro vyhledávače a AI.
    Říká strojově: kdo je Robin Petr, co nabízí, kde působí — aby Google
@@ -44,25 +44,42 @@ export default function StructuredData() {
         hasOfferCatalog: {
           "@type": "OfferCatalog",
           name: "Služby",
-          itemListElement: PRICING.map((s) => ({
-            "@type": "Offer",
-            /* `price` znamená ve schema.org PŘESNOU cenu. U služeb účtovaných
-               „od …" (e-shop, objednávky) by to Googlu i AI asistentům tvrdilo
-               pevnou částku, kterou pak ukážou zákazníkovi jako konečnou —
-               a inzerovaná cena je podle § 1732 odst. 2 NOZ závazná nabídka.
-               Proto se u nich posílá minPrice, ne price. */
-            ...(s.oneTimeFrom
-              ? {
-                  priceSpecification: {
-                    "@type": "PriceSpecification",
-                    minPrice: s.oneTimeCzk,
-                    priceCurrency: "CZK",
-                  },
-                }
-              : { price: s.oneTimeCzk, priceCurrency: "CZK" }),
-            description: s.text,
-            itemOffered: { "@type": "Service", name: s.name },
-          })),
+          itemListElement: [
+            /* Balíčky jdou první — jsou hlavní nabídka. Mají pevnou cenu
+               (žádné „od"), takže se posílá `price`. Do popisu se vypisuje,
+               co obsahují, aby AI asistent uměl odpovědět „co je v balíčku". */
+            ...BALICKY.map((b) => ({
+              "@type": "Offer",
+              price: b.oneTimeCzk,
+              priceCurrency: "CZK",
+              description: `${b.text} — obsahuje: ${polozkyBalicku(b)
+                .map((p) => p.name)
+                .join(", ")}`,
+              itemOffered: {
+                "@type": "Service",
+                name: `Balíček ${b.name}`,
+              },
+            })),
+            ...PRICING.map((s) => ({
+              "@type": "Offer",
+              /* `price` znamená ve schema.org PŘESNOU cenu. U služeb účtovaných
+                 „od …" (e-shop, objednávky) by to Googlu i AI asistentům tvrdilo
+                 pevnou částku, kterou pak ukážou zákazníkovi jako konečnou —
+                 a inzerovaná cena je podle § 1732 odst. 2 NOZ závazná nabídka.
+                 Proto se u nich posílá minPrice, ne price. */
+              ...(s.oneTimeFrom
+                ? {
+                    priceSpecification: {
+                      "@type": "PriceSpecification",
+                      minPrice: s.oneTimeCzk,
+                      priceCurrency: "CZK",
+                    },
+                  }
+                : { price: s.oneTimeCzk, priceCurrency: "CZK" }),
+              description: s.text,
+              itemOffered: { "@type": "Service", name: s.name },
+            })),
+          ],
         },
       },
       {

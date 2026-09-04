@@ -1,5 +1,6 @@
 import Link from "next/link";
 import NabidkaFocus from "./NabidkaFocus";
+import Balicky from "./Balicky";
 import { PRICING } from "@/lib/pricing";
 
 const priceText = (id) => PRICING.find((p) => p.id === id).text;
@@ -78,17 +79,16 @@ const SERVICES = [
   },
   {
     name: "Pokladna",
-    flag: "připravujeme",
-    soon: true,
     /* skutečný snímek z běžící pokladny (Software/pokladna), ne ilustrace */
     img: "/ilustrace/foto-pokladna.jpg",
     what: "Pokladna na tablet nebo počítač. Markování dotykem, účtenky, denní uzávěrka — a funguje i bez internetu.",
+    /* Nesmí tvrdit „neplatíte měsíční poplatek" — od 2026-09-03 se platí
+       690 Kč/měs. Odlišení stojí na třech skutečných věcech: offline provoz,
+       žádné procento z karet (Dotykačka bere 0,79–0,99 %) a žádné vázání. */
     benefit:
-      "Neplatíte měsíční pronájem pokladny a data zůstávají u vás. Když vypadne připojení, prodáváte dál.",
-    how: "Běží přímo v zařízení, nepotřebuje server. Účtenku vytisknete na běžnou termotiskárnu.",
-    /* Záměrně bez ceny — není spuštěná. Proto taky není v lib/pricing.js:
-       ten plní schema.org Offer a nabídka bez ceny by byla vadný structured data. */
-    cta: { label: "Chci vědět, až bude hotová", href: "/kontakt" },
+      "Nikdo si nebere procenta z vašich plateb kartou a data zůstávají u vás. Když vypadne připojení, prodáváte dál.",
+    how: "Běží přímo v zařízení, nepotřebuje server, takže ji výpadek internetu nepoloží. Účtenku vytisknete na běžnou termotiskárnu. Tablet ani tiskárnu v ceně nemáte — buď použijete svoje, nebo je seženu.",
+    price: priceText("pokladna"),
   },
   {
     name: "Něco na míru",
@@ -354,19 +354,37 @@ export default function Sluzby() {
           </span>
         </h1>
         <p className="mt-5 text-[1.15rem] leading-relaxed text-ink-soft">
-          Tohle dělám v podnicích nejčastěji. Můžete si vzít jednu věc, nebo si
-          postupně poskládat víc —{" "}
+          Nedělám jenom weby.{" "}
           <span className="font-medium text-ink">
-            všechno spolu funguje a máte to na jednom místě
-          </span>
-          . Věrnostní stojánek nebo čidla do lednic u běžného webaře nedostanete.
+            Vybavím provozovnu celou
+          </span>{" "}
+          — od webu přes pokladnu a věrnost až po čidla do lednic. Všechno
+          navrhuju, stavím i spravuju sám, takže to spolu opravdu funguje a máte
+          na to jeden kontakt. Věrnostní stojánek ani hlídání teplot u běžného
+          webaře nedostanete.
+        </p>
+      </div>
+
+      {/* Balíčky jsou hlavní nabídka a stojí NAD jednotlivými produkty —
+          pozice je „vybavím provozovnu celou", ne „mám tady seznam služeb". */}
+      <Balicky />
+
+      <div className="mx-auto mt-16 max-w-3xl px-6">
+        <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-brown">
+          // Jednotlivé produkty
+        </p>
+        <h2 className="mt-3 font-display text-[clamp(1.6rem,1.2rem+1.6vw,2.2rem)] font-semibold leading-tight text-ink">
+          Z čeho se to skládá
+        </h2>
+        <p className="mt-3 text-[1.02rem] leading-relaxed text-ink-soft">
+          Každou věc jde vzít i samostatně — tady je rozepsaná i s cenou.
         </p>
       </div>
 
       {/* produkty — na desktopu vodorovný scroll (sekce se přilepí a produkty
           jedou do strany), na mobilu klasicky pod sebou. Plná šířka kvůli
           vodorovnému posunu. Řízení je čisté CSS, viz .services* v globals.css. */}
-      <div className="services mt-12" style={{ "--n": SERVICES.length }}>
+      <div className="services mt-10" style={{ "--n": SERVICES.length }}>
         <div className="services__viewport">
           <div className="services__track">
             {SERVICES.map((s, i) => (
