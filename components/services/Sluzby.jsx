@@ -1,6 +1,6 @@
 import Link from "next/link";
 import NabidkaFocus from "./NabidkaFocus";
-import Balicky from "./Balicky";
+import Konfigurator from "./Konfigurator";
 import { PRICING } from "@/lib/pricing";
 
 const priceText = (id) => PRICING.find((p) => p.id === id).text;
@@ -360,31 +360,15 @@ export default function Sluzby() {
           </span>{" "}
           — od webu přes pokladnu a věrnost až po čidla do lednic. Všechno
           navrhuju, stavím i spravuju sám, takže to spolu opravdu funguje a máte
-          na to jeden kontakt. Věrnostní stojánek ani hlídání teplot u běžného
-          webaře nedostanete.
-        </p>
-      </div>
-
-      {/* Balíčky jsou hlavní nabídka a stojí NAD jednotlivými produkty —
-          pozice je „vybavím provozovnu celou", ne „mám tady seznam služeb". */}
-      <Balicky />
-
-      <div className="mx-auto mt-16 max-w-3xl px-6">
-        <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-brown">
-          // Jednotlivé produkty
-        </p>
-        <h2 className="mt-3 font-display text-[clamp(1.6rem,1.2rem+1.6vw,2.2rem)] font-semibold leading-tight text-ink">
-          Z čeho se to skládá
-        </h2>
-        <p className="mt-3 text-[1.02rem] leading-relaxed text-ink-soft">
-          Každou věc jde vzít i samostatně — tady je rozepsaná i s cenou.
+          na to jeden kontakt. Vezmete si jednu věc, nebo si dole poskládáte
+          vlastní nabídku — čím víc toho je, tím levněji.
         </p>
       </div>
 
       {/* produkty — na desktopu vodorovný scroll (sekce se přilepí a produkty
           jedou do strany), na mobilu klasicky pod sebou. Plná šířka kvůli
           vodorovnému posunu. Řízení je čisté CSS, viz .services* v globals.css. */}
-      <div className="services mt-10" style={{ "--n": SERVICES.length }}>
+      <div className="services mt-12" style={{ "--n": SERVICES.length }}>
         <div className="services__viewport">
           <div className="services__track">
             {SERVICES.map((s, i) => (
@@ -396,6 +380,10 @@ export default function Sluzby() {
         </div>
         <NabidkaFocus />
       </div>
+
+      {/* Konfigurátor stojí POD produkty: čtenář už ví, co jednotlivé věci
+          jsou, a tady si z nich poskládá vlastní nabídku i se slevou. */}
+      <Konfigurator />
 
       <div className="mx-auto max-w-3xl px-6">
         {/* společný přehled — patří ke všem produktům výš, proto není samostatná karta */}

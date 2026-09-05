@@ -2,23 +2,28 @@
 
 > Ceny jsou konečné, nejsem plátce DPH. Jednorázová částka pokrývá výrobu a zavedení, měsíční částka provoz a servis. Součástí měsíční částky je i přístup do společného přehledu (věrnost, teploty, tržby na jedné stránce) — neúčtuje se zvlášť. Aktuální i na https://robinpetr.cz/sluzby.
 
-## Balíčky (hlavní nabídka)
+## Množstevní sleva
 
-Nejčastěji vybavím provozovnu celou. Balíček vyjde levněji než tytéž služby jednotlivě a máte na všechno jeden kontakt místo čtyř dodavatelů.
+Ceny se dají kombinovat a čím víc služeb podnik vezme najednou, tím levněji. Sleva se počítá z počtu **různých služeb**, ne z počtu kusů — čtyři čidla jsou pořád jedna služba.
 
-### Balíček Podnik — pro jakýkoli obor
-- Cena: 11 900 Kč jednorázově + 690 Kč/měs
-- Obsahuje: web podniku (jedna stránka), digitální vizitku, věrnostní systém a společný přehled
-- Úspora oproti jednotlivým službám: 1 480 Kč jednorázově a 90 Kč/měs
+| Počet služeb | Sleva |
+|---|---|
+| 2 | 3 % |
+| 3 | 6 % |
+| 4 a víc | 10 % |
 
-### Balíček Restaurace — pro gastro provozy
-- Cena: 15 900 Kč jednorázově + 1 190 Kč/měs
-- Obsahuje: web podniku (jedna stránka), digitální vizitku, věrnostní systém, pokladnu a společný přehled
-- Volitelně navíc: hlídání teplot (HACCP) za 1 290 Kč/čidlo + 179 Kč/měs za čidlo
-- Úspora oproti jednotlivým službám: 2 380 Kč jednorázově a 280 Kč/měs
+Sleva se uplatní na jednorázovou i měsíční částku. Nabídku si jde poskládat a spočítat na https://robinpetr.cz/sluzby.
 
-### Vlastní balíček
-Nehodí se ani jeden? Poskládá se z jednotlivých produktů níž jen to, co podnik potřebuje. Společný přehled je v ceně vždycky.
+## Web se vybírá po úrovních
+
+Jeden podnik nemůže mít několik webů zároveň, takže se z těchhle čtyř možností vybírá **právě jedna** a vyšší vždycky obsahuje nižší:
+
+1. Web podniku (jedna stránka) — 8 900 Kč
+2. Web podniku (víc stránek) — 11 900 Kč
+3. Online objednávky — od 14 900 Kč
+4. E-shop na míru — od 34 900 Kč
+
+Při přechodu na vyšší úroveň se doplácí jen rozdíl, ne celá cena znovu. Celá skupina se do počtu služeb pro množstevní slevu počítá jako jedna služba.
 
 ## Jednotlivé produkty
 
