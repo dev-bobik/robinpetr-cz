@@ -23,7 +23,7 @@ const RENTAL_COSTS = [
   "Šablona splývá s konkurencí a zákazník nemá důvod vybrat si zrovna vás.",
   "Když nástroje nefungují spolu, dělají v provozu chyby.",
   "Než zákazník něco prokliká, často radši odejde jinam.",
-  "Za pronajatou platformu platíte pořád a stejně vypadáte podobně jako ostatní.",
+  "Za pronajatou platformu platíte měsíčně taky, ale nikdo za ní nestojí. Když něco nejde, píšete do ticketu a čekáte.",
 ];
 
 function CtaLink({ children, className = "" }) {
