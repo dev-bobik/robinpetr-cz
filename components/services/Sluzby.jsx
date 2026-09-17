@@ -91,7 +91,7 @@ const SERVICES = [
     img: "/ilustrace/eshop-web2.jpg",
     what: "Vlastní e-shop, kde zákazník zaplatí kartou a zboží mu přijde domů. Produkty, košík, platby, doprava i admin, ve kterém si to spravujete sami.",
     benefit:
-      "Prodáváte i mimo otevírací dobu a mimo své město, bez provizí tržišť. A když něco potřebujete, jsem po ruce a e-shop roste s vámi.",
+      "Prodáváte i mimo otevírací dobu a mimo své město, bez provizí tržišť. Jsem vždy po ruce a e-shop může růst s vámi.",
     how: "Napojím platby kartou i převodem a dopravu (PPL, Zásilkovna). Objednávky, sklad i faktury máte v jednom přehledu. Základ za 34 900 Kč je tohle všechno; funkce navíc (varianty zboží, slevové kódy, další jazyk, napojení na sklad…) se přičítají podle rozsahu.",
     price: priceText("eshop"),
   },
