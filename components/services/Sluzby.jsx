@@ -105,7 +105,7 @@ const SERVICES = [
   {
     name: "Pokladna",
     /* skutečný snímek z běžící pokladny (Software/pokladna), ne ilustrace */
-    img: "/ilustrace/foto-pokladna.jpg",
+    img: "/ilustrace/foto-pokladna-pult.jpg",
     what: "Pokladna na tablet nebo počítač. Markování dotykem, účtenky, denní uzávěrka — a funguje i bez internetu.",
     /* Nesmí tvrdit „neplatíte měsíční poplatek" — od 2026-09-03 se platí
        měsíční provoz (od 2026-09-07 od 390 Kč/měs). Odlišení stojí na třech
