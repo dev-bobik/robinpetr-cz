@@ -59,8 +59,7 @@ Uvedená částka je základ; funkce navíc (rezervace, galerie, další jazyk, 
 ## Online objednávky
 - Cena: od 14 900 Kč jednorázově; výš podle přidaných funkcí (výběr času vyzvednutí, další jazyk, věrnostní body za objednávku…)
 - Měsíční poplatek: 690 Kč/měs (provoz)
-- Co to je: zákazník si objedná a zaplatí z mobilu — u stolu přes QR kód na tištěném stojánku, nebo předem k vyzvednutí; objednávka naskočí podniku v přehledu i s číslem stolu
-- V ceně jsou stojánky s QR kódem na stoly
+- Co to je: zákazník si cestou objedná a zaplatí z mobilu a u podniku si to vyzvedne; objednávka naskočí podniku v přehledu
 
 ## Vlastní rozvoz (na poptávku)
 - Cena: bez ceníku, na poptávku po domluvě

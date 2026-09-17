@@ -57,16 +57,16 @@ const SERVICES = [
   },
   {
     /* Přepsáno 2026-09-17: dřív karta míchala tři věci (objednávky, rozvoz,
-       rezervace). Teď je to JEN objednávka k vyzvednutí nebo ke stolu —
-       rozvoz je samostatná karta níž (na poptávku), rezervace tu nejsou.
-       Srovnání s rozvozovými aplikacemi sem nepatří: Wolt objednávku
-       u pultu ani u stolu neřeší. */
+       rezervace). Teď je to JEN objednávka předem k vyzvednutí — rozvoz je
+       samostatná karta níž (na poptávku), rezervace tu nejsou a objednávka
+       u stolu přes QR bude další samostatný produkt. Srovnání s rozvozovými
+       aplikacemi sem nepatří: Wolt objednávku u pultu neřeší. */
     name: "Online objednávky",
     img: "/ilustrace/foto-objednavky.jpg",
-    what: "Zákazník si objedná a zaplatí z mobilu — u stolu přes QR na stojánku, nebo předem a přijde si to vyzvednout. Bez telefonování a bez fronty u pultu.",
+    what: "Zákazník si cestou objedná a zaplatí z mobilu a u vás si to jen vyzvedne. Bez telefonování a bez fronty u pultu.",
     benefit:
       "Ve špičce nepotřebujete tolik lidí na obsluhu: objednávky chodí samy, nikdo je nepřepisuje a nic se neplete. Zaplaceno je předem, takže nikdo neobjedná a nepřijde.",
-    how: "Na stoly dostanete tištěné stojánky s QR kódem. Zákazník ho naskenuje, vybere, zaplatí a vám naskočí objednávka v přehledu i s číslem stolu — vy ji jen připravíte. Základ za 14 900 Kč je objednávka s platbou, přehledem a stojánky; funkce navíc (výběr času vyzvednutí, další jazyk, věrnostní body za objednávku…) se přičítají podle rozsahu.",
+    how: "Zákazník objedná z mobilu, vám naskočí objednávka v přehledu a vy ji jen připravíte. Základ za 14 900 Kč je objednávka s platbou, vyzvednutím a přehledem; funkce navíc (výběr času vyzvednutí, další jazyk, věrnostní body za objednávku…) se přičítají podle rozsahu.",
     price: priceText("objednavky"),
   },
   {
