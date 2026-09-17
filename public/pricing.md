@@ -4,7 +4,7 @@
 
 ## Množstevní sleva
 
-Ceny se dají kombinovat a čím víc služeb podnik vezme najednou, tím levněji. Sleva se počítá z počtu **různých služeb**, ne z počtu kusů — čtyři čidla jsou pořád jedna služba.
+Ceny se dají kombinovat a čím víc služeb si podnik vybere najednou, tím větší slevu dostane. Sleva se počítá z počtu **různých služeb**, ne z počtu kusů — čtyři čidla jsou pořád jedna služba.
 
 | Počet služeb | Sleva |
 |---|---|
@@ -66,7 +66,7 @@ Uvedená částka je hotový web včetně správy obsahu. Za příplatek: rezerv
 - Co to je: objednávka s doručením domů přes vlastní web místo rozvozových aplikací (které si berou 25–30 % z objednávky); staví se nad online objednávkami — rozvozové zóny, poplatky za dopravu, přehled pro kurýra
 
 ## E-shop na míru
-- Cena: od 34 900 Kč jednorázově; výš podle přidaných funkcí (varianty zboží, slevové kódy, další jazyk, napojení na sklad…)
+- Cena: od 34 900 Kč jednorázově (hotový e-shop se správou); cokoli navíc na míru (napojení na další systémy, rozšíření) individuálně podle rozsahu
 - Měsíční poplatek: 1 290 Kč/měs (správa)
 
 ## Hlídání teplot (HACCP monitoring)

@@ -127,7 +127,7 @@ export default function Konfigurator() {
           // Sestavte si nabídku
         </p>
         <h2 className="mt-3 font-display text-[clamp(1.6rem,1.2rem+1.6vw,2.2rem)] font-semibold leading-tight text-ink">
-          Čím víc toho vezmete najednou, tím levněji
+          Víc služeb najednou, nižší cena
         </h2>
         <p className="mt-3 text-[1.02rem] leading-relaxed text-ink-soft">
           Zaškrtněte, co by se vám hodilo. Cenu i slevu uvidíte hned —{" "}

@@ -91,8 +91,8 @@ const SERVICES = [
     img: "/ilustrace/eshop-web2.jpg",
     what: "Vlastní e-shop, kde zákazník zaplatí kartou a zboží mu přijde domů. Produkty, košík, platby, doprava i admin, ve kterém si to spravujete sami.",
     benefit:
-      "Prodáváte i mimo otevírací dobu a mimo své město, bez provizí tržišť. Jsem vždy po ruce a e-shop může růst s vámi.",
-    how: "Napojím platby kartou i převodem a dopravu (PPL, Zásilkovna). Objednávky, sklad i faktury máte v jednom přehledu. Základ za 34 900 Kč je tohle všechno; funkce navíc (varianty zboží, slevové kódy, další jazyk, napojení na sklad…) se přičítají podle rozsahu.",
+      "Prodáváte i mimo otevírací dobu a mimo své město a z každé objednávky vám nikdo neukrajuje procenta. Správa je jednoduchá a pohodlná, jsem vždy po ruce a e-shop může růst s vámi. Technicky nenarazíte na žádnou stěnu — cokoli budete potřebovat, dokážu po domluvě napojit nebo dostavět.",
+    how: "Napojím platby kartou i převodem a dopravu (PPL, Zásilkovna). Objednávky, sklad i faktury máte v jednom přehledu a produkty, ceny nebo akce si měníte sami. Za 34 900 Kč je hotový e-shop i se správou.",
     price: priceText("eshop"),
   },
   {
@@ -399,7 +399,7 @@ export default function Sluzby() {
           — od webu přes pokladnu a věrnost až po čidla do lednic. Všechno
           navrhuju, stavím i spravuju sám, takže to spolu opravdu funguje a máte
           na to jeden kontakt. Vezmete si jednu věc, nebo si dole poskládáte
-          vlastní nabídku — čím víc toho je, tím levněji.
+          vlastní nabídku, a čím víc služeb vyberete, tím větší slevu dostanete.
         </p>
       </div>
 
