@@ -25,7 +25,7 @@ Jeden podnik nemůže mít několik webů zároveň, takže se z těchhle čtyř
 
 (Vlastní rozvoz není úroveň webu — je to doplněk nad online objednávkami, jen na poptávku.)
 
-Uvedená částka je základ; funkce navíc (rezervace, galerie, další jazyk, napojení na věrnost…) se přičítají podle rozsahu a přesné číslo padne dřív, než se začne pracovat. Při přechodu na vyšší úroveň se doplácí jen rozdíl, ne celá cena znovu. Celá skupina se do počtu služeb pro množstevní slevu počítá jako jedna služba.
+Uvedená částka je hotový web včetně správy obsahu. Za příplatek: rezervace s výběrem termínu · objednávání od stolu · víc provozoven · propojení s dalšími systémy — domluva individuálně podle rozsahu, přesné číslo padne dřív, než se začne pracovat. Při přechodu na vyšší úroveň se doplácí jen rozdíl, ne celá cena znovu. Celá skupina se do počtu služeb pro množstevní slevu počítá jako jedna služba.
 
 ## Jednotlivé produkty
 
@@ -39,12 +39,12 @@ Uvedená částka je základ; funkce navíc (rezervace, galerie, další jazyk, 
 - Měsíční poplatek: 490 Kč/měs (provoz)
 
 ## Web podniku (jedna stránka)
-- Cena: od 8 900 Kč jednorázově; výš podle přidaných funkcí (rezervace, galerie, další jazyk, napojení na věrnost…)
+- Cena: od 8 900 Kč jednorázově; výš jen u věcí na míru (rezervace s výběrem termínu, objednávání od stolu, víc provozoven, propojení s dalšími systémy)
 - Měsíční poplatek: 390 Kč/měs (správa)
-- Co to je: jedna přehledná stránka — menu, otevírací doba, fotky a kontakt
+- Co to je: jedna přehledná stránka (typicky menu, otevírací doba, fotky a kontakt) se správou obsahu pro majitele
 
 ## Web podniku (víc stránek)
-- Cena: od 11 900 Kč jednorázově (do pěti stránek); výš podle dalších stránek a přidaných funkcí
+- Cena: od 11 900 Kč jednorázově (do pěti stránek); výš jen u dalších stránek a věcí na míru (rezervace s výběrem termínu, objednávání od stolu, víc provozoven, propojení s dalšími systémy)
 - Měsíční poplatek: 390 Kč/měs (správa)
 - Co to je: samostatná stránka pro každé téma (služby, reference, ceník…) s vlastním menu
 

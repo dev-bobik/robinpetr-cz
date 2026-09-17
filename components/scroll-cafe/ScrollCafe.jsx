@@ -17,7 +17,7 @@ const PHASES = [
     at: 0.0,
     kicker: "Web",
     title: "Web, díky kterému vás lidé najdou",
-    text: "Menu, otevírací doba, fotky a kontakt přehledně na jednom místě. Změny za vás udělám já.",
+    text: "Menu, otevírací doba, fotky a kontakt přehledně na jednom místě. Ceny a novinky si měníte sami z telefonu.",
   },
   {
     at: 0.24,

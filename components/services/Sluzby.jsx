@@ -37,11 +37,12 @@ const SERVICES = [
     img: "/ilustrace/foto-web-jedna.jpg",
     what: "Když vám stačí jedna přehledná stránka — menu, otevírací doba, fotky a kontakt, všechno pod sebou.",
     benefit:
-      "Působíte důvěryhodně a změny menu nebo cen za vás udělám já. Nemusíte přepisovat PDF ani shánět webaře.",
+      "Web stavím tak, aby vás lidé reálně našli ve vyhledávání, na mapách i u AI asistentů a měli důvod vás doporučit dál. Ceny nebo jídelníček si pak měníte sami ve správě webu za minutu, z telefonu.",
     /* Věta o funkcích navíc tu musí zůstat: cena je „od 8 900 Kč" a bez
        důvodu je podle § 1732 odst. 2 NOZ vymahatelná na spodní částce.
        Viz komentář u web-jedna v lib/pricing.js. */
-    how: "Postavím ho na rychlém základu a upravím podle vašeho podniku. Za 8 900 Kč je stránka s tím, co je popsané výš; funkce navíc (rezervace, galerie, další jazyk, napojení na věrnost…) se přičítají podle rozsahu a číslo řeknu dřív, než začnu. Změny menu, cen i otevírací doby jsou v měsíční správě.",
+    how: "Domluvíme se, co má na stránce být, dodáte fotky a texty (nebo je napíšu já) a do dvou týdnů web běží na vaší doméně. Za 8 900 Kč je hotová stránka i se správou, kde si obsah měníte sami.",
+    extra: "rezervace s výběrem termínu · objednávání od stolu · víc provozoven · propojení s vašimi dalšími systémy — domluvíme se individuálně podle rozsahu.",
     price: priceText("web-jedna"),
   },
   {
@@ -52,7 +53,8 @@ const SERVICES = [
       "Každá stránka cílí na jiné vyhledávání, takže vás Google nabídne víc lidem. Web má prostor růst spolu s podnikem.",
     /* Počet stránek v základu i věta o funkcích navíc tu musí zůstat —
        je to hranice, od které se cena „od 11 900 Kč" zvedá. */
-    how: "Za 11 900 Kč je až pět stránek podle vašeho zadání (např. úvod, služby, reference, ceník, kontakt). Další stránky a funkce navíc (rezervace, galerie, další jazyk…) se přičítají podle rozsahu a číslo řeknu dřív, než začnu. Změny textů i přidávání obsahu jsou v měsíční správě.",
+    how: "Za 11 900 Kč je až pět stránek podle vašeho zadání (např. úvod, služby, reference, ceník, kontakt) i se správou, kde si obsah měníte sami.",
+    extra: "další stránky · rezervace s výběrem termínu · objednávání od stolu · víc provozoven · propojení s vašimi dalšími systémy — domluvíme se individuálně podle rozsahu.",
     price: priceText("web-vice"),
   },
   {
@@ -177,7 +179,7 @@ function PriceTag({ children, accent }) {
   );
 }
 
-function ServiceDetail({ index, name, flag, accent, soon, img, what, benefit, how, price, cta }) {
+function ServiceDetail({ index, name, flag, accent, soon, img, what, benefit, how, extra, price, cta }) {
   /* Výchozí odkaz na kontakt; produkty s vlastním textem (na míru, pokladna)
      si ho přebijí přes `cta`. */
   const link = cta ?? { label: "Napište mi", href: "/kontakt" };
@@ -301,6 +303,13 @@ function ServiceDetail({ index, name, flag, accent, soon, img, what, benefit, ho
             >
               {how}
             </p>
+            {/* Jednořádkový výčet věcí na míru — u webů je to důvod ceny „od",
+                proto stojí zvlášť a ne zamotaný ve větě. */}
+            {extra ? (
+              <p className="mt-3 text-[0.9rem] leading-snug text-ink-soft">
+                <span className="font-medium text-ink">Za příplatek:</span> {extra}
+              </p>
+            ) : null}
           </div>
         ) : null}
       </div>
