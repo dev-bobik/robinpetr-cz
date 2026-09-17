@@ -25,7 +25,7 @@ const SERVICES = [
     name: "Věrnostní systém",
     flag: "hlavní řešení",
     accent: true,
-    img: "/ilustrace/vernost-web.jpg",
+    img: "/ilustrace/vernost-pult.jpg",
     what: "Věrnostní program, na který zákazníkům stačí telefon v kapse.",
     benefit:
       "Stálý zákazník utratí víc a nemusíte ho pokaždé znovu lákat reklamou. Navíc vidíte, kdo chodí a jak často.",
@@ -62,7 +62,7 @@ const SERVICES = [
        u stolu přes QR bude další samostatný produkt. Srovnání s rozvozovými
        aplikacemi sem nepatří: Wolt objednávku u pultu neřeší. */
     name: "Online objednávky",
-    img: "/ilustrace/foto-objednavky.jpg",
+    img: "/ilustrace/foto-objednavky-cestou.jpg",
     what: "Zákazník si cestou objedná a zaplatí z mobilu a u vás si to jen vyzvedne. Bez telefonování a bez fronty u pultu.",
     benefit:
       "Ve špičce nepotřebujete tolik lidí na obsluhu: objednávky chodí samy, nikdo je nepřepisuje a nic se neplete. Zaplaceno je předem, takže nikdo neobjedná a nepřijde.",
@@ -76,7 +76,7 @@ const SERVICES = [
     name: "Vlastní rozvoz",
     flag: "na poptávku",
     soon: true,
-    img: "/ilustrace/foto-objednavky.jpg",
+    img: "/ilustrace/foto-objednavky-cestou.jpg",
     what: "Objednávka s doručením domů přes váš vlastní web a aplikaci pro kurýra — místo rozvozových aplikací.",
     benefit:
       "Rozvozové aplikace si z každé objednávky berou 25–30 %. Vlastní rozvoz nechá peníze u vás a zákazníka máte v databázi vy, ne platforma.",
@@ -95,7 +95,7 @@ const SERVICES = [
   },
   {
     name: "Hlídání podniku (HACCP)",
-    img: "/ilustrace/foto-haccp.jpg",
+    img: "/ilustrace/foto-haccp-lednice.jpg",
     what: "Bezdrátová čidla, která měří teploty v lednicích a mrazácích.",
     benefit:
       "Záznamy pro HACCP se vedou samy. O vypadlém mrazáku víte za pár minut, ne až ráno, kdy je zboží zkažené.",
@@ -509,7 +509,7 @@ export default function Sluzby() {
         {/* CTA — ilustrace stojánku podpírá text „položím stojánek na pult" */}
         <div className="mt-14 flex flex-col items-center gap-6 rounded-2xl border border-clay/30 bg-clay/[0.05] p-8 text-center sm:flex-row sm:text-left">
           <img
-            src="/ilustrace/foto-vernost.jpg"
+            src="/ilustrace/foto-vernost-pult.jpg"
             alt=""
             className="h-32 w-44 shrink-0 rotate-[-3deg] rounded-lg border-4 border-white object-cover shadow-[0_16px_32px_-14px_rgba(46,42,34,0.55)] sm:h-36 sm:w-52"
           />
