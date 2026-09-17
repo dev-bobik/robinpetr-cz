@@ -23,6 +23,8 @@ Jeden podnik nemůže mít několik webů zároveň, takže se z těchhle čtyř
 3. Online objednávky — od 14 900 Kč
 4. E-shop na míru — od 34 900 Kč
 
+(Vlastní rozvoz není úroveň webu — je to doplněk nad online objednávkami, jen na poptávku.)
+
 Uvedená částka je základ; funkce navíc (rezervace, galerie, další jazyk, napojení na věrnost…) se přičítají podle rozsahu a přesné číslo padne dřív, než se začne pracovat. Při přechodu na vyšší úroveň se doplácí jen rozdíl, ne celá cena znovu. Celá skupina se do počtu služeb pro množstevní slevu počítá jako jedna služba.
 
 ## Jednotlivé produkty
@@ -54,9 +56,15 @@ Uvedená částka je základ; funkce navíc (rezervace, galerie, další jazyk, 
 - Nikdo si nebere procenta z plateb kartou a nejste ničím vázáni
 - Tablet ani termotiskárna v ceně nejsou — buď použijete svoje, nebo je seženu
 
-## Online objednávky (bez provizí rozvozovým aplikacím)
-- Cena: od 14 900 Kč jednorázově; výš podle přidaných funkcí (rozvozové zóny, rezervace stolů, další jazyk…)
-- Měsíční poplatek: 690 Kč/měs
+## Online objednávky
+- Cena: od 14 900 Kč jednorázově; výš podle přidaných funkcí (výběr času vyzvednutí, další jazyk, věrnostní body za objednávku…)
+- Měsíční poplatek: 690 Kč/měs (provoz)
+- Co to je: zákazník si objedná a zaplatí z mobilu — u stolu přes QR kód na tištěném stojánku, nebo předem k vyzvednutí; objednávka naskočí podniku v přehledu i s číslem stolu
+- V ceně jsou stojánky s QR kódem na stoly
+
+## Vlastní rozvoz (na poptávku)
+- Cena: bez ceníku, na poptávku po domluvě
+- Co to je: objednávka s doručením domů přes vlastní web místo rozvozových aplikací (které si berou 25–30 % z objednávky); staví se nad online objednávkami — rozvozové zóny, poplatky za dopravu, přehled pro kurýra
 
 ## E-shop na míru
 - Cena: od 34 900 Kč jednorázově; výš podle přidaných funkcí (varianty zboží, slevové kódy, další jazyk, napojení na sklad…)

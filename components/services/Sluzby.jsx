@@ -56,13 +56,33 @@ const SERVICES = [
     price: priceText("web-vice"),
   },
   {
+    /* Přepsáno 2026-09-17: dřív karta míchala tři věci (objednávky, rozvoz,
+       rezervace). Teď je to JEN objednávka k vyzvednutí nebo ke stolu —
+       rozvoz je samostatná karta níž (na poptávku), rezervace tu nejsou.
+       Srovnání s rozvozovými aplikacemi sem nepatří: Wolt objednávku
+       u pultu ani u stolu neřeší. */
     name: "Online objednávky",
     img: "/ilustrace/foto-objednavky.jpg",
-    what: "Objednávání a platba přímo na vašem webu. Bez rozvozových aplikací a jejich provizí.",
+    what: "Zákazník si objedná a zaplatí z mobilu — u stolu přes QR na stojánku, nebo předem a přijde si to vyzvednout. Bez telefonování a bez fronty u pultu.",
     benefit:
-      "Rozvozové aplikace si z každé objednávky berou 25–30 %. Vlastní objednávky nechají peníze u vás.",
-    how: "Zákazník objedná z mobilu a vám se objednávka ukáže v přehledu. Vy ji jen odbavíte. Základ za 14 900 Kč je objednávka s platbou a přehledem; funkce navíc (rozvozové zóny, rezervace stolů, další jazyk…) se přičítají podle rozsahu.",
+      "Ve špičce nepotřebujete tolik lidí na obsluhu: objednávky chodí samy, nikdo je nepřepisuje a nic se neplete. Zaplaceno je předem, takže nikdo neobjedná a nepřijde.",
+    how: "Na stoly dostanete tištěné stojánky s QR kódem. Zákazník ho naskenuje, vybere, zaplatí a vám naskočí objednávka v přehledu i s číslem stolu — vy ji jen připravíte. Základ za 14 900 Kč je objednávka s platbou, přehledem a stojánky; funkce navíc (výběr času vyzvednutí, další jazyk, věrnostní body za objednávku…) se přičítají podle rozsahu.",
     price: priceText("objednavky"),
+  },
+  {
+    /* Rozvoz je schválně zvlášť a zašedlý (`soon`) — je to jiná věc než
+       objednávka u stolu: kurýři, zóny, poplatky za dopravu. Zatím bez
+       ceníku, dělá se jen na poptávku po domluvě. */
+    name: "Vlastní rozvoz",
+    flag: "na poptávku",
+    soon: true,
+    img: "/ilustrace/foto-objednavky.jpg",
+    what: "Objednávka s doručením domů přes váš vlastní web a aplikaci pro kurýra — místo rozvozových aplikací.",
+    benefit:
+      "Rozvozové aplikace si z každé objednávky berou 25–30 %. Vlastní rozvoz nechá peníze u vás a zákazníka máte v databázi vy, ne platforma.",
+    how: "Staví se nad online objednávkami: přibudou rozvozové zóny, poplatky za dopravu a přehled pro kurýra v mobilu. Rozsah i cena podle podniku — napište mi a domluvíme se.",
+    price: "cena na poptávku",
+    cta: { label: "Napište mi, co rozvážíte", href: "/kontakt" },
   },
   {
     name: "E-shop na míru",

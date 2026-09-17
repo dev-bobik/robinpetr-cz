@@ -22,8 +22,8 @@ const PHASES = [
   {
     at: 0.24,
     kicker: "Objednávky",
-    title: "Objednávky bez provizí navíc",
-    text: "Zákazník objedná z mobilu a vám se to ukáže v pokladně. Peníze zůstávají u vás.",
+    title: "Objednávky bez fronty u pultu",
+    text: "Zákazník objedná z mobilu nebo přes QR na stole a vám to naskočí v přehledu. Obsluha jen připravuje.",
   },
   {
     at: 0.47,
