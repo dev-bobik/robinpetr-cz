@@ -38,7 +38,10 @@ const SERVICES = [
     what: "Když vám stačí jedna přehledná stránka — menu, otevírací doba, fotky a kontakt, všechno pod sebou.",
     benefit:
       "Působíte důvěryhodně a změny menu nebo cen za vás udělám já. Nemusíte přepisovat PDF ani shánět webaře.",
-    how: "Postavím ho na rychlém základu a upravím podle vašeho podniku. Změny menu, cen i otevírací doby jsou v měsíční správě.",
+    /* Věta o funkcích navíc tu musí zůstat: cena je „od 8 900 Kč" a bez
+       důvodu je podle § 1732 odst. 2 NOZ vymahatelná na spodní částce.
+       Viz komentář u web-jedna v lib/pricing.js. */
+    how: "Postavím ho na rychlém základu a upravím podle vašeho podniku. Za 8 900 Kč je stránka s tím, co je popsané výš; funkce navíc (rezervace, galerie, další jazyk, napojení na věrnost…) se přičítají podle rozsahu a číslo řeknu dřív, než začnu. Změny menu, cen i otevírací doby jsou v měsíční správě.",
     price: priceText("web-jedna"),
   },
   {
@@ -47,7 +50,9 @@ const SERVICES = [
     what: "Když máte víc služeb, pobočky nebo reference a chcete pro každé téma vlastní stránku s vlastním menu.",
     benefit:
       "Každá stránka cílí na jiné vyhledávání, takže vás Google nabídne víc lidem. Web má prostor růst spolu s podnikem.",
-    how: "V ceně je až pět stránek podle vašeho zadání (např. úvod, služby, reference, ceník, kontakt). Změny textů i přidávání obsahu jsou v měsíční správě.",
+    /* Počet stránek v základu i věta o funkcích navíc tu musí zůstat —
+       je to hranice, od které se cena „od 11 900 Kč" zvedá. */
+    how: "Za 11 900 Kč je až pět stránek podle vašeho zadání (např. úvod, služby, reference, ceník, kontakt). Další stránky a funkce navíc (rezervace, galerie, další jazyk…) se přičítají podle rozsahu a číslo řeknu dřív, než začnu. Změny textů i přidávání obsahu jsou v měsíční správě.",
     price: priceText("web-vice"),
   },
   {
@@ -56,7 +61,7 @@ const SERVICES = [
     what: "Objednávání a platba přímo na vašem webu. Bez rozvozových aplikací a jejich provizí.",
     benefit:
       "Rozvozové aplikace si z každé objednávky berou 25–30 %. Vlastní objednávky nechají peníze u vás.",
-    how: "Zákazník objedná z mobilu a vám se objednávka ukáže v přehledu. Vy ji jen odbavíte.",
+    how: "Zákazník objedná z mobilu a vám se objednávka ukáže v přehledu. Vy ji jen odbavíte. Základ za 14 900 Kč je objednávka s platbou a přehledem; funkce navíc (rozvozové zóny, rezervace stolů, další jazyk…) se přičítají podle rozsahu.",
     price: priceText("objednavky"),
   },
   {
@@ -65,7 +70,7 @@ const SERVICES = [
     what: "Vlastní e-shop, kde zákazník zaplatí kartou a zboží mu přijde domů. Produkty, košík, platby, doprava i admin, ve kterém si to spravujete sami.",
     benefit:
       "Prodáváte i mimo otevírací dobu a mimo své město. Bez provizí tržišť a bez měsíčních poplatků za pronajatou platformu.",
-    how: "Napojím platby kartou i převodem a dopravu (PPL, Zásilkovna). Objednávky, sklad i faktury máte v jednom přehledu.",
+    how: "Napojím platby kartou i převodem a dopravu (PPL, Zásilkovna). Objednávky, sklad i faktury máte v jednom přehledu. Základ za 34 900 Kč je tohle všechno; funkce navíc (varianty zboží, slevové kódy, další jazyk, napojení na sklad…) se přičítají podle rozsahu.",
     price: priceText("eshop"),
   },
   {
@@ -83,11 +88,15 @@ const SERVICES = [
     img: "/ilustrace/foto-pokladna.jpg",
     what: "Pokladna na tablet nebo počítač. Markování dotykem, účtenky, denní uzávěrka — a funguje i bez internetu.",
     /* Nesmí tvrdit „neplatíte měsíční poplatek" — od 2026-09-03 se platí
-       690 Kč/měs. Odlišení stojí na třech skutečných věcech: offline provoz,
-       žádné procento z karet (Dotykačka bere 0,79–0,99 %) a žádné vázání. */
+       měsíční provoz (od 2026-09-07 od 390 Kč/měs). Odlišení stojí na třech
+       skutečných věcech: offline provoz, žádné procento z karet (Dotykačka
+       bere 0,79–0,99 %) a žádné vázání. */
     benefit:
       "Nikdo si nebere procenta z vašich plateb kartou a data zůstávají u vás. Když vypadne připojení, prodáváte dál.",
-    how: "Běží přímo v zařízení, nepotřebuje server, takže ji výpadek internetu nepoloží. Účtenku vytisknete na běžnou termotiskárnu. Tablet ani tiskárnu v ceně nemáte — buď použijete svoje, nebo je seženu.",
+    /* Věta o měsíčním poplatku tu musí zůstat: cena je inzerovaná jako
+       „od 390 Kč" a bez důvodu je podle § 1732 odst. 2 NOZ vymahatelná
+       na spodní částce. Viz komentář u pokladny v lib/pricing.js. */
+    how: "Běží přímo v zařízení, nepotřebuje server, takže ji výpadek internetu nepoloží. Účtenku vytisknete na běžnou termotiskárnu. Tablet ani tiskárnu v ceně nemáte — buď použijete svoje, nebo je seženu. Měsíční poplatek začíná na 390 Kč a roste podle funkcí a provozu.",
     price: priceText("pokladna"),
   },
   {

@@ -44,25 +44,53 @@ export default function StructuredData() {
         hasOfferCatalog: {
           "@type": "OfferCatalog",
           name: "Služby",
-          itemListElement: PRICING.map((s) => ({
+          itemListElement: PRICING.map((s) => {
+            /* `price` znamená ve schema.org PŘESNOU cenu. U služeb účtovaných
+               „od …" by to Googlu i AI asistentům tvrdilo pevnou částku,
+               kterou pak ukážou zákazníkovi jako konečnou — a inzerovaná cena
+               je podle § 1732 odst. 2 NOZ závazná nabídka. Proto se u nich
+               posílá minPrice, ne price. Platí to zvlášť pro jednorázovou
+               (oneTimeFrom) a zvlášť pro opakovanou částku (monthlyFrom) —
+               pokladna má pevné zavedení a „od" jen u měsíčního provozu. */
+            const jednorazova = s.oneTimeFrom
+              ? {
+                  "@type": "PriceSpecification",
+                  minPrice: s.oneTimeCzk,
+                  priceCurrency: "CZK",
+                }
+              : null;
+
+            /* Měsíční poplatek se bez referenceQuantity nedá odlišit od
+               jednorázové ceny — unitCode MON je „měsíc" podle UN/CEFACT. */
+            const mesicni = s.monthlyCzk
+              ? {
+                  "@type": "UnitPriceSpecification",
+                  ...(s.monthlyFrom
+                    ? { minPrice: s.monthlyCzk }
+                    : { price: s.monthlyCzk }),
+                  priceCurrency: "CZK",
+                  referenceQuantity: {
+                    "@type": "QuantitativeValue",
+                    value: 1,
+                    unitCode: "MON",
+                  },
+                }
+              : null;
+
+            const spec = [jednorazova, mesicni].filter(Boolean);
+
+            return {
               "@type": "Offer",
-              /* `price` znamená ve schema.org PŘESNOU cenu. U služeb účtovaných
-                 „od …" (e-shop, objednávky) by to Googlu i AI asistentům tvrdilo
-                 pevnou částku, kterou pak ukážou zákazníkovi jako konečnou —
-                 a inzerovaná cena je podle § 1732 odst. 2 NOZ závazná nabídka.
-                 Proto se u nich posílá minPrice, ne price. */
-              ...(s.oneTimeFrom
-                ? {
-                    priceSpecification: {
-                      "@type": "PriceSpecification",
-                      minPrice: s.oneTimeCzk,
-                      priceCurrency: "CZK",
-                    },
-                  }
-                : { price: s.oneTimeCzk, priceCurrency: "CZK" }),
-            description: s.text,
-            itemOffered: { "@type": "Service", name: s.name },
-          })),
+              /* Pevná jednorázová cena zůstává v `price` na úrovni Offeru;
+                 „od" varianta jde do priceSpecification vedle měsíční. */
+              ...(jednorazova ? {} : { price: s.oneTimeCzk, priceCurrency: "CZK" }),
+              ...(spec.length
+                ? { priceSpecification: spec.length === 1 ? spec[0] : spec }
+                : {}),
+              description: s.text,
+              itemOffered: { "@type": "Service", name: s.name },
+            };
+          }),
         },
       },
       {

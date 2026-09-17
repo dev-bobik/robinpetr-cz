@@ -18,12 +18,12 @@ Sleva se uplatní na jednorázovou i měsíční částku. Nabídku si jde poskl
 
 Jeden podnik nemůže mít několik webů zároveň, takže se z těchhle čtyř možností vybírá **právě jedna** a vyšší vždycky obsahuje nižší:
 
-1. Web podniku (jedna stránka) — 8 900 Kč
-2. Web podniku (víc stránek) — 11 900 Kč
+1. Web podniku (jedna stránka) — od 8 900 Kč
+2. Web podniku (víc stránek) — od 11 900 Kč
 3. Online objednávky — od 14 900 Kč
 4. E-shop na míru — od 34 900 Kč
 
-Při přechodu na vyšší úroveň se doplácí jen rozdíl, ne celá cena znovu. Celá skupina se do počtu služeb pro množstevní slevu počítá jako jedna služba.
+Uvedená částka je základ; funkce navíc (rezervace, galerie, další jazyk, napojení na věrnost…) se přičítají podle rozsahu a přesné číslo padne dřív, než se začne pracovat. Při přechodu na vyšší úroveň se doplácí jen rozdíl, ne celá cena znovu. Celá skupina se do počtu služeb pro množstevní slevu počítá jako jedna služba.
 
 ## Jednotlivé produkty
 
@@ -37,29 +37,29 @@ Při přechodu na vyšší úroveň se doplácí jen rozdíl, ne celá cena znov
 - Měsíční poplatek: 490 Kč/měs (provoz)
 
 ## Web podniku (jedna stránka)
-- Cena: 8 900 Kč jednorázově
-- Měsíční poplatek: 290 Kč/měs (správa)
+- Cena: od 8 900 Kč jednorázově; výš podle přidaných funkcí (rezervace, galerie, další jazyk, napojení na věrnost…)
+- Měsíční poplatek: 390 Kč/měs (správa)
 - Co to je: jedna přehledná stránka — menu, otevírací doba, fotky a kontakt
 
 ## Web podniku (víc stránek)
-- Cena: 11 900 Kč jednorázově (do pěti stránek)
+- Cena: od 11 900 Kč jednorázově (do pěti stránek); výš podle dalších stránek a přidaných funkcí
 - Měsíční poplatek: 390 Kč/měs (správa)
 - Co to je: samostatná stránka pro každé téma (služby, reference, ceník…) s vlastním menu
 
 ## Pokladna
-- Cena: 4 900 Kč jednorázově (zavedení, nastavení sortimentu a zaškolení obsluhy)
-- Měsíční poplatek: 690 Kč/měs (provoz, podpora a aktualizace)
+- Cena: 3 900 Kč jednorázově (zavedení, nastavení sortimentu a zaškolení obsluhy)
+- Měsíční poplatek: od 390 Kč/měs (provoz, podpora a aktualizace); výš podle funkcí a provozu
 - Co to je: pokladna na tablet nebo počítač — markování dotykem, účtenky, denní uzávěrka, sklad, stoly a obsluha
 - Běží offline přímo v zařízení, takže ji výpadek internetu nepoloží
 - Nikdo si nebere procenta z plateb kartou a nejste ničím vázáni
 - Tablet ani termotiskárna v ceně nejsou — buď použijete svoje, nebo je seženu
 
 ## Online objednávky (bez provizí rozvozovým aplikacím)
-- Cena: od 14 900 Kč jednorázově
+- Cena: od 14 900 Kč jednorázově; výš podle přidaných funkcí (rozvozové zóny, rezervace stolů, další jazyk…)
 - Měsíční poplatek: 690 Kč/měs
 
 ## E-shop na míru
-- Cena: od 34 900 Kč jednorázově
+- Cena: od 34 900 Kč jednorázově; výš podle přidaných funkcí (varianty zboží, slevové kódy, další jazyk, napojení na sklad…)
 - Měsíční poplatek: 1 290 Kč/měs (správa)
 
 ## Hlídání teplot (HACCP monitoring)

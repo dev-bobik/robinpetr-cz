@@ -196,13 +196,16 @@ export default function Konfigurator() {
                               +{czk(doplatek.oneTimeCzk)} Kč
                               {uroven.oneTimeFrom && " a výš"}
                             </span>
-                            {doplatek.monthlyCzk > 0 && ` · +${czk(doplatek.monthlyCzk)} Kč/měs`}
+                            {doplatek.monthlyCzk > 0 &&
+                              ` · +${czk(doplatek.monthlyCzk)} Kč/měs${uroven.monthlyFrom ? " a výš" : ""}`}
                           </>
                         ) : (
                           <>
                             {czk(uroven.oneTimeCzk)} Kč
                             {uroven.oneTimeFrom && " a výš"}
-                            {uroven.monthlyCzk ? ` · ${czk(uroven.monthlyCzk)} Kč/měs` : ""}
+                            {uroven.monthlyCzk
+                              ? ` · ${uroven.monthlyFrom ? "od " : ""}${czk(uroven.monthlyCzk)} Kč/měs`
+                              : ""}
                           </>
                         )}
                       </span>
@@ -247,7 +250,15 @@ export default function Konfigurator() {
                       <span className="mt-1 block font-mono text-[0.78rem] leading-snug text-ink-soft">
                         {czk(sluzba.oneTimeCzk)} Kč
                         {sluzba.oneTimeFrom && " a výš"}
-                        {sluzba.monthlyCzk ? ` · ${czk(sluzba.monthlyCzk)} Kč/měs` : " · bez měsíčního"}
+                        {sluzba.monthlyCzk ? (
+                          <>
+                            {" · "}
+                            {sluzba.monthlyFrom && "od "}
+                            {czk(sluzba.monthlyCzk)} Kč/měs
+                          </>
+                        ) : (
+                          " · bez měsíčního"
+                        )}
                         {pocty && " za kus"}
                       </span>
                     </span>
@@ -349,7 +360,9 @@ export default function Konfigurator() {
                 </p>
                 <p className="mt-1 flex items-baseline gap-1.5">
                   <span className="font-mono text-[2rem] font-bold leading-none tabular-nums text-ink">
-                    {nabidka.odhad && <span className="text-[1.1rem] font-medium">od </span>}
+                    {nabidka.odhadJednorazove && (
+                      <span className="text-[1.1rem] font-medium">od </span>
+                    )}
                     {czk(nabidka.jednorazove)}
                   </span>
                   <span className="font-mono text-sm text-ink-soft">Kč</span>
@@ -367,6 +380,9 @@ export default function Konfigurator() {
                     </p>
                     <p className="mt-1 flex items-baseline gap-1.5">
                       <span className="font-mono text-[1.4rem] font-bold leading-none tabular-nums text-ink">
+                        {nabidka.odhadMesicne && (
+                          <span className="text-[0.95rem] font-medium">od </span>
+                        )}
                         {czk(nabidka.mesicne)}
                       </span>
                       <span className="font-mono text-sm text-ink-soft">Kč/měs</span>
