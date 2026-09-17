@@ -34,7 +34,7 @@ const SERVICES = [
   },
   {
     name: "Web podniku (jedna stránka)",
-    img: "/ilustrace/foto-web.jpg",
+    img: "/ilustrace/foto-web-jedna.jpg",
     what: "Když vám stačí jedna přehledná stránka — menu, otevírací doba, fotky a kontakt, všechno pod sebou.",
     benefit:
       "Působíte důvěryhodně a změny menu nebo cen za vás udělám já. Nemusíte přepisovat PDF ani shánět webaře.",
@@ -46,7 +46,7 @@ const SERVICES = [
   },
   {
     name: "Web podniku (víc stránek)",
-    img: "/ilustrace/foto-web.jpg",
+    img: "/ilustrace/foto-web-vice.jpg",
     what: "Když máte víc služeb, pobočky nebo reference a chcete pro každé téma vlastní stránku s vlastním menu.",
     benefit:
       "Každá stránka cílí na jiné vyhledávání, takže vás Google nabídne víc lidem. Web má prostor růst spolu s podnikem.",
