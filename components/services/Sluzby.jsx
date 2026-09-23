@@ -87,12 +87,26 @@ const SERVICES = [
     cta: { label: "Napište mi, co rozvážíte", href: "/kontakt" },
   },
   {
+    /* Přidáno 2026-09-23 jako nižší stupeň e-shopu — jediná položka od
+       34 900 Kč byla pro menší podniky předimenzovaná. Text `how` MUSÍ
+       obsahovat jmenovitý výčet toho, co cenu zvedá: cena je „od" a podle
+       § 1732 odst. 2 NOZ by bez vysvětlení byla vymahatelná na 19 900 Kč.
+       Zásilkovna se tu schválně neuvádí — v šabloně e-shopu zatím není. */
+    name: "E-shop (základ)",
+    img: "/ilustrace/eshop-web2.jpg",
+    what: "Hotový e-shop pro menší nabídku: pár desítek produktů, košík, platba kartou nebo převodem a zásilka dopravcem.",
+    benefit:
+      "Prodáváte i mimo otevírací dobu a mimo své město, bez provizí z každé objednávky a bez měsíční licence za pronajatý e-shop. Produkty, ceny a sklad si spravujete sami.",
+    how: "Základ za 19 900 Kč je e-shop do 50 produktů: košík, sklad s hlídáním počtu kusů, platba kartou, převodem i na dobírku, doprava PPL na adresu nebo na ParcelShop a osobní odběr, admin pro vás a právní texty. Cenu zvedá to, co je nad tenhle rozsah — víc než 50 produktů, převod stávajícího e-shopu i s daty nebo úpravy vzhledu mimo šablonu. Varianty produktů, slevové kódy, Zásilkovna, napojení na fakturaci a feedy na srovnávače nejsou příplatek, to je už e-shop na míru.",
+    price: priceText("eshop-zaklad"),
+  },
+  {
     name: "E-shop na míru",
     img: "/ilustrace/eshop-web2.jpg",
     what: "Vlastní e-shop, kde zákazník zaplatí kartou a zboží mu přijde domů. Produkty, košík, platby, doprava i admin, ve kterém si to spravujete sami.",
     benefit:
       "Prodáváte i mimo otevírací dobu a mimo své město a z každé objednávky vám nikdo neukrajuje procenta. Správa je jednoduchá a pohodlná, jsem vždy po ruce a e-shop může růst s vámi. Technicky nenarazíte na žádnou stěnu — cokoli budete potřebovat, dokážu po domluvě napojit nebo dostavět.",
-    how: "Napojím platby kartou i převodem a dopravu (PPL, Zásilkovna). Objednávky, sklad i faktury máte v jednom přehledu a produkty, ceny nebo akce si měníte sami. Za 34 900 Kč je hotový e-shop i se správou.",
+    how: "Napojím platby kartou i převodem a dopravu (PPL, Zásilkovna). Objednávky, sklad i faktury máte v jednom přehledu a produkty, ceny nebo akce si měníte sami. Za 34 900 Kč je hotový e-shop i se správou. Proti základu má navíc varianty produktů (velikosti, příchutě), slevové kódy a akce, víc dopravců zároveň, napojení na fakturaci a feedy na Heureku nebo Zboží.cz.",
     price: priceText("eshop"),
   },
   {

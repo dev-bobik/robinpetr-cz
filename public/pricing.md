@@ -16,14 +16,17 @@ Sleva se uplatní na jednorázovou i měsíční částku. Nabídku si jde poskl
 
 ## Web se vybírá po úrovních
 
-Jeden podnik nemůže mít několik webů zároveň, takže se z těchhle čtyř možností vybírá **právě jedna** a vyšší vždycky obsahuje nižší:
+Jeden podnik nemůže mít několik webů zároveň, takže se z těchhle pěti možností vybírá **právě jedna** a vyšší vždycky obsahuje nižší:
 
 1. Web podniku (jedna stránka) — od 8 900 Kč
 2. Web podniku (víc stránek) — od 11 900 Kč
 3. Online objednávky — od 14 900 Kč
-4. E-shop na míru — od 34 900 Kč
+4. E-shop (základ) — od 19 900 Kč
+5. E-shop na míru — od 34 900 Kč
 
-(Vlastní rozvoz není úroveň webu — je to doplněk nad online objednávkami, jen na poptávku.)
+Hranice mezi objednávkami a e-shopem je jednoduchá: když si zákazník zboží vyzvedne u vás, jsou to online objednávky; když se mu posílá dopravcem, je to e-shop.
+
+(Vlastní rozvoz není úroveň webu — je to doplněk nad online objednávkami, kde rozváží podnik sám, ne dopravce; jen na poptávku.)
 
 Uvedená částka je hotový web včetně správy obsahu. Za příplatek: rezervace s výběrem termínu · objednávání od stolu · víc provozoven · propojení s dalšími systémy — domluva individuálně podle rozsahu, přesné číslo padne dřív, než se začne pracovat. Při přechodu na vyšší úroveň se doplácí jen rozdíl, ne celá cena znovu. Celá skupina se do počtu služeb pro množstevní slevu počítá jako jedna služba.
 
@@ -65,9 +68,17 @@ Uvedená částka je hotový web včetně správy obsahu. Za příplatek: rezerv
 - Cena: bez ceníku, na poptávku po domluvě
 - Co to je: objednávka s doručením domů přes vlastní web místo rozvozových aplikací (které si berou 25–30 % z objednávky); staví se nad online objednávkami — rozvozové zóny, poplatky za dopravu, přehled pro kurýra
 
+## E-shop (základ)
+- Cena: od 19 900 Kč jednorázově
+- Měsíční poplatek: 890 Kč/měs (správa)
+- Co je v ceně: e-shop do 50 produktů, košík, sklad s hlídáním počtu kusů, platba kartou / převodem / na dobírku, doprava PPL na adresu i na ParcelShop, osobní odběr, admin pro klienta (produkty, ceny, sklad, objednávky) a právní texty
+- Co cenu zvedá: víc než 50 produktů, převod stávajícího e-shopu i s daty, úpravy vzhledu mimo šablonu — individuálně podle rozsahu
+- Co už do tohoto stupně nepatří a řeší e-shop na míru: varianty produktů (velikosti, příchutě), slevové kódy a akce, Zásilkovna a víc dopravců zároveň, cena dopravy podle váhy nebo zón, napojení na fakturaci a účetnictví, feedy na Heureku a Zboží.cz, druhý jazyk, zákaznické účty a B2B ceny
+
 ## E-shop na míru
 - Cena: od 34 900 Kč jednorázově (hotový e-shop se správou); cokoli navíc na míru (napojení na další systémy, rozšíření) individuálně podle rozsahu
 - Měsíční poplatek: 1 290 Kč/měs (správa)
+- Co má navíc proti základu: varianty produktů, slevové kódy a akce, víc dopravců zároveň (včetně Zásilkovny), cena dopravy podle váhy a zón, napojení na fakturaci a účetnictví, feedy na srovnávače zboží, druhý jazyk, zákaznické účty a B2B ceny, neomezený počet produktů, vzhled na míru
 
 ## Hlídání teplot (HACCP monitoring)
 - Cena: 1 290 Kč za čidlo jednorázově (včetně instalace)
