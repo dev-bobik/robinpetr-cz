@@ -39,21 +39,21 @@ Uvedená částka je hotový web včetně správy obsahu. Za příplatek: rezerv
 
 ## Věrnostní systém
 - Cena: 3 490 Kč jednorázově (stojánek na míru)
-- Měsíční poplatek: 490 Kč/měs (provoz)
+- Měsíční poplatek: 390 Kč/měs (provoz)
 
 ## Web podniku (jedna stránka)
 - Cena: od 8 900 Kč jednorázově; výš jen u věcí na míru (rezervace s výběrem termínu, objednávání od stolu, víc provozoven, propojení s dalšími systémy)
-- Měsíční poplatek: 390 Kč/měs (správa)
+- Měsíční poplatek: 240 Kč/měs (správa)
 - Co to je: jedna přehledná stránka (typicky menu, otevírací doba, fotky a kontakt) se správou obsahu pro majitele
 
 ## Web podniku (víc stránek)
 - Cena: od 11 900 Kč jednorázově (do pěti stránek); výš jen u dalších stránek a věcí na míru (rezervace s výběrem termínu, objednávání od stolu, víc provozoven, propojení s dalšími systémy)
-- Měsíční poplatek: 390 Kč/měs (správa)
+- Měsíční poplatek: 240 Kč/měs (správa)
 - Co to je: samostatná stránka pro každé téma (služby, reference, ceník…) s vlastním menu
 
 ## Pokladna
-- Cena: 3 900 Kč jednorázově (zavedení, nastavení sortimentu a zaškolení obsluhy)
-- Měsíční poplatek: od 390 Kč/měs (provoz, podpora a aktualizace); výš podle funkcí a provozu
+- Cena: 5 900 Kč jednorázově (zavedení včetně evidence tržeb EET, nastavení sortimentu a zaškolení obsluhy)
+- Měsíční poplatek: od 240 Kč/měs (provoz, podpora a aktualizace); výš podle funkcí a provozu
 - Co to je: pokladna na tablet nebo počítač — markování dotykem, účtenky, denní uzávěrka, sklad, stoly a obsluha
 - Běží offline přímo v zařízení, takže ji výpadek internetu nepoloží
 - Nikdo si nebere procenta z plateb kartou a nejste ničím vázáni
@@ -61,7 +61,7 @@ Uvedená částka je hotový web včetně správy obsahu. Za příplatek: rezerv
 
 ## Online objednávky
 - Cena: od 14 900 Kč jednorázově; výš podle přidaných funkcí (výběr času vyzvednutí, další jazyk, věrnostní body za objednávku…)
-- Měsíční poplatek: 690 Kč/měs (provoz)
+- Měsíční poplatek: 540 Kč/měs (provoz)
 - Co to je: zákazník si cestou objedná a zaplatí z mobilu a u podniku si to vyzvedne; objednávka naskočí podniku v přehledu
 
 ## Vlastní rozvoz (na poptávku)
@@ -70,19 +70,19 @@ Uvedená částka je hotový web včetně správy obsahu. Za příplatek: rezerv
 
 ## E-shop (základ)
 - Cena: od 19 900 Kč jednorázově
-- Měsíční poplatek: 890 Kč/měs (správa)
+- Měsíční poplatek: 690 Kč/měs (správa)
 - Co je v ceně: e-shop do 50 produktů, košík, sklad s hlídáním počtu kusů, platba kartou / převodem / na dobírku, doprava PPL na adresu i na ParcelShop, osobní odběr, admin pro klienta (produkty, ceny, sklad, objednávky) a právní texty
 - Co cenu zvedá: víc než 50 produktů, převod stávajícího e-shopu i s daty, úpravy vzhledu mimo šablonu — individuálně podle rozsahu
 - Co už do tohoto stupně nepatří a řeší e-shop na míru: varianty produktů (velikosti, příchutě), slevové kódy a akce, Zásilkovna a víc dopravců zároveň, cena dopravy podle váhy nebo zón, napojení na fakturaci a účetnictví, feedy na Heureku a Zboží.cz, druhý jazyk, zákaznické účty a B2B ceny
 
 ## E-shop na míru
 - Cena: od 34 900 Kč jednorázově (hotový e-shop se správou); cokoli navíc na míru (napojení na další systémy, rozšíření) individuálně podle rozsahu
-- Měsíční poplatek: 1 290 Kč/měs (správa)
+- Měsíční poplatek: 1 040 Kč/měs (správa)
 - Co má navíc proti základu: varianty produktů, slevové kódy a akce, víc dopravců zároveň (včetně Zásilkovny), cena dopravy podle váhy a zón, napojení na fakturaci a účetnictví, feedy na srovnávače zboží, druhý jazyk, zákaznické účty a B2B ceny, neomezený počet produktů, vzhled na míru
 
 ## Hlídání teplot (HACCP monitoring)
 - Cena: 1 290 Kč za čidlo jednorázově (včetně instalace)
-- Měsíční poplatek: 179 Kč/měs za čidlo
+- Měsíční poplatek: 139 Kč/měs za čidlo
 
 ## Něco na míru
 - Cena: po schůzce — sazba se odvíjí od rozsahu, přesné číslo padne dřív, než se začne pracovat

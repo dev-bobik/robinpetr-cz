@@ -124,15 +124,15 @@ const SERVICES = [
     img: "/ilustrace/foto-pokladna-pult.jpg",
     what: "Pokladna na tablet nebo počítač. Markování dotykem, účtenky, denní uzávěrka — a funguje i bez internetu.",
     /* Nesmí tvrdit „neplatíte měsíční poplatek" — od 2026-09-03 se platí
-       měsíční provoz (od 2026-09-07 od 390 Kč/měs). Odlišení stojí na třech
+       měsíční provoz (od 2026-10-02 od 240 Kč/měs). Odlišení stojí na třech
        skutečných věcech: offline provoz, žádné procento z karet (Dotykačka
        bere 0,79–0,99 %) a žádné vázání. */
     benefit:
       "Nikdo si nebere procenta z vašich plateb kartou a data zůstávají u vás. Když vypadne připojení, prodáváte dál.",
     /* Věta o měsíčním poplatku tu musí zůstat: cena je inzerovaná jako
-       „od 390 Kč" a bez důvodu je podle § 1732 odst. 2 NOZ vymahatelná
+       „od 240 Kč" a bez důvodu je podle § 1732 odst. 2 NOZ vymahatelná
        na spodní částce. Viz komentář u pokladny v lib/pricing.js. */
-    how: "Běží přímo v zařízení, nepotřebuje server, takže ji výpadek internetu nepoloží. Účtenku vytisknete na běžnou termotiskárnu. Tablet ani tiskárnu v ceně nemáte — buď použijete svoje, nebo je seženu. Měsíční poplatek začíná na 390 Kč a roste podle funkcí a provozu.",
+    how: "Běží přímo v zařízení, nepotřebuje server, takže ji výpadek internetu nepoloží. Účtenku vytisknete na běžnou termotiskárnu. Tablet ani tiskárnu v ceně nemáte — buď použijete svoje, nebo je seženu. Měsíční poplatek začíná na 240 Kč a roste podle funkcí a provozu.",
     price: priceText("pokladna"),
   },
   {
