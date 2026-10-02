@@ -104,6 +104,14 @@ export default function Pokladna() {
           jednoduchou pokladnu, která tržby odesílá sama, a instalací i
           registrací Vás provedu.
         </p>
+        {/* stejný snímek běžící pokladny jako na /sluzby */}
+        <img
+          src="/ilustrace/foto-pokladna-pult.jpg"
+          alt="Tablet s pokladnou a tiskárna účtenek na pultu kavárny"
+          width={800}
+          height={600}
+          className="mt-10 w-full rounded-2xl border border-brown/15 object-cover shadow-[0_24px_50px_-28px_rgba(60,40,20,0.45)]"
+        />
 
         <div className="mt-16">
           <SectionKicker>// Co se mění</SectionKicker>
